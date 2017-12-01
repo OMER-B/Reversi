@@ -1,0 +1,41 @@
+commit e2359e4764d0c3565747a3fd9caba14ac307e7b0
+Author: omer <omer5656@gmail.com>
+Date:   Tue Nov 27 16:51:55 2017 +0200
+
+    final coding style to submit
+
+commit 4a66c04e9c53d32979f774ce464123689496de90
+Author: omer <omer5656@gmail.com>
+Date:   Tue Nov 26 13:24:13 2017 +0200
+
+    added tests
+
+commit 5625771e09a32e076a343d7306251aadbffacb0d
+Author: omer <omer5656@gmail.com>
+Date:   Tue Nov 25 16:05:34 2017 +0200
+
+    finished ai algorithm
+
+commit 327f672013302470ece038e42e6f26e029a6ff59
+Author: H <h@ubuntu.ubuntu-domain>
+Date:   Fri Nov 24 20:24:06 2017 +0200
+
+    improved AI but without other game updates
+
+commit 9bf03f14190cf9452c337b102e21dbd81012749c
+Author: H <h@ubuntu.ubuntu-domain>
+Date:   Fri Nov 23 16:12:20 2017 +0200
+
+    ai algorithm works, but without other updates of the game
+
+commit fd88a6c777e45344b61e8324f8eb3ab10f3e07bc
+Author: omer <omer5656@gmail.com>
+Date:   Tue Nov 22 16:38:26 2017 +0200
+
+    remake the project to support point and mix both projects
+
+commit ee388d256e53dd720752004ca19a37e06c510b8c
+Author: omer <omer5656@gmail.com>
+Date:   Tue Nov 21 16:34:15 2017 +0200
+
+    finished ex2 working
