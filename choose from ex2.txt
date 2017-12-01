@@ -1,5 +1,0 @@
-/* OMER BARAK       313264053 */
-/* HODAYA KOSLOWSKY 313377673 */
-
-We have chosen to use most of Omer's classes, and Hodaya's Logic class.
-Omer used object-oriented-programming guide lines better: he gave as parameters for functions pointers and references, while Hodaya used many times the objects themselves. (which is wastefull of time and memory) Hodaya had shorter and more efficient Logic algorithms. Thanks to the OOP of both projects, the combining process was relativly simple: the outer classes had littlt to do with the Logic inner implementation.
