@@ -29,7 +29,7 @@ set(SOURCE_FILES
         point.cpp
         point.h
         regLogic.cpp
-        regLogic.h tests/boardTest.cpp tests/playerTest.cpp tests/pointTest.cpp tests/cellTest.cpp tests/logicTest.cpp server.cpp server.h)
+        regLogic.h tests/boardTest.cpp tests/playerTest.cpp tests/pointTest.cpp tests/cellTest.cpp tests/logicTest.cpp server/server.cpp server/server.h)
 
-add_executable(Reversi ${SOURCE_FILES} tests/boardTest.cpp tests/playerTest.cpp tests/cellTest.cpp tests/logicTest.cpp server.cpp server.h)
+add_executable(Reversi ${SOURCE_FILES} tests/boardTest.cpp tests/playerTest.cpp tests/cellTest.cpp tests/logicTest.cpp server/server.cpp server/server.h)
 target_link_libraries(Reversi gtest gtest_main)

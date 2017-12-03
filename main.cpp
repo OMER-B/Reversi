@@ -1,5 +1,6 @@
 #include <iostream>
 #include "game.h"
+#include "server/server.h"
 
 using namespace std;
 

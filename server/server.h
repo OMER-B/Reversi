@@ -1,16 +1,17 @@
 #ifndef REVERSI_SERVER_H
 #define REVERSI_SERVER_H
 
-#include "point.h"
+#include "../point.h"
 
 class Server {
  private:
   int port_;
   int serverSocket_;
-  void handleClient(int firstClient, int secondClient);
+  void handleClients(int firstClient, int secondClient);
 
  public:
   Server(int port);
+  Server(char *file);
   void start();
   void stop();
 };
