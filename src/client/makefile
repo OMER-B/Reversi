@@ -1,15 +1,14 @@
 CC = g++
-VERSION = -std=c++98
 CLIENT_H_FILES = *.h
 CLIENT_CPP_FILES = *.cpp
 CLIENT_O_FILES = ./obj/client_obj/*
 
-create_all: obj client_exe clean
+create_all: obj client clean
 
-client_exe: $(CLIENT_CPP_FILES) $(CLIENT_H_FILES)
-	$(CC) $(VERSION) -c $(CLIENT_CPP_FILES)
+client: $(CLIENT_CPP_FILES) $(CLIENT_H_FILES)
+	$(CC) -c $(CLIENT_CPP_FILES)
 	mv *.o obj/client_obj
-	$(CC) $(VERSION) $(CLIENT_O_FILES) -o ../../exe/client_exe
+	$(CC) $(CLIENT_O_FILES) -o ../../exe/client
 
 obj:
 	mkdir obj

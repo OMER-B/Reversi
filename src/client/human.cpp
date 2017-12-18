@@ -10,12 +10,12 @@ Human::Human(char symbol) : Player(symbol) {}
 Human::~Human() {}
 
 int Human::makeMove(Board &board, Logic &logic, Display &display) {
-
   Point newCell = getInput(board, logic, display);
   if (newCell.getX() != -1) {
     logic.putNewCell(board, *this, newCell);
+    return 0;
   }
-  return 0;
+  return 1;
 }
 
 Point Human::getInput(Board &board, Logic &logic, Display &display) {

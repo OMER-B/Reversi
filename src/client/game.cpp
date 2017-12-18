@@ -1,6 +1,6 @@
+#include <stdlib.h>
 #include "game.h"
 #include "client.h"
-#include <cstdlib>
 
 Game::Game() : players_(), numberOfPlayers_(), validTurns_(), currentPlayer_() {
   display_ = new ConsoleDisplay();
@@ -29,7 +29,6 @@ void Game::setGameMode() {
     case 2: players_[0] = new Human('X');
       players_[1] = new Computer('O');
       board_ = new Board(SIZE, SIZE, players_);
-
       break;
     case 3: {
       char settings[] = "client_config";

@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "client.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -7,15 +8,16 @@
 #include <unistd.h>
 #include <limits>
 #include <fstream>
-#include <cstdlib>
+
+#define BUFFER 10
 
 using namespace std;
 
 Client::Client(char *serverIP, int serverPort)
-        : Human('R'),
-          serverIP_(serverIP),
-          serverPort_(serverPort),
-          clientSocket_(0) {
+    : Human('R'),
+      serverIP_(serverIP),
+      serverPort_(serverPort),
+      clientSocket_(0) {
   dummy_ = NULL;
 }
 
@@ -26,8 +28,7 @@ Client::Client(char *fileName) : Human('R'),
   ifstream inFile;
   inFile.open(fileName);
   inFile >> input;
-  serverIP_ = new char[sizeof(input.c_str())];
-  strcpy(serverIP_, input.c_str());
+  serverIP_ = input;
   inFile >> input;
   serverPort_ = atoi(input.c_str());
   inFile.close();
@@ -35,7 +36,6 @@ Client::Client(char *fileName) : Human('R'),
 }
 
 Client::~Client() {
-  delete [] serverIP_;
   close(clientSocket_);
 }
 
@@ -48,7 +48,7 @@ int Client::connectToServer() {
 
   // Convert the ip string to a network address
   struct in_addr address;
-  if (!inet_aton(serverIP_, &address)) {
+  if (!inet_aton(serverIP_.c_str(), &address)) {
     throw "Can't parse IP address. IP is probably in wrong format.";
   }
 
@@ -81,7 +81,7 @@ int Client::connectToServer() {
 }
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
-  char move[10] = "";
+  char move[BUFFER] = "";
   ssize_t n;
   Point newCell = Client::getInput(board, logic, display);
 
@@ -90,24 +90,25 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
     n = write(clientSocket_, &move, sizeof(move));
     cout << endl << "You have ended the game." << endl;
     return 2;
-  }
-  if (newCell == Point(-1, -1)) {
+  } else if (newCell == Point(-1, -1)) {
     strcpy(move, "-1 -1");
     n = write(clientSocket_, &move, sizeof(move));
-    if (getRemoteEnemyMovement() == 2) {
+    int enemyStatus = getRemoteEnemyMovement();
+    if ((enemyStatus == 1 )||(enemyStatus == 2 ) ) {
+      cout << endl << "Both players don't have any moves." << endl;
       return 2;
     }
-    return 1;
+  } else {
+    logic.putNewCell(board, *this, newCell);
+    display.printBoard(&board);
+    strcpy(move, newCell.toString().c_str());
+    // Write the points to the socket
+    n = write(clientSocket_, &move, sizeof(move));
+    if (n == -1) {
+      throw "Error input point to socket";
+    }
   }
-  logic.putNewCell(board, *this, newCell);
-  display.printBoard(&board);
 
-  strcpy(move, newCell.toString().c_str());
-  // Write the points to the socket
-  n = write(clientSocket_, &move, sizeof(move));
-  if (n == -1) {
-    throw "Error input point to socket";
-  }
   if (getRemoteEnemyMovement() == 2) {
     cout << endl << "Other player has ended the game." << endl;
     return 2;
@@ -116,7 +117,7 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
 }
 
 int Client::getRemoteEnemyMovement() {
-  cout << "It's enemey's turn. Waiting their input." << endl;
+  cout << "It's enemy's turn. Waiting their input." << endl;
   // Read other player's move from the server
   char enemyString[10];
   ssize_t n = read(clientSocket_, &enemyString, sizeof(enemyString));
@@ -128,6 +129,9 @@ int Client::getRemoteEnemyMovement() {
   if (point.getX() == 0) {
     return 2;
   }
+  if (point.getX() == -1) {
+    return 1;
+  }
   return 0;
 }
 
@@ -135,15 +139,15 @@ Point Client::getInput(Board &board, Logic &logic, Display &display) {
   cout << getSymbol() << ", it's your turn." << endl;
   vector<Point> possibleMoves = logic.getOptionalMoves(board, *this);
   if (possibleMoves.empty()) {
-    cout << "You don't have any moves. Trying next player." << endl;
-    return Point(-1, -1);
+    cout << "You don't have any moves. Type -1." << endl
+         << "If enemy did not make a move type 0." << endl;
+  } else {
+    cout << "Possible moves: ";
+    for (vector<Point>::iterator it = possibleMoves.begin();
+         it != possibleMoves.end(); ++it) {
+      cout << *it;
+    }
   }
-  cout << "Possible moves: ";
-  for (vector<Point>::iterator it = possibleMoves.begin();
-       it != possibleMoves.end(); ++it) {
-    cout << *it;
-  }
-
   int moveX = -1, moveY = -1;
   while (true) {
     cout << endl << "Enter your move 'row col': ";

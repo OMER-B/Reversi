@@ -7,6 +7,8 @@
 #include <fstream>
 #include <arpa/inet.h>
 
+#define BUFFER 10
+
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
 Server::Server(int port) : serverSocket_(0) {
@@ -95,7 +97,7 @@ void Server::notifyClients(int clients[]) {
 
 void Server::handleClient(int firstClient, int secondClient) {
   int i = 0;
-  char move[10];
+  char move[BUFFER];
   ssize_t n;
   int clients[] = {firstClient, secondClient};
 

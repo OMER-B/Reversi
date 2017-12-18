@@ -12,7 +12,7 @@ class Client : public Human {
   Dummy *dummy_;
 
   // The IP of the server.
-  char *serverIP_;
+  string serverIP_;
 
   // The port of the server.
   int serverPort_;
