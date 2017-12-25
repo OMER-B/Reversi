@@ -3,10 +3,14 @@
 
 #include <iostream>
 #include <vector>
+#include "../server.h"
+#include <map>
+
 using namespace std;
 
 class Command {
-  virtual void execute(vector<string> args) = 0;
+ public:
+  virtual void execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket) = 0;
   virtual ~Command;
 };
 

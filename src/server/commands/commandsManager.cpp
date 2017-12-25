@@ -15,8 +15,7 @@ CommandsManager::~CommandsManager() {
   }
 }
 
-void CommandsManager::excecuteCommand(string command, vector<string> args) {
+void CommandsManager::excecuteCommand(string command, vector<string> &args, int client, map<string, Room *> &lobby) {
   Command *commandObj = commandsMap_[command];
-  commandObj->execute(args);
+  commandObj->execute(lobby, args, client);
 }
-

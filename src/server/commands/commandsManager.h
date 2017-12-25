@@ -14,7 +14,7 @@ class CommandsManager {
  public:
   CommandsManager();
 
-  void excecuteCommand(string command, vector<string> args);
+  void excecuteCommand(string command, vector<string> &args, int client, map<string, Room *> &lobby);
 
   ~CommandsManager();
 };

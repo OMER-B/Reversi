@@ -1,8 +1,4 @@
-//
-// Created by omer on 22/12/17.
-//
-
 #include "commandPlay.h"
-void CommandPlay::execute(vector<string> args) {
-
+void CommandPlay::execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket) {
+  // Every player should write to the //OTHER// player what it played.
 }

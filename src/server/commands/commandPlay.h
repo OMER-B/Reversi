@@ -7,8 +7,7 @@
 
 using namespace std;
 class CommandPlay : public Command {
-  void execute(vector<string> args);
-
+  void execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDPLAY_H
