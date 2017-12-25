@@ -14,12 +14,10 @@ using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
 Server::Server(int port) : serverSocket_(0) {
   port_ = port;
-  lobby = new map<string, Room *>();
   cout << "Server" << endl;
 }
 
 Server::Server(char *fileName) {
-  lobby = new map<string, Room *>();
   ifstream inFile;
   inFile.open(fileName);
   inFile >> port_;
@@ -50,12 +48,6 @@ void Server::start() {
   socklen_t clientAddressLen;
   //thread main process with (if == exit) ((FOR SERVER)))
 
-  CommandsManager manager;
-  string command;
-  vector<string> args;
-  char input[BUFFER];
-  memset(input, 0, sizeof(input));
-
   while (true) {
     // Accept a new clients connections.
     int clientSocket = accept(serverSocket_, (struct sockaddr *) &clientAddress, &clientAddressLen);
@@ -63,23 +55,29 @@ void Server::start() {
     if (clientSocket == -1) {
       throw "Error on first client accept";
     }
-    ssize_t n = read(clientSocket, &input, sizeof(input));
+    //pthread_create()    //send handle clients and the three parameters.
 
-    command = seperate(input).first;
-    args = seperate(input).second;
-    manager.excecuteCommand(command, args, clientSocket, *lobby);
-
-    int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *args);
-    // HERE should be a loop iterating over all the games in the lobbies and checking if two players in same room
-    // are ready to play (if firstClient and secondClient are not NULL).
-    // ARGS -- handleClient should receive the game struct as argument (so it can access other player's socket)
-    // instead of handleClient do thread
-
-    ;
+    int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*handleClient)(void *), void *args);
   }
 }
 
-std::pair<string, vector<string>> Server::seperate(string input) {
+static void Server::handleClient(Lobby *lobby, HandleGame *handleGame ,int clientSocket) {
+  char input[BUFFER];
+  memset(input, 0, sizeof(input));
+
+  CommandsManager manager(Lobby *lobby, HandleGame *handleGame);
+  ssize_t n = read(clientSocket, &input, sizeof(input));
+
+  string command;
+  vector<string> args;
+  command = seperate(input).first;
+  args = seperate(input).second;
+  //manager.excecuteCommand(command, args, clientSocket);
+}
+
+
+
+static std::pair<string, vector<string>> Server::seperate(string input) {
   stringstream stream(input);
   string command;
   string buffer;
@@ -92,67 +90,8 @@ std::pair<string, vector<string>> Server::seperate(string input) {
   return pair<string, vector<string>>(command, args);
 }
 
-void Server::notifyClients(int clients[]) {
-  int NUM0 = 0;
-  int NUM1 = 1;
-
-  cout << "Notifying clients who is who." << endl;
-
-  ssize_t n = write(clients[0], &NUM0, sizeof(NUM0));
-  if (n == -1) {
-    cout << "Error writing to socket" << endl;
-    return;
-  }
-  n = write(clients[1], &NUM1, sizeof(NUM1));
-  if (n == -1) {
-    cout << "Error writing to socket" << endl;
-    return;
-  }
-}
-
-void Server::handleClient(int firstClient, int secondClient) {
-  int i = 0;
-  char move[BUFFER];
-  ssize_t n;
-  int clients[] = {firstClient, secondClient};
-
-  notifyClients(clients);
-
-  while (true) {
-    // Read new point from client.
-    n = read(clients[(i % 2)], &move, sizeof(move));
-    if (n == -1) {
-      cout << "Error reading row" << endl;
-      break;
-    }
-    if (n == 0) {
-      cout << "Client disconnected" << endl;
-      break;
-    }
-    if (strcmp(move, "0 0") == 0) {
-      n = write(clients[(i + 1) % 2], &move, sizeof(move));
-      if (n == -1) {
-        cout << "Error writing to socket" << endl;
-        break;
-      }
-      cout << "GameFlow has ended by exit from " << clients[(i % 2)] << endl;
-      break;
-    }
-    if (strcmp(move, "-1 -1") != 0) {
-      cout << "Got move (" << move << ") from " << clients[(i % 2)] << endl;
-    }
-    // Write the point back to the other client.
-    n = write(clients[(i + 1) % 2], &move, sizeof(move));
-    if (n == -1) {
-      cout << "Error writing to socket" << endl;
-      break;
-    }
-    i++;
-  }
-}
 
 Server::~Server() {
-  delete lobby;
   stop();
 }
 

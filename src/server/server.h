@@ -3,24 +3,16 @@
 
 #include <string>
 #include <vector>
+#include "commands/command.h"
+#include "commands/commandsManager.h"
+#include "HandleGame.h"
 
 using namespace std;
-
-typedef enum Status { Waiting, Active, Ended };
-
-typedef struct Room {
-  string name;
-  int firstClient;
-  int secondClient;
-  int threadID;
-  Status status;
-} Room;
-
+class Lobby; 
 //server, currClientSocket and threadNumber (who to close)
 
 class Server {
  private:
-  map<string, Room *> *lobby; // Needs to be a pointer and member of server.
 
   // Socket of the server.
   int serverSocket_;
@@ -28,15 +20,16 @@ class Server {
   // Port for the server.
   int port_;
 
-  // Gets info from the players and transfer it between them.
-  void handleClient(int firstClient, int secondCleint);
-
  public:
   // Constructor by port.
   explicit Server(int port__);
 
   // Constructor by file with port details.
   explicit Server(char *fileName);
+
+  // in a new thread
+  //send the class of game and class of lobby
+  static void handleClient(Lobby *lobby, HandleGame *handleGame ,int clientSocket);
 
   // Destructor for the server.
   ~Server();
@@ -47,10 +40,7 @@ class Server {
   // close the server's socket.
   void stop();
 
-  // Notify the clients who they are.
-  void notifyClients(int clients[]);
-
-  pair<string, vector<string>> seperate(string input);
+  static pair<string, vector<string>> seperate(string input);
 };
 
 #endif //REVERSI_SERVER_H
