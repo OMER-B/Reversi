@@ -1,9 +1,10 @@
 //
-// Created by h on 25/12/17.
+// Created by h on 26/12/17.
 //
 
 #ifndef REVERSI_HANDLEGAME_H
 #define REVERSI_HANDLEGAME_H
+
 
 #include <string>
 
@@ -14,7 +15,7 @@ typedef struct Room {
   int firstClient;
   int secondClient;
   int threadID;
-  Status status;
+  Status status_;
 } Room;
 
 class HandleGame {

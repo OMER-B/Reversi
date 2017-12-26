@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include "../Room.h"
+#include "../Lobby.h"
 #include "../server.h"
 #include <map>
 

@@ -7,7 +7,9 @@
 using namespace std;
 
 class CommandJoin : public Command {
-  void execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket);
+  Lobby *lobby_;
+  CommandJoin(Lobby &lobby);
+  void execute(vector<string> &args, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDJOIN_H

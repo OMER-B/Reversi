@@ -7,7 +7,10 @@
 using namespace std;
 
 class CommandClose : public Command {
-  void execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket);
+  Lobby *lobby_;
+  CommandClose(Lobby &lobby);
+
+  void execute(vector<string> &args, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDCLOSE_H

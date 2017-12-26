@@ -61,11 +61,11 @@ void Server::start() {
   }
 }
 
-static void Server::handleClient(Lobby *lobby, HandleGame *handleGame ,int clientSocket) {
+static void Server::handleClient(Lobby *lobby, handleGame *handleGame ,int clientSocket) {
   char input[BUFFER];
   memset(input, 0, sizeof(input));
 
-  CommandsManager manager(Lobby *lobby, HandleGame *handleGame);
+  CommandsManager manager(lobby *lobby, handleGame *handleGame);
   ssize_t n = read(clientSocket, &input, sizeof(input));
 
   string command;
@@ -74,8 +74,6 @@ static void Server::handleClient(Lobby *lobby, HandleGame *handleGame ,int clien
   args = seperate(input).second;
   //manager.excecuteCommand(command, args, clientSocket);
 }
-
-
 
 static std::pair<string, vector<string>> Server::seperate(string input) {
   stringstream stream(input);
@@ -90,7 +88,6 @@ static std::pair<string, vector<string>> Server::seperate(string input) {
   return pair<string, vector<string>>(command, args);
 }
 
-
 Server::~Server() {
   stop();
 }
@@ -98,4 +95,3 @@ Server::~Server() {
 void Server::stop() {
   close(serverSocket_);
 }
-

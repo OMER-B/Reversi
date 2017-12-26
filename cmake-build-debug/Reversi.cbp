@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Reversi"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server">
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server/fast">
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client">
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client/fast">
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/board.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/board.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/cell.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/cell.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/client.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/client.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/computer.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/computer.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/consoleDisplay.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/display.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/dummy.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/dummy.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameFlow.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/logic.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/logic.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/main.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/player.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/player.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/point.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/point.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/regLogic.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/regLogic.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/HandleGame.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/HandleGame.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Lobby.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Lobby.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Room.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Room.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/command.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandClose.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandJoin.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandPrint.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandStart.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandsManager.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/main.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/server.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/server.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

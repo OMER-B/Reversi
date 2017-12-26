@@ -8,7 +8,7 @@
 #include "HandleGame.h"
 
 using namespace std;
-class Lobby; 
+class Lobby;
 //server, currClientSocket and threadNumber (who to close)
 
 class Server {
@@ -28,8 +28,8 @@ class Server {
   explicit Server(char *fileName);
 
   // in a new thread
-  //send the class of game and class of lobby
-  static void handleClient(Lobby *lobby, HandleGame *handleGame ,int clientSocket);
+  //send the class of game and class of Lobby
+  static void handleClient(Lobby *lobby, handleGame *handleGame ,int clientSocket);
 
   // Destructor for the server.
   ~Server();

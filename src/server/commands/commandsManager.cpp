@@ -2,10 +2,9 @@
 
 CommandsManager::CommandsManager() {
   commandsMap_["print"] = new CommandPrint();
-  commandsMap_["close"] = new CommandClose();
-  commandsMap_["start"] = new CommandStart();
-  commandsMap_["join"] = new CommandJoin();
-  commandsMap_["play"] = new CommandPlay();
+  commandsMap_["close"] = new CommandClose(lobby);
+  commandsMap_["start"] = new CommandStart(lobby);
+  commandsMap_["join"] = new CommandJoin(lobby);
 }
 
 CommandsManager::~CommandsManager() {

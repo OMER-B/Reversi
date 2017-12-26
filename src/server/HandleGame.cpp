@@ -1,7 +1,3 @@
-//
-// Created by h on 25/12/17.
-//
-
 #include <unistd.h>
 #include "HandleGame.h"
 #include <iostream>
@@ -10,7 +6,7 @@
 using namespace std;
 #define BUFFER 128
 
-void HandleGame::play(Room *room) {
+void handleGame::play(Room *room) {
   //read the move of the first player, and send to the second
 
   int clients[2];
