@@ -12,12 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Client.dir/src/client/player.cpp.o"
   "CMakeFiles/Client.dir/src/client/point.cpp.o"
   "CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
-  "CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o"
-  "CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o"
-  "CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o"
-  "CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o"
-  "CMakeFiles/Client.dir/src/client/gameManager.cpp.o"
-  "CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o"
   "Client.pdb"
   "Client"
 )

@@ -11,7 +11,7 @@
 
 class Lobby {
 private:
-  map<string, Room *> *lobby_;
+  map<string, Room *> *roomsMap_;
 
 public:
   Lobby();

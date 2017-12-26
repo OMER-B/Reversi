@@ -6,7 +6,7 @@
 using namespace std;
 #define BUFFER 128
 
-static void * HandleGame::play(void *room) {
+void* HandleGame::play(void *room) {
   Room *game = (Room*)room;
   //read the move of the first player, and send to the second
 

@@ -6,6 +6,7 @@
 #include <fstream>
 #include <arpa/inet.h>
 #include <sstream>
+#include <thread>
 
 #define BUFFER 256
 #define MAX_CONNECTED_CLIENTS 5
@@ -34,18 +35,21 @@ Server::Server(char *fileName) {
 }
 
 void Server::start() {
-  // Create a socket point
+// Create a socket point
   serverSocket_ = socket(AF_INET, SOCK_STREAM, 0);
   if (serverSocket_ == -1) {
     throw "Error opening socket";
   }
   // Assign a local address to the socket
   struct sockaddr_in serverAddress;
-  bzero((void *) &serverAddress, sizeof(serverAddress));
+  bzero((void *) &serverAddress,
+        sizeof(serverAddress));
   serverAddress.sin_family = AF_INET;
   serverAddress.sin_addr.s_addr = INADDR_ANY;
   serverAddress.sin_port = htons(port_);
-  if (bind(serverSocket_, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) == -1) {
+  if (bind(serverSocket_,
+           (struct sockaddr *) &serverAddress,
+           sizeof(serverAddress)) == -1) {
     throw "Error on binding";
   }
   cout << "Binding succeeded." << endl;
@@ -54,12 +58,15 @@ void Server::start() {
   // Define the client socket's structures
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
+
   //thread main process with (if == exit) ((FOR SERVER)))
   //TODO create here new thread, that gets all the server parameters in "first thread args"
 
   while (true) {
     // Accept a new clients connections.
-    int clientSocket = accept(serverSocket_, (struct sockaddr *) &clientAddress, &clientAddressLen);
+    int clientSocket = accept(serverSocket_,
+                                   (struct sockaddr *) &clientAddress,
+                                   &clientAddressLen);
     cout << "First client connected" << endl;
     if (clientSocket == -1) {
       throw "Error on first client accept";
@@ -73,12 +80,14 @@ void Server::start() {
   }
 }
 
-static void* Server::handleClient(void * args) {
+static void* handleClient(void * args) {
   SecondThreadArgs *clientArgs = (SecondThreadArgs*)args;
   CommandsManager *manager = clientArgs->manager;
 
   char input[BUFFER];
   memset(input, 0, sizeof(input));
+
+  cout << "connected to client: " <<clientArgs->clientSocket << endl;
 
   ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
 
@@ -91,7 +100,7 @@ static void* Server::handleClient(void * args) {
   //TODO: close thread here
 }
 
-static std::pair<string, vector<string>> Server::seperate(string input) {
+static std::pair<string, vector<string> > seperate(string input) {
   stringstream stream(input);
   string command;
   string buffer;
@@ -101,7 +110,7 @@ static std::pair<string, vector<string>> Server::seperate(string input) {
   while (stream >> buffer) {
     args.push_back(buffer);
   }
-  return pair<string, vector<string>>(command, args);
+  return pair<string, vector<string> >(command, args);
 }
 
 Server::~Server() {

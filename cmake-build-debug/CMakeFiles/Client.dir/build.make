@@ -369,150 +369,6 @@ CMakeFiles/Client.dir/src/client/regLogic.cpp.o.provides: CMakeFiles/Client.dir/
 CMakeFiles/Client.dir/src/client/regLogic.cpp.o.provides.build: CMakeFiles/Client.dir/src/client/regLogic.cpp.o
 
 
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/commands/commandStart.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o -c /home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp > CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.i
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp -o CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.s
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.requires
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.provides: CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.provides
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.provides.build: CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o
-
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/commands/commandJoin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o -c /home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp > CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.i
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp -o CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.s
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.requires
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.provides: CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.provides
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.provides.build: CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o
-
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/commands/commandClose.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o -c /home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp > CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.i
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp -o CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.s
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.requires
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.provides: CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.provides
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.provides.build: CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o
-
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/commands/commandPrint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o -c /home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp > CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.i
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp -o CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.s
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.requires
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.provides: CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.provides
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.provides.build: CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o
-
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o: ../src/client/gameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Client.dir/src/client/gameManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/client/gameManager.cpp.o -c /home/h/CLionProjects/Reversi/src/client/gameManager.cpp
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/client/gameManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/client/gameManager.cpp > CMakeFiles/Client.dir/src/client/gameManager.cpp.i
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/client/gameManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/client/gameManager.cpp -o CMakeFiles/Client.dir/src/client/gameManager.cpp.s
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/client/gameManager.cpp.o.requires
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o.provides: CMakeFiles/Client.dir/src/client/gameManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/gameManager.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/client/gameManager.cpp.o.provides
-
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o.provides.build: CMakeFiles/Client.dir/src/client/gameManager.cpp.o
-
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandsManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o -c /home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp > CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.i
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp -o CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.s
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.requires:
-
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.requires
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.provides: CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.provides.build
-.PHONY : CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.provides
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.provides.build: CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o
-
-
 # Object files for target Client
 Client_OBJECTS = \
 "CMakeFiles/Client.dir/src/client/board.cpp.o" \
@@ -527,13 +383,7 @@ Client_OBJECTS = \
 "CMakeFiles/Client.dir/src/client/main.cpp.o" \
 "CMakeFiles/Client.dir/src/client/player.cpp.o" \
 "CMakeFiles/Client.dir/src/client/point.cpp.o" \
-"CMakeFiles/Client.dir/src/client/regLogic.cpp.o" \
-"CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o" \
-"CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o" \
-"CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o" \
-"CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o" \
-"CMakeFiles/Client.dir/src/client/gameManager.cpp.o" \
-"CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o"
+"CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
@@ -551,15 +401,9 @@ Client: CMakeFiles/Client.dir/src/client/main.cpp.o
 Client: CMakeFiles/Client.dir/src/client/player.cpp.o
 Client: CMakeFiles/Client.dir/src/client/point.cpp.o
 Client: CMakeFiles/Client.dir/src/client/regLogic.cpp.o
-Client: CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o
-Client: CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o
-Client: CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o
-Client: CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o
-Client: CMakeFiles/Client.dir/src/client/gameManager.cpp.o
-Client: CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o
 Client: CMakeFiles/Client.dir/build.make
 Client: CMakeFiles/Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -580,12 +424,6 @@ CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/client/main.cpp.o.requ
 CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/client/player.cpp.o.requires
 CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/client/point.cpp.o.requires
 CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/client/regLogic.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/client/gameManager.cpp.o.requires
-CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o.requires
 
 .PHONY : CMakeFiles/Client.dir/requires
 

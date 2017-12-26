@@ -11,18 +11,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/consoleDisplay.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/dummy.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/dummy.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/gameFlow.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/gameManager.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/gameManager.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/human.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/human.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/logic.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/logic.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/main.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/main.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/player.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/player.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/point.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/point.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/regLogic.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

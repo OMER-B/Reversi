@@ -2,7 +2,7 @@
 #define REVERSI_COMMANDPRINT_H
 
 #include "command.h"
-#include "../Lobby.h"
+#include "Lobby.h"
 #include <vector>
 #include <iostream>
 using namespace std;

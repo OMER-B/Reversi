@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include "Lobby.h"
-#include "commands/command.h"
-#include "commands/commandsManager.h"
+#include "command.h"
+#include "commandsManager.h"
 #include "HandleGame.h"
 
 
@@ -26,7 +26,7 @@ class Server {
   Lobby * lobby_;
   vector<pthread_t *> *threads_;
   CommandsManager *manager_;
-  HandleGame *handleGame_;
+  HandleGame * handleGame_;
   int serverSocket_; // Socket of the server.
   int port_; // Port for the server.
 
@@ -37,9 +37,6 @@ class Server {
   // Constructor by file with port details.
   explicit Server(char *fileName);
 
-  // in a new thread
-  //send the class of game and class of Lobby
-  static void* handleClient(void * args);
 
   // Destructor for the server.
   ~Server();
@@ -50,7 +47,13 @@ class Server {
   // close the server's socket.
   void stop();
 
-  static pair<string, vector<string> > seperate(string input);
 };
+
+
+// in a new thread
+//send the class of game and class of Lobby
+static void* handleClient(void * args);
+
+static pair<string, vector<string> > seperate(string input);
 
 #endif //REVERSI_SERVER_H

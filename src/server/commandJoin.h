@@ -2,8 +2,8 @@
 #define REVERSI_COMMANDJOIN_H
 
 #include "command.h"
-#include "../HandleGame.h"
-#include "../Lobby.h"
+#include "HandleGame.h"
+#include "Lobby.h"
 
 #include <iostream>
 #include <vector>

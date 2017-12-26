@@ -331,7 +331,7 @@ src/client/gameManager.o: src/client/gameManager.cpp.o
 
 # target to build an object file
 src/client/gameManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/gameManager.cpp.o
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/client/gameManager.cpp.o
 .PHONY : src/client/gameManager.cpp.o
 
 src/client/gameManager.i: src/client/gameManager.cpp.i
@@ -340,7 +340,7 @@ src/client/gameManager.i: src/client/gameManager.cpp.i
 
 # target to preprocess a source file
 src/client/gameManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/gameManager.cpp.i
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/client/gameManager.cpp.i
 .PHONY : src/client/gameManager.cpp.i
 
 src/client/gameManager.s: src/client/gameManager.cpp.s
@@ -349,7 +349,7 @@ src/client/gameManager.s: src/client/gameManager.cpp.s
 
 # target to generate assembly for a file
 src/client/gameManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/gameManager.cpp.s
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/client/gameManager.cpp.s
 .PHONY : src/client/gameManager.cpp.s
 
 src/client/human.o: src/client/human.cpp.o
@@ -595,140 +595,140 @@ src/server/Room.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.s
 .PHONY : src/server/Room.cpp.s
 
-src/server/commands/commandClose.o: src/server/commands/commandClose.cpp.o
+src/server/commandClose.o: src/server/commandClose.cpp.o
 
-.PHONY : src/server/commands/commandClose.o
-
-# target to build an object file
-src/server/commands/commandClose.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o
-.PHONY : src/server/commands/commandClose.cpp.o
-
-src/server/commands/commandClose.i: src/server/commands/commandClose.cpp.i
-
-.PHONY : src/server/commands/commandClose.i
-
-# target to preprocess a source file
-src/server/commands/commandClose.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.i
-.PHONY : src/server/commands/commandClose.cpp.i
-
-src/server/commands/commandClose.s: src/server/commands/commandClose.cpp.s
-
-.PHONY : src/server/commands/commandClose.s
-
-# target to generate assembly for a file
-src/server/commands/commandClose.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.s
-.PHONY : src/server/commands/commandClose.cpp.s
-
-src/server/commands/commandJoin.o: src/server/commands/commandJoin.cpp.o
-
-.PHONY : src/server/commands/commandJoin.o
+.PHONY : src/server/commandClose.o
 
 # target to build an object file
-src/server/commands/commandJoin.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o
-.PHONY : src/server/commands/commandJoin.cpp.o
+src/server/commandClose.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.o
+.PHONY : src/server/commandClose.cpp.o
 
-src/server/commands/commandJoin.i: src/server/commands/commandJoin.cpp.i
+src/server/commandClose.i: src/server/commandClose.cpp.i
 
-.PHONY : src/server/commands/commandJoin.i
+.PHONY : src/server/commandClose.i
 
 # target to preprocess a source file
-src/server/commands/commandJoin.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.i
-.PHONY : src/server/commands/commandJoin.cpp.i
+src/server/commandClose.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.i
+.PHONY : src/server/commandClose.cpp.i
 
-src/server/commands/commandJoin.s: src/server/commands/commandJoin.cpp.s
+src/server/commandClose.s: src/server/commandClose.cpp.s
 
-.PHONY : src/server/commands/commandJoin.s
+.PHONY : src/server/commandClose.s
 
 # target to generate assembly for a file
-src/server/commands/commandJoin.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.s
-.PHONY : src/server/commands/commandJoin.cpp.s
+src/server/commandClose.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.s
+.PHONY : src/server/commandClose.cpp.s
 
-src/server/commands/commandPrint.o: src/server/commands/commandPrint.cpp.o
+src/server/commandJoin.o: src/server/commandJoin.cpp.o
 
-.PHONY : src/server/commands/commandPrint.o
+.PHONY : src/server/commandJoin.o
 
 # target to build an object file
-src/server/commands/commandPrint.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o
-.PHONY : src/server/commands/commandPrint.cpp.o
+src/server/commandJoin.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.o
+.PHONY : src/server/commandJoin.cpp.o
 
-src/server/commands/commandPrint.i: src/server/commands/commandPrint.cpp.i
+src/server/commandJoin.i: src/server/commandJoin.cpp.i
 
-.PHONY : src/server/commands/commandPrint.i
+.PHONY : src/server/commandJoin.i
 
 # target to preprocess a source file
-src/server/commands/commandPrint.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.i
-.PHONY : src/server/commands/commandPrint.cpp.i
+src/server/commandJoin.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.i
+.PHONY : src/server/commandJoin.cpp.i
 
-src/server/commands/commandPrint.s: src/server/commands/commandPrint.cpp.s
+src/server/commandJoin.s: src/server/commandJoin.cpp.s
 
-.PHONY : src/server/commands/commandPrint.s
+.PHONY : src/server/commandJoin.s
 
 # target to generate assembly for a file
-src/server/commands/commandPrint.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.s
-.PHONY : src/server/commands/commandPrint.cpp.s
+src/server/commandJoin.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.s
+.PHONY : src/server/commandJoin.cpp.s
 
-src/server/commands/commandStart.o: src/server/commands/commandStart.cpp.o
+src/server/commandPrint.o: src/server/commandPrint.cpp.o
 
-.PHONY : src/server/commands/commandStart.o
+.PHONY : src/server/commandPrint.o
 
 # target to build an object file
-src/server/commands/commandStart.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o
-.PHONY : src/server/commands/commandStart.cpp.o
+src/server/commandPrint.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.o
+.PHONY : src/server/commandPrint.cpp.o
 
-src/server/commands/commandStart.i: src/server/commands/commandStart.cpp.i
+src/server/commandPrint.i: src/server/commandPrint.cpp.i
 
-.PHONY : src/server/commands/commandStart.i
+.PHONY : src/server/commandPrint.i
 
 # target to preprocess a source file
-src/server/commands/commandStart.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.i
-.PHONY : src/server/commands/commandStart.cpp.i
+src/server/commandPrint.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.i
+.PHONY : src/server/commandPrint.cpp.i
 
-src/server/commands/commandStart.s: src/server/commands/commandStart.cpp.s
+src/server/commandPrint.s: src/server/commandPrint.cpp.s
 
-.PHONY : src/server/commands/commandStart.s
+.PHONY : src/server/commandPrint.s
 
 # target to generate assembly for a file
-src/server/commands/commandStart.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.s
-.PHONY : src/server/commands/commandStart.cpp.s
+src/server/commandPrint.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.s
+.PHONY : src/server/commandPrint.cpp.s
 
-src/server/commands/commandsManager.o: src/server/commands/commandsManager.cpp.o
+src/server/commandStart.o: src/server/commandStart.cpp.o
 
-.PHONY : src/server/commands/commandsManager.o
+.PHONY : src/server/commandStart.o
 
 # target to build an object file
-src/server/commands/commandsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o
-.PHONY : src/server/commands/commandsManager.cpp.o
+src/server/commandStart.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.o
+.PHONY : src/server/commandStart.cpp.o
 
-src/server/commands/commandsManager.i: src/server/commands/commandsManager.cpp.i
+src/server/commandStart.i: src/server/commandStart.cpp.i
 
-.PHONY : src/server/commands/commandsManager.i
+.PHONY : src/server/commandStart.i
 
 # target to preprocess a source file
-src/server/commands/commandsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.i
-.PHONY : src/server/commands/commandsManager.cpp.i
+src/server/commandStart.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.i
+.PHONY : src/server/commandStart.cpp.i
 
-src/server/commands/commandsManager.s: src/server/commands/commandsManager.cpp.s
+src/server/commandStart.s: src/server/commandStart.cpp.s
 
-.PHONY : src/server/commands/commandsManager.s
+.PHONY : src/server/commandStart.s
 
 # target to generate assembly for a file
-src/server/commands/commandsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.s
-.PHONY : src/server/commands/commandsManager.cpp.s
+src/server/commandStart.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.s
+.PHONY : src/server/commandStart.cpp.s
+
+src/server/commandsManager.o: src/server/commandsManager.cpp.o
+
+.PHONY : src/server/commandsManager.o
+
+# target to build an object file
+src/server/commandsManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.o
+.PHONY : src/server/commandsManager.cpp.o
+
+src/server/commandsManager.i: src/server/commandsManager.cpp.i
+
+.PHONY : src/server/commandsManager.i
+
+# target to preprocess a source file
+src/server/commandsManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.i
+.PHONY : src/server/commandsManager.cpp.i
+
+src/server/commandsManager.s: src/server/commandsManager.cpp.s
+
+.PHONY : src/server/commandsManager.s
+
+# target to generate assembly for a file
+src/server/commandsManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.s
+.PHONY : src/server/commandsManager.cpp.s
 
 src/server/main.o: src/server/main.cpp.o
 
@@ -845,21 +845,21 @@ help:
 	@echo "... src/server/Room.o"
 	@echo "... src/server/Room.i"
 	@echo "... src/server/Room.s"
-	@echo "... src/server/commands/commandClose.o"
-	@echo "... src/server/commands/commandClose.i"
-	@echo "... src/server/commands/commandClose.s"
-	@echo "... src/server/commands/commandJoin.o"
-	@echo "... src/server/commands/commandJoin.i"
-	@echo "... src/server/commands/commandJoin.s"
-	@echo "... src/server/commands/commandPrint.o"
-	@echo "... src/server/commands/commandPrint.i"
-	@echo "... src/server/commands/commandPrint.s"
-	@echo "... src/server/commands/commandStart.o"
-	@echo "... src/server/commands/commandStart.i"
-	@echo "... src/server/commands/commandStart.s"
-	@echo "... src/server/commands/commandsManager.o"
-	@echo "... src/server/commands/commandsManager.i"
-	@echo "... src/server/commands/commandsManager.s"
+	@echo "... src/server/commandClose.o"
+	@echo "... src/server/commandClose.i"
+	@echo "... src/server/commandClose.s"
+	@echo "... src/server/commandJoin.o"
+	@echo "... src/server/commandJoin.i"
+	@echo "... src/server/commandJoin.s"
+	@echo "... src/server/commandPrint.o"
+	@echo "... src/server/commandPrint.i"
+	@echo "... src/server/commandPrint.s"
+	@echo "... src/server/commandStart.o"
+	@echo "... src/server/commandStart.i"
+	@echo "... src/server/commandStart.s"
+	@echo "... src/server/commandsManager.o"
+	@echo "... src/server/commandsManager.i"
+	@echo "... src/server/commandsManager.s"
 	@echo "... src/server/main.o"
 	@echo "... src/server/main.i"
 	@echo "... src/server/main.s"

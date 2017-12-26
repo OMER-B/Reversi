@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(Reversi)
 
 set(CMAKE_CXX_STANDARD 11)
+SET( CMAKE_CXX_FLAGS "-pthread")
 
 add_executable(Client
         src/client/board.cpp
@@ -29,9 +30,9 @@ add_executable(Client
         src/client/point.cpp
         src/client/point.h
         src/client/regLogic.cpp
-        src/client/regLogic.h src/server/commands/command.h src/server/commands/commandStart.cpp src/server/commands/commandStart.h src/server/commands/commandJoin.cpp src/server/commands/commandJoin.h src/server/commands/commandClose.cpp src/server/commands/commandClose.h src/server/commands/commandPrint.cpp src/server/commands/commandPrint.h src/client/gameManager.cpp src/client/gameManager.h src/server/commands/commandsManager.cpp src/server/commands/commandsManager.h)
+        src/client/regLogic.h)
 
 add_executable(Server
         src/server/main.cpp
         src/server/server.cpp
-        src/server/server.h src/server/Room.cpp src/server/Room.h src/server/Lobby.cpp src/server/Lobby.h src/server/HandleGame.h src/server/HandleGame.cpp)
+        src/server/server.h src/server/Room.cpp src/server/Room.h src/server/Lobby.cpp src/server/Lobby.h src/server/HandleGame.h src/server/HandleGame.cpp  src/server/command.h src/server/commandStart.cpp src/server/commandStart.h src/server/commandJoin.cpp src/server/commandJoin.h src/server/commandClose.cpp src/server/commandClose.h src/server/commandPrint.cpp src/server/commandPrint.h src/client/gameManager.cpp src/client/gameManager.h src/server/commandsManager.cpp src/server/commandsManager.h)

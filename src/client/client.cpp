@@ -77,8 +77,14 @@ int Client::connectToServer() {
   }
   cout << "Connected to server. IP: " << serverIP_ << ", Port: " << serverPort_
        << "." << endl << "Waiting for second player." << endl;
+  //TODO delete set up and recieve here a command
   return setUp();
 }
+
+string Client::getCommand() {
+  
+}
+
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
   char move[BUFFER] = "";

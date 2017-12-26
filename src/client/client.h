@@ -31,12 +31,14 @@ class Client : public Human {
   explicit Client(char *fileName);
 
   // Destructor for the client.
-  virtual ~Client();
+  ~Client();
 
   void setDummy_(Dummy *dummy_);
 
   // Establishes a connection with the server.
   int connectToServer();
+
+  string  getCommand();
 
   // Makes the move based on players input.
   int makeMove(Board &board, Logic &logic, Display &display);

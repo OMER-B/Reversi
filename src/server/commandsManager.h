@@ -7,8 +7,8 @@
 #include "commandStart.h"
 #include "commandClose.h"
 #include "commandPrint.h"
-#include "../HandleGame.h"
-#include "../Lobby.h"
+#include "HandleGame.h"
+#include "Lobby.h"
 
 
 class CommandsManager {

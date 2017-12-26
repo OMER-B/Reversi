@@ -1,8 +1,5 @@
 #include "Room.h"
 
-Room::Room() {
-
-}
 
 const string &Room::getName() const {
   return name_;

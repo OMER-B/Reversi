@@ -1,6 +1,4 @@
-//
-// Created by h on 26/12/17.
-//
+
 
 #ifndef REVERSI_ROOM_H
 #define REVERSI_ROOM_H
@@ -19,7 +17,7 @@ private:
   Status status_;
 
 public:
-  Room();
+
   const string &getName() const;
 
   void setName(const string &name_);

@@ -2,7 +2,7 @@
 #define REVERSI_COMMANDSTART_H
 
 #include "command.h"
-#include "../Lobby.h"
+#include "Lobby.h"
 #include <vector>
 
 using namespace std;

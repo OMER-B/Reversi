@@ -2,7 +2,7 @@
 #define REVERSI_COMMANDCLOSE_H
 
 #include "command.h"
-#include "../Lobby.h"
+#include "Lobby.h"
 #include <iostream>
 #include <vector>
 using namespace std;

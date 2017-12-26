@@ -176,10 +176,10 @@
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.cpp">
-			<Option target="Client"/>
+			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.h">
-			<Option target="Client"/>
+			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.cpp">
 			<Option target="Client"/>
@@ -232,38 +232,38 @@
 		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Room.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/command.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/command.h">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandClose.cpp">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandClose.cpp">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandClose.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandClose.h">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandJoin.cpp">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandJoin.cpp">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandJoin.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandJoin.h">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandPrint.cpp">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandPrint.cpp">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandPrint.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandPrint.h">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandStart.cpp">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandStart.cpp">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandStart.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandStart.h">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandsManager.cpp">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandsManager.cpp">
+			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commands/commandsManager.h">
-			<Option target="Client"/>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandsManager.h">
+			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/server/main.cpp">
 			<Option target="Server"/>

@@ -68,9 +68,6 @@ CMakeFiles/Client.dir/src/client/gameFlow.cpp.o: ../src/client/player.h
 CMakeFiles/Client.dir/src/client/gameFlow.cpp.o: ../src/client/point.h
 CMakeFiles/Client.dir/src/client/gameFlow.cpp.o: ../src/client/regLogic.h
 
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o: ../src/client/gameManager.cpp
-CMakeFiles/Client.dir/src/client/gameManager.cpp.o: ../src/client/gameManager.h
-
 CMakeFiles/Client.dir/src/client/human.cpp.o: ../src/client/board.h
 CMakeFiles/Client.dir/src/client/human.cpp.o: ../src/client/cell.h
 CMakeFiles/Client.dir/src/client/human.cpp.o: ../src/client/computer.h
@@ -124,40 +121,4 @@ CMakeFiles/Client.dir/src/client/regLogic.cpp.o: ../src/client/player.h
 CMakeFiles/Client.dir/src/client/regLogic.cpp.o: ../src/client/point.h
 CMakeFiles/Client.dir/src/client/regLogic.cpp.o: ../src/client/regLogic.cpp
 CMakeFiles/Client.dir/src/client/regLogic.cpp.o: ../src/client/regLogic.h
-
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/Lobby.h
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/Room.h
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/commands/command.h
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/commands/commandClose.cpp
-CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o: ../src/server/commands/commandClose.h
-
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/HandleGame.h
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/Lobby.h
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/Room.h
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/commands/command.h
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/commands/commandJoin.cpp
-CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o: ../src/server/commands/commandJoin.h
-
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/Lobby.h
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/Room.h
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/commands/command.h
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/commands/commandPrint.cpp
-CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o: ../src/server/commands/commandPrint.h
-
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/Lobby.h
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/Room.h
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/commands/command.h
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/commands/commandStart.cpp
-CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o: ../src/server/commands/commandStart.h
-
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/HandleGame.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/Lobby.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/Room.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/command.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandClose.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandJoin.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandPrint.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandStart.h
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandsManager.cpp
-CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o: ../src/server/commands/commandsManager.h
 
