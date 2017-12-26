@@ -1,5 +1,4 @@
 #include "server.h"
-#include "commands/commandsManager.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -9,20 +8,29 @@
 #include <sstream>
 
 #define BUFFER 256
+#define MAX_CONNECTED_CLIENTS 5
 
 using namespace std;
-#define MAX_CONNECTED_CLIENTS 2
+
 Server::Server(int port) : serverSocket_(0) {
   port_ = port;
-  cout << "Server" << endl;
+  lobby_ = new Lobby;
+  threads_ = new vector<pthread_t*>;
+  handleGame_ = new HandleGame;
+  manager_ = new CommandsManager(lobby_, handleGame_);
 }
 
 Server::Server(char *fileName) {
+  threads_ = new vector<pthread_t*>;
+  lobby_ = new Lobby;
+  handleGame_ = new HandleGame;
+  manager_ = new CommandsManager(lobby_, handleGame_);
+
   ifstream inFile;
   inFile.open(fileName);
   inFile >> port_;
   inFile.close();
-  cout << "Server port: " << port_ << endl;
+
 }
 
 void Server::start() {
@@ -47,6 +55,7 @@ void Server::start() {
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
   //thread main process with (if == exit) ((FOR SERVER)))
+  //TODO create here new thread, that gets all the server parameters in "first thread args"
 
   while (true) {
     // Accept a new clients connections.
@@ -55,24 +64,31 @@ void Server::start() {
     if (clientSocket == -1) {
       throw "Error on first client accept";
     }
-    //pthread_create()    //send handle clients and the three parameters.
-
-    int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*handleClient)(void *), void *args);
+    SecondThreadArgs args;
+    args.clientSocket = clientSocket;
+    args.manager = manager_;
+    pthread_t id;
+    threads_->push_back(&id);
+    pthread_create(&id, NULL, handleClient, &args);
   }
 }
 
-static void Server::handleClient(Lobby *lobby, handleGame *handleGame ,int clientSocket) {
+static void* Server::handleClient(void * args) {
+  SecondThreadArgs *clientArgs = (SecondThreadArgs*)args;
+  CommandsManager *manager = clientArgs->manager;
+
   char input[BUFFER];
   memset(input, 0, sizeof(input));
 
-  CommandsManager manager(lobby *lobby, handleGame *handleGame);
-  ssize_t n = read(clientSocket, &input, sizeof(input));
+  ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
 
   string command;
-  vector<string> args;
+  vector<string> stringArgs;
   command = seperate(input).first;
-  args = seperate(input).second;
-  //manager.excecuteCommand(command, args, clientSocket);
+  stringArgs = seperate(input).second;
+
+  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+  //TODO: close thread here
 }
 
 static std::pair<string, vector<string>> Server::seperate(string input) {
@@ -89,6 +105,10 @@ static std::pair<string, vector<string>> Server::seperate(string input) {
 }
 
 Server::~Server() {
+  delete threads_;
+  delete lobby_;
+  delete manager_;
+  delete handleGame_;
   stop();
 }
 

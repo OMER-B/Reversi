@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/src/server/main.cpp.o"
   "CMakeFiles/Server.dir/src/server/server.cpp.o"
+  "CMakeFiles/Server.dir/src/server/Room.cpp.o"
   "CMakeFiles/Server.dir/src/server/Lobby.cpp.o"
   "CMakeFiles/Server.dir/src/server/HandleGame.cpp.o"
-  "CMakeFiles/Server.dir/src/server/Room.cpp.o"
   "Server.pdb"
   "Server"
 )

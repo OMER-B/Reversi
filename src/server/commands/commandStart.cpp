@@ -1,7 +1,9 @@
 #include <map>
 #include <unistd.h>
 #include "commandStart.h"
+
 void CommandStart::execute(vector<string> &args, int clientSocket) {
+  //TODO add mutex
   string name = args[0];
   if (lobby_->contains(name)) { // Room name already exists
     int invalid_name = -1;
@@ -9,12 +11,13 @@ void CommandStart::execute(vector<string> &args, int clientSocket) {
     ssize_t n = write(clientSocket, &invalid_name, sizeof(invalid_name));
     return;
   }
-  Room *room;
+  Room *room = lobby_->createRoom(name);
   room->setName(name);
   room->setFirstClient(clientSocket);
   room->setStatus(Waiting);
+  //TODO add mutex
   lobby_->addRoom(*room);
 }
 
-CommandStart::CommandStart(Lobby &lobby) : lobby_(&lobby) {
+CommandStart::CommandStart(Lobby *lobby) : lobby_(lobby) {
 }

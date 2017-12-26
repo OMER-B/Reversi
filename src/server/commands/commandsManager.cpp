@@ -1,10 +1,10 @@
 #include "commandsManager.h"
 
-CommandsManager::CommandsManager() {
-  commandsMap_["print"] = new CommandPrint();
+CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
+  commandsMap_["print"] = new CommandPrint(lobby);
   commandsMap_["close"] = new CommandClose(lobby);
   commandsMap_["start"] = new CommandStart(lobby);
-  commandsMap_["join"] = new CommandJoin(lobby);
+  commandsMap_["join"] = new CommandJoin(lobby, handleGame);
 }
 
 CommandsManager::~CommandsManager() {
@@ -14,7 +14,6 @@ CommandsManager::~CommandsManager() {
   }
 }
 
-void CommandsManager::excecuteCommand(string command, vector<string> &args, int client, map<string, Room *> &lobby) {
-  Command *commandObj = commandsMap_[command];
-  commandObj->execute(lobby, args, client);
+void CommandsManager::executeCommand(string command, vector<string> &args, int client) {
+  commandsMap_[command]->execute(args, client);
 }

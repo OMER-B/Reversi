@@ -6,12 +6,13 @@
 using namespace std;
 #define BUFFER 128
 
-void handleGame::play(Room *room) {
+static void * HandleGame::play(void *room) {
+  Room *game = (Room*)room;
   //read the move of the first player, and send to the second
 
   int clients[2];
-  clients[0] = room->firstClient;
-  clients[1] = room->secondClient;
+  clients[0] = game->getFirstClient();
+  clients[1] = game->getSecondClient();
 
   int NUM0 = 0;
   int NUM1 = 1;
@@ -21,12 +22,12 @@ void handleGame::play(Room *room) {
   ssize_t n = write(clients[0], &NUM0, sizeof(NUM0));
   if (n == -1) {
     cout << "Error writing to socket" << endl;
-    return;
+    return NULL;
   }
   n = write(clients[1], &NUM1, sizeof(NUM1));
   if (n == -1) {
     cout << "Error writing to socket" << endl;
-    return;
+    return NULL;
   }
 
   int i = 0;

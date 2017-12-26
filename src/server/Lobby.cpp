@@ -34,5 +34,11 @@ void Lobby::addRoom(Room &room) {
 }
 
 Room *Lobby::getRoom(string name) {
-  return lobby_[name];
+  return lobby_->at(name);
+}
+
+Room* Lobby::createRoom(string name) {
+  Room * room = new Room();
+  lobby_->at(name) = room;
+  return room;
 }

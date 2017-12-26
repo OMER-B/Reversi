@@ -8,9 +8,10 @@ void CommandClose::execute(vector<string> &args, int clientSocket) {
     lobby_->removeRoom(name);
     close(lobby_->getRoom(name)->getFirstClient());
     close(lobby_->getRoom(name)->getSecondClient());
+    lobby_->getRoom(name)->setStatus(Ended);
   }
 }
 
-CommandClose::CommandClose(Lobby &lobby) : lobby_(&lobby) {
+CommandClose::CommandClose(Lobby *lobby) : lobby_(lobby) {
 
 }

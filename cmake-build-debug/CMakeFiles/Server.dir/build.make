@@ -105,9 +105,33 @@ CMakeFiles/Server.dir/src/server/server.cpp.o.provides: CMakeFiles/Server.dir/sr
 CMakeFiles/Server.dir/src/server/server.cpp.o.provides.build: CMakeFiles/Server.dir/src/server/server.cpp.o
 
 
+CMakeFiles/Server.dir/src/server/Room.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/server/Room.cpp.o: ../src/server/Room.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/src/server/Room.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/server/Room.cpp.o -c /home/h/CLionProjects/Reversi/src/server/Room.cpp
+
+CMakeFiles/Server.dir/src/server/Room.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/server/Room.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/Room.cpp > CMakeFiles/Server.dir/src/server/Room.cpp.i
+
+CMakeFiles/Server.dir/src/server/Room.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/server/Room.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/Room.cpp -o CMakeFiles/Server.dir/src/server/Room.cpp.s
+
+CMakeFiles/Server.dir/src/server/Room.cpp.o.requires:
+
+.PHONY : CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
+
+CMakeFiles/Server.dir/src/server/Room.cpp.o.provides: CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.o.provides.build
+.PHONY : CMakeFiles/Server.dir/src/server/Room.cpp.o.provides
+
+CMakeFiles/Server.dir/src/server/Room.cpp.o.provides.build: CMakeFiles/Server.dir/src/server/Room.cpp.o
+
+
 CMakeFiles/Server.dir/src/server/Lobby.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/server/Lobby.cpp.o: ../src/server/Lobby.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/src/server/Lobby.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Server.dir/src/server/Lobby.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/server/Lobby.cpp.o -c /home/h/CLionProjects/Reversi/src/server/Lobby.cpp
 
 CMakeFiles/Server.dir/src/server/Lobby.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/Server.dir/src/server/Lobby.cpp.o.provides.build: CMakeFiles/Server.d
 
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/HandleGame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Server.dir/src/server/HandleGame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Server.dir/src/server/HandleGame.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/server/HandleGame.cpp.o -c /home/h/CLionProjects/Reversi/src/server/HandleGame.cpp
 
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.i: cmake_force
@@ -153,46 +177,22 @@ CMakeFiles/Server.dir/src/server/HandleGame.cpp.o.provides: CMakeFiles/Server.di
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o.provides.build: CMakeFiles/Server.dir/src/server/HandleGame.cpp.o
 
 
-CMakeFiles/Server.dir/src/server/Room.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/src/server/Room.cpp.o: ../src/server/Room.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Server.dir/src/server/Room.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/src/server/Room.cpp.o -c /home/h/CLionProjects/Reversi/src/server/Room.cpp
-
-CMakeFiles/Server.dir/src/server/Room.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/server/Room.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/server/Room.cpp > CMakeFiles/Server.dir/src/server/Room.cpp.i
-
-CMakeFiles/Server.dir/src/server/Room.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/server/Room.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/server/Room.cpp -o CMakeFiles/Server.dir/src/server/Room.cpp.s
-
-CMakeFiles/Server.dir/src/server/Room.cpp.o.requires:
-
-.PHONY : CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
-
-CMakeFiles/Server.dir/src/server/Room.cpp.o.provides: CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.o.provides.build
-.PHONY : CMakeFiles/Server.dir/src/server/Room.cpp.o.provides
-
-CMakeFiles/Server.dir/src/server/Room.cpp.o.provides.build: CMakeFiles/Server.dir/src/server/Room.cpp.o
-
-
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles/Server.dir/src/server/main.cpp.o" \
 "CMakeFiles/Server.dir/src/server/server.cpp.o" \
+"CMakeFiles/Server.dir/src/server/Room.cpp.o" \
 "CMakeFiles/Server.dir/src/server/Lobby.cpp.o" \
-"CMakeFiles/Server.dir/src/server/HandleGame.cpp.o" \
-"CMakeFiles/Server.dir/src/server/Room.cpp.o"
+"CMakeFiles/Server.dir/src/server/HandleGame.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
 Server: CMakeFiles/Server.dir/src/server/main.cpp.o
 Server: CMakeFiles/Server.dir/src/server/server.cpp.o
+Server: CMakeFiles/Server.dir/src/server/Room.cpp.o
 Server: CMakeFiles/Server.dir/src/server/Lobby.cpp.o
 Server: CMakeFiles/Server.dir/src/server/HandleGame.cpp.o
-Server: CMakeFiles/Server.dir/src/server/Room.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Server"
@@ -205,9 +205,9 @@ CMakeFiles/Server.dir/build: Server
 
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/main.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/server.cpp.o.requires
+CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/Lobby.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/HandleGame.cpp.o.requires
-CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/src/server/Room.cpp.o.requires
 
 .PHONY : CMakeFiles/Server.dir/requires
 

@@ -3,17 +3,12 @@
 
 #include <iostream>
 #include <vector>
-#include "../Room.h"
-#include "../Lobby.h"
-#include "../server.h"
-#include <map>
 
 using namespace std;
 
 class Command {
  public:
-  virtual void execute(map<string, Room *> &lobby, vector<string> &args, int clientSocket) = 0;
-  virtual ~Command;
+  virtual void execute(vector<string> &args, int clientSocket) = 0;
 };
 
 #endif //REVERSI_COMMAND_H

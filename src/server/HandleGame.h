@@ -7,20 +7,11 @@
 
 
 #include <string>
-
-typedef enum Status { Waiting, Active, Ended };
-
-typedef struct Room {
-  std::string name;
-  int firstClient;
-  int secondClient;
-  int threadID;
-  Status status_;
-} Room;
+#include "Room.h"
 
 class HandleGame {
 public:
-  static void play(Room *room);
+  static void* play(void *room);
 };
 
 

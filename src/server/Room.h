@@ -10,12 +10,12 @@
 
 using namespace std;
 
-typedef enum Status { Waiting, Active, Ended };
+typedef enum Status { Waiting, Active, Ended } Status;
 
 class Room {
 private:
   string name_;
-  int firstClient_ = 0, secondClient_ = 0, threadID_;
+  int firstClient_ , secondClient_ , threadID_;
   Status status_;
 
 public:

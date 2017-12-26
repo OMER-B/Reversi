@@ -34,4 +34,4 @@ add_executable(Client
 add_executable(Server
         src/server/main.cpp
         src/server/server.cpp
-        src/server/server.h src/server/Lobby.cpp src/server/Lobby.h src/server/HandleGame.h src/server/HandleGame.cpp src/server/Lobby.cpp src/server/Lobby.h src/server/Room.cpp src/server/Room.h)
+        src/server/server.h src/server/Room.cpp src/server/Room.h src/server/Lobby.cpp src/server/Lobby.h src/server/HandleGame.h src/server/HandleGame.cpp)

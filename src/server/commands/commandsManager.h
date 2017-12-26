@@ -2,19 +2,22 @@
 #define REVERSI_COMMANDSMANAGER_H
 
 #include <map>
-#include "../Lobby.h"
-#include "commandClose.h"
-#include "commandPrint.h"
+#include "command.h"
 #include "commandJoin.h"
 #include "commandStart.h"
+#include "commandClose.h"
+#include "commandPrint.h"
+#include "../HandleGame.h"
+#include "../Lobby.h"
+
 
 class CommandsManager {
  private:
-  map<string, Command *> commandsMap_;
+  map<string, Command * > commandsMap_;
  public:
-  CommandsManager();
+  CommandsManager(Lobby *lobby, HandleGame *handleGame);
 
-  void excecuteCommand(string command, vector<string> &args, int client, map<string, Room *> &lobby);
+  void executeCommand(string command, vector<string> &args, int client);
 
   ~CommandsManager();
 };

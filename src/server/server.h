@@ -3,22 +3,32 @@
 
 #include <string>
 #include <vector>
+#include "Lobby.h"
 #include "commands/command.h"
 #include "commands/commandsManager.h"
 #include "HandleGame.h"
 
+
+typedef struct FirstThreadArgs{
+
+}FirstThreadArgs;
+
+typedef struct SecondThreadArgs{
+  CommandsManager *manager;
+  int clientSocket;
+  pthread_t id;
+}SecondThreadArgs;
+
 using namespace std;
-class Lobby;
-//server, currClientSocket and threadNumber (who to close)
 
 class Server {
  private:
-
-  // Socket of the server.
-  int serverSocket_;
-
-  // Port for the server.
-  int port_;
+  Lobby * lobby_;
+  vector<pthread_t *> *threads_;
+  CommandsManager *manager_;
+  HandleGame *handleGame_;
+  int serverSocket_; // Socket of the server.
+  int port_; // Port for the server.
 
  public:
   // Constructor by port.
@@ -29,7 +39,7 @@ class Server {
 
   // in a new thread
   //send the class of game and class of Lobby
-  static void handleClient(Lobby *lobby, handleGame *handleGame ,int clientSocket);
+  static void* handleClient(void * args);
 
   // Destructor for the server.
   ~Server();
@@ -40,7 +50,7 @@ class Server {
   // close the server's socket.
   void stop();
 
-  static pair<string, vector<string>> seperate(string input);
+  static pair<string, vector<string> > seperate(string input);
 };
 
 #endif //REVERSI_SERVER_H

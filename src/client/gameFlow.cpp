@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "game.h"
+#include "gameFlow.h"
 #include "client.h"
 
 Game::Game() : players_(), numberOfPlayers_(), validTurns_(), currentPlayer_() {
