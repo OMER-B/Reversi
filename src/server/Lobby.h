@@ -10,10 +10,10 @@
 #include "Room.h"
 
 class Lobby {
-private:
+ private:
   map<string, Room *> *roomsMap_;
 
-public:
+ public:
   Lobby();
   ~Lobby();
   bool isEmpty();
@@ -21,10 +21,10 @@ public:
   void removeRoom(string name);
   vector<string> getListOfRooms();
   bool contains(string name);
-  Room* getRoom(string name);
+  Room *getRoom(string name);
 
-  Room* createRoom(string name);
+  Room *createRoom(string name);
+  map<string, Room *> *getMap();
 };
-
 
 #endif //REVERSI_LOBBY_H

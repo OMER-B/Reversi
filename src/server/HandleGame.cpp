@@ -14,8 +14,8 @@ void* HandleGame::play(void *room) {
   clients[0] = game->getFirstClient();
   clients[1] = game->getSecondClient();
 
-  int NUM0 = 0;
-  int NUM1 = 1;
+  char NUM0[2] = "0";
+  char NUM1[2] = "1";
 
   cout << "Notifying clients who is who." << endl;
 

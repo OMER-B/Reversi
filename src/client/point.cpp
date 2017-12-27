@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include <sstream>
 #include <cstring>
 #include "point.h"
@@ -42,9 +41,15 @@ bool Point::operator!=(const Point &point) const {
 }
 
 Point::Point(string point) {
-  unsigned long pos = point.find_first_of(',');
-  x_ = atoi(point.substr(0, pos).c_str());
-  y_ = atoi(point.substr(pos + 2).c_str());
+  unsigned long xIndex = point.find_first_not_of(" ");
+  unsigned long yIndex = point.find_last_not_of(" ");
+  x_ = point.at(xIndex) - 48;
+  y_ = point.at(yIndex) - 48;
+
+
+//  unsigned long pos = point.find_first_of(',');
+//  x_ = atoi(point.substr(0, pos).c_str());
+//  y_ = atoi(point.substr(pos + 2).c_str());
 }
 
 std::ostream &operator<<(std::ostream &out, Point const &point) {

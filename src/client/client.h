@@ -21,7 +21,7 @@ class Client : public Human {
   int clientSocket_;
 
   // Sets up the clients symbol and dummy.
-  int setUp();
+  void setUp(int index);
 
  public:
   // Constructor for the client.

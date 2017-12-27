@@ -34,7 +34,7 @@ void Game::setGameMode() {
       board_ = new Board(SIZE, SIZE, players_);
       break;
     case 3: {
-      char settings[] = "/home/h/CLionProjects/Reversi/src/client/client_config";
+      char settings[] = "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client_config";
       Client *client = new Client(settings);
       Dummy *dummy = new Dummy('D');
       client->setDummy_(dummy);
@@ -46,7 +46,7 @@ void Game::setGameMode() {
         exit(-1);
       }
       current = client->indexOfPlayer();
-      if(current == 0) {
+      if(current ==-1) {
         cout << "you did not start a game. see you next time";
         exit(0);
       }

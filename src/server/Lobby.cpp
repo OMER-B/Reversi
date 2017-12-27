@@ -19,6 +19,9 @@ bool Lobby::isEmpty() {
   return roomsMap_->empty();
 }
 
+map<string, Room *> *Lobby::getMap() {
+  return roomsMap_;
+}
 vector<string> Lobby::getListOfRooms() {
   vector<string> listOfRooms;
   for (map<string, Room *>::iterator it = roomsMap_->begin(); it != roomsMap_->end(); ++it) {
@@ -45,8 +48,8 @@ Room *Lobby::getRoom(string name) {
   return roomsMap_->at(name);
 }
 
-Room* Lobby::createRoom(string name) {
-  Room * room = new Room();
+Room *Lobby::createRoom(string name) {
+  Room *room = new Room();
   (*roomsMap_)[name] = room;
   return room;
 }

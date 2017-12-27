@@ -1,13 +1,9 @@
 #include "server.h"
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include <unistd.h>
 #include <string.h>
 #include <fstream>
 #include <arpa/inet.h>
 #include <sstream>
-#include <pthread.h>
-
 
 using namespace std;
 
@@ -35,7 +31,6 @@ Server::Server(char *fileName) {
   inFile.open(fileName);
   inFile >> port_;
   inFile.close();
-
 }
 
 void Server::start() {
@@ -127,16 +122,19 @@ void *handleClient(void *args) {
   if (n == -1) {
     throw "failed to receive read from client";
   }
+
   vector<string> stringArgs;
 
   pair<string, vector<string> > result;
   result = seperate(input);
-  
+
   string command = result.first;
   stringArgs = result.second;
-
-  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
-  //TODO: close thread here
+  if(manager->isLegalCommand(command, clientArgs->clientSocket)){
+    manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+  } else {
+    cout << "Illegal command" << endl;
+  }
 }
 
 std::pair<string, vector<string> > seperate(string input) {
@@ -153,13 +151,18 @@ std::pair<string, vector<string> > seperate(string input) {
 }
 
 Server::~Server() {
+  stop();
   delete threads_;
   delete lobby_;
   delete manager_;
   delete handleGame_;
-  stop();
 }
 
 void Server::stop() {
+  map<string, Room *> *mappa = lobby_->getMap();
+  for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end(); ++it) {
+    close((*it).second->getFirstClient());
+    close((*it).second->getSecondClient());
+  }
   close(serverSocket_);
 }

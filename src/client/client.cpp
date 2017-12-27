@@ -1,5 +1,4 @@
 #include <istream>
-#include <cstdlib>
 #include "client.h"
 #include "clientCommand.h"
 #include <sys/socket.h>
@@ -28,10 +27,10 @@
 using namespace std;
 
 Client::Client(char *serverIP, int serverPort)
-        : Human('R'),
-          serverIP_(serverIP),
-          serverPort_(serverPort),
-          clientSocket_(0) {
+    : Human('R'),
+      serverIP_(serverIP),
+      serverPort_(serverPort),
+      clientSocket_(0) {
   dummy_ = NULL;
 }
 
@@ -96,23 +95,25 @@ void Client::connectToServer() {
 int Client::indexOfPlayer() {
   ClientCommand clientCommand(clientSocket_);
   string command;
+  int index;
+  cin.ignore();
   do {
-    cout << "enter command" << endl;
+    cout << "Enter command" << endl;
     command = getCommand();
-    cout << "you entered: " << command << endl;
-    if(clientCommand.activate(command)){
-      return true;
+    cout << "You entered: " << command << endl;
+    index = clientCommand.activate(command);
+    if (index != -1) {
+      setUp(index);
+      return index;
     }
-  } while((strcmp(command.c_str(), "close")!=0) &&(strcmp(command.c_str(), "exit")!=0));
-   return 0;
+  } while ((strcmp(command.c_str(), "close") != 0) && (strcmp(command.c_str(), "exit") != 0));
+  return -1;
 }
 
 string Client::getCommand() {
   char command[BUFFER] = "";
-  cin.ignore();
   cin.clear();
   cin.getline(command, sizeof(command));
-  cout << "test get command: " << command << endl;
   return string(command);
 }
 
@@ -214,26 +215,16 @@ Point Client::getInput(Board &board, Logic &logic, Display &display) {
   return Point(moveX, moveY);
 }
 
-int Client::setUp() {
-  int turn;
-  char c = 'O';
-  ssize_t n = read(clientSocket_, &turn, sizeof(turn));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
+void Client::setUp(int index) {
+  char symbol[] = {'X', 'O'};
 
-  if (turn == 0) {
-    c = 'X';
-    dummy_->Dummy::setSymbol('O');
-  } else {
-    dummy_->Dummy::setSymbol('X');
-  }
+  dummy_->Dummy::setSymbol(symbol[1 - index]);
 
-  cout << "Game has started. You are: " << c << " (" << turn << ")" << endl;
+  Client::setSymbol(symbol[index]);
+
+  cout << "Game has started. You are: " << symbol[index] << " (" << index << ")" << endl;
   cout << "To end the game, send 0." << endl;
   cout << "To announce no more moves, send -1." << endl;
-  Client::setSymbol(c);
-  return turn;
 }
 
 Dummy *Client::getDummy() {

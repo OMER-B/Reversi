@@ -9,18 +9,24 @@ CommandPrint::CommandPrint(Lobby *lobby) {
 
 void CommandPrint::execute(vector<string> &args, int clientSocket) {
   char list[BUFFER];
-  if(lobby_->isEmpty()) {
+  string listOfRooms;
+  if (lobby_->isEmpty()) {
     strcpy(list, "There are no games yet.\n");
   } else {
     vector<string> games = lobby_->getListOfRooms();
+    for (int i = 0; i < games.size(); i++) {
+      listOfRooms += games[i] + ", ";
+    }
+    listOfRooms += "\n";
+    strcpy(list, listOfRooms.c_str());
     //TODO turn this into one string and send
   }
-  cout << "Sending list of games to socket: " << clientSocket << test << endl;
+  cout << "Sending to socket " << clientSocket << " list of rooms: " << listOfRooms << endl;
   ssize_t n = write(clientSocket, &list, sizeof(list));
-  if(n == -1) {
+  if (n == -1) {
     throw "Error sending list of games";
   }
-  if(n==0) {
+  if (n == 0) {
     throw "could not send list of games";
   }
 }

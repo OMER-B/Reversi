@@ -11,12 +11,10 @@ void CommandJoin::execute(vector<string> &args, int clientSocket) {
     room = lobby_->getRoom(name);
     room->setSecondClient(clientSocket);
     room->setStatus(Active);
+    char success[] = "Successfully joined\n";
+    ssize_t n = write(clientSocket, &success, sizeof(success));
     if (room->getFirstClient() != 0 && room->getSecondClient() != 0) {
       thread_t id;
-
-      char msg[] = "good";
-      ssize_t n = write(room->getFirstClient(), &msg, sizeof(msg));
-      n = write(room->getSecondClient(), &msg, sizeof(msg));
       pthread_create(&id, NULL, handleGame_->play, room);
       //TODO delete here the thread after opening it
     }
@@ -24,6 +22,10 @@ void CommandJoin::execute(vector<string> &args, int clientSocket) {
          << ", " << lobby_->getRoom(name)->getSecondClient() << ", status: " << lobby_->getRoom(name)->getStatus()
          << endl;
   } else {
+    char invalid[] = "Room does not exist.\n";
+    ssize_t n = write(clientSocket, &invalid, sizeof(invalid));
+    char negative[] = "-1";
+    n = write(clientSocket, &negative, sizeof(negative));
     cout << "Socket " << clientSocket << " asked to join a room which does not exist." << endl;
   }
   //TODO add mutex

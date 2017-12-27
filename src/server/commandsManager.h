@@ -17,6 +17,7 @@ class CommandsManager {
  public:
   CommandsManager(Lobby *lobby, HandleGame *handleGame);
 
+  bool isLegalCommand(string command, int client);
   void executeCommand(string command, vector<string> &args, int client);
 
   ~CommandsManager();

@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "commandsManager.h"
 
 CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
@@ -18,3 +19,13 @@ void CommandsManager::executeCommand(string command, vector<string> &args, int c
   cout << "Received command: " << command << " from socket: " << client << endl;
   commandsMap_[command]->execute(args, client);
 }
+bool CommandsManager::isLegalCommand(string command, int client) {
+  if (commandsMap_.find(command) == commandsMap_.end()) {
+    cout << "Unrecognized command received: " << command << endl;
+    char invalid[20] = "Invalid command!";
+    ssize_t n = write(client, &invalid, sizeof(invalid));
+    return false;
+  }
+  return true;
+}
+
