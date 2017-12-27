@@ -18,6 +18,7 @@ private:
 
 public:
 
+  Room();
   const string &getName() const;
 
   void setName(const string &name_);

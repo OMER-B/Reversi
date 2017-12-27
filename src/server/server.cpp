@@ -127,14 +127,15 @@ void *handleClient(void *args) {
   if (n == -1) {
     throw "failed to receive read from client";
   }
-  cout << "handleClient" << endl;
-  cout << input << endl;
-//  string command;
-//  vector<string> stringArgs;
-//  command = seperate(input).first;
-//  stringArgs = seperate(input).second;
-//
-//  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+  vector<string> stringArgs;
+
+  pair<string, vector<string> > result;
+  result = seperate(input);
+  
+  string command = result.first;
+  stringArgs = result.second;
+
+  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
   //TODO: close thread here
 }
 

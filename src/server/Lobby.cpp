@@ -9,6 +9,9 @@ Lobby::Lobby() {
 }
 
 Lobby::~Lobby() {
+  for (map<string, Room *>::iterator it = roomsMap_->begin(); it != roomsMap_->end(); ++it) {
+    delete &it;
+  }
   delete roomsMap_;
 }
 
@@ -29,8 +32,9 @@ void Lobby::removeRoom(string name) {
 }
 
 void Lobby::addRoom(Room &room) {
+
   string name = room.getName();
-  roomsMap_->at(name) = &room;
+  (*roomsMap_)[name] = &room;
 }
 
 Room *Lobby::getRoom(string name) {
@@ -39,6 +43,6 @@ Room *Lobby::getRoom(string name) {
 
 Room* Lobby::createRoom(string name) {
   Room * room = new Room();
-  roomsMap_->at(name) = room;
+  (*roomsMap_)[name] = room;
   return room;
 }

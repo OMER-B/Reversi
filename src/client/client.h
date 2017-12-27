@@ -40,6 +40,8 @@ class Client : public Human {
 
   string  getCommand();
 
+  void getFeedback();
+
   // Makes the move based on players input.
   int makeMove(Board &board, Logic &logic, Display &display);
 

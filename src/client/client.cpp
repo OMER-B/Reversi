@@ -90,10 +90,17 @@ string Client::getCommand() {
   if (n == -1) {
     throw "failed to write to server";
   }
-  cout << "command: " << command << endl;
+  getFeedback();
 }
 
-
+void Client::getFeedback() {
+  char feedback[BUFFER];
+  ssize_t n = read(clientSocket_, &feedback, sizeof(feedback));
+  if (n == -1) {
+    throw "Error reading enemy point from socket";
+  }
+  cout << feedback;
+}
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
   char move[BUFFER] = "";

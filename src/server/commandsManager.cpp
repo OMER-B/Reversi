@@ -15,5 +15,7 @@ CommandsManager::~CommandsManager() {
 }
 
 void CommandsManager::executeCommand(string command, vector<string> &args, int client) {
+  cout << "command:" << command << endl;
   commandsMap_[command]->execute(args, client);
+  cout << "end" << endl;
 }

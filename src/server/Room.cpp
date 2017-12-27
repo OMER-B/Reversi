@@ -40,3 +40,11 @@ Status Room::getStatus() const {
 void Room::setStatus(Status status) {
   status_ = status;
 }
+
+Room::Room() {
+  status_ = Ended;
+  threadID_ = 0;
+  secondClient_ = 0;
+  firstClient_ = 0;
+  name_ = "";
+}
