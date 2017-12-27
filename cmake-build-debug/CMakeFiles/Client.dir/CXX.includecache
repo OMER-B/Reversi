@@ -35,6 +35,8 @@ cstdlib
 -
 client.h
 /home/h/CLionProjects/Reversi/src/client/client.h
+clientCommand.h
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
 sys/socket.h
 -
 netinet/in.h
@@ -63,6 +65,20 @@ human.h
 /home/h/CLionProjects/Reversi/src/client/human.h
 dummy.h
 /home/h/CLionProjects/Reversi/src/client/dummy.h
+
+/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp
+cstring
+-
+unistd.h
+-
+iostream
+-
+clientCommand.h
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
+
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
+string
+-
 
 /home/h/CLionProjects/Reversi/src/client/computer.cpp
 computer.h

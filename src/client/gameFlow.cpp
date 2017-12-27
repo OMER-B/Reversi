@@ -15,6 +15,9 @@ Game::~Game() {
 }
 
 void Game::setGameMode() {
+
+  //TODO move all this to main!!!!
+
   int gameMode;
   cout << "Choose a game mode: " << endl << "1) Player vs Player" << endl
        << "2) Player vs Computer" << endl << "3) Remote player" << endl
@@ -35,18 +38,24 @@ void Game::setGameMode() {
       Client *client = new Client(settings);
       Dummy *dummy = new Dummy('D');
       client->setDummy_(dummy);
+      int current;
       try {
-        int current = client->connectToServer();
-        players_[current] = client;
-        players_[1 - current] = dummy;
-        board_ = new Board(SIZE, SIZE, players_);
-        display_->printBoard(board_);
-        if (current == 1) {
-          client->getRemoteEnemyMovement();
-        }
+        client->connectToServer();
       } catch (const char *msg) {
         cout << "Failed to connect to server. Reason: " << msg << endl;
         exit(-1);
+      }
+      current = client->indexOfPlayer();
+      if(current == 0) {
+        cout << "you did not start a game. see you next time";
+        exit(0);
+      }
+      players_[current] = client;
+      players_[1 - current] = dummy;
+      board_ = new Board(SIZE, SIZE, players_);
+      display_->printBoard(board_);
+      if (current == 1) {
+        client->getRemoteEnemyMovement();
       }
       break;
     }

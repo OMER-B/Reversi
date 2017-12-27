@@ -18,6 +18,7 @@ CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/board.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/cell.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/client.cpp
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/client.h
+CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/clientCommand.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/computer.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/display.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/dummy.h
@@ -25,6 +26,9 @@ CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/human.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/logic.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/player.h
 CMakeFiles/Client.dir/src/client/client.cpp.o: ../src/client/point.h
+
+CMakeFiles/Client.dir/src/client/clientCommand.cpp.o: ../src/client/clientCommand.cpp
+CMakeFiles/Client.dir/src/client/clientCommand.cpp.o: ../src/client/clientCommand.h
 
 CMakeFiles/Client.dir/src/client/computer.cpp.o: ../src/client/board.h
 CMakeFiles/Client.dir/src/client/computer.cpp.o: ../src/client/cell.h

@@ -30,7 +30,7 @@ add_executable(Client
         src/client/point.cpp
         src/client/point.h
         src/client/regLogic.cpp
-        src/client/regLogic.h)
+        src/client/regLogic.h src/client/clientCommand.cpp src/client/clientCommand.h)
 
 add_executable(Server
         src/server/main.cpp

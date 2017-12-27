@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/h/CLionProjects/Reversi/src/client/board.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/board.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/cell.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/cell.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/client.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/client.cpp.o"
+  "/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/clientCommand.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/computer.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/computer.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/consoleDisplay.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/dummy.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/dummy.cpp.o"

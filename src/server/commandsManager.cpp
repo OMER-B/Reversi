@@ -1,7 +1,7 @@
 #include "commandsManager.h"
 
 CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
-  commandsMap_["print"] = new CommandPrint(lobby);
+  commandsMap_["list_games"] = new CommandPrint(lobby);
   commandsMap_["close"] = new CommandClose(lobby);
   commandsMap_["start"] = new CommandStart(lobby);
   commandsMap_["join"] = new CommandJoin(lobby, handleGame);

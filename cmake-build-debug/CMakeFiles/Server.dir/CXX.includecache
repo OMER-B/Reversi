@@ -95,6 +95,8 @@ vector
 /home/h/CLionProjects/Reversi/src/server/commandPrint.cpp
 unistd.h
 -
+cstring
+-
 commandPrint.h
 /home/h/CLionProjects/Reversi/src/server/commandPrint.h
 

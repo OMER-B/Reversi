@@ -1,6 +1,7 @@
 #include <istream>
 #include <cstdlib>
 #include "client.h"
+#include "clientCommand.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -11,6 +12,18 @@
 #include <fstream>
 
 #define BUFFER 128
+
+/**
+ * 1. connect to server, here
+ * 2. send a command, here
+ * 3. a class to handle the command:
+ *      a. if he wants the list of games: read from socket
+ *      b. if he wants to start a new game: wait for someone to join
+ *      c. if he wants to join a game: go to set up and run from gameflow
+ * 4. return here in a loop, until "close"
+ *
+ */
+
 
 using namespace std;
 
@@ -40,7 +53,7 @@ Client::~Client() {
   close(clientSocket_);
 }
 
-int Client::connectToServer() {
+void Client::connectToServer() {
   // Create a socket point
   clientSocket_ = socket(AF_INET, SOCK_STREAM, 0);
   if (clientSocket_ == -1) {
@@ -77,8 +90,21 @@ int Client::connectToServer() {
     throw "Error connecting to server";
   }
   cout << "Connected to server. IP: " << serverIP_ << ", Port: " << serverPort_
-       << "." << endl << "Waiting for second player." << endl;
-  getCommand();
+       << "." << endl;
+}
+
+int Client::indexOfPlayer() {
+  ClientCommand clientCommand(clientSocket_);
+  string command;
+  do {
+    cout << "enter command" << endl;
+    command = getCommand();
+    cout << "you entered: " << command << endl;
+    if(clientCommand.activate(command)){
+      return true;
+    }
+  } while((strcmp(command.c_str(), "close")!=0) &&(strcmp(command.c_str(), "exit")!=0));
+   return 0;
 }
 
 string Client::getCommand() {
@@ -86,20 +112,8 @@ string Client::getCommand() {
   cin.ignore();
   cin.clear();
   cin.getline(command, sizeof(command));
-  ssize_t n = write(clientSocket_, &command, sizeof(command));
-  if (n == -1) {
-    throw "failed to write to server";
-  }
-  getFeedback();
-}
-
-void Client::getFeedback() {
-  char feedback[BUFFER];
-  ssize_t n = read(clientSocket_, &feedback, sizeof(feedback));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
-  cout << feedback;
+  cout << "test get command: " << command << endl;
+  return string(command);
 }
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {

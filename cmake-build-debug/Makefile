@@ -217,6 +217,33 @@ src/client/client.cpp.s:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/client.cpp.s
 .PHONY : src/client/client.cpp.s
 
+src/client/clientCommand.o: src/client/clientCommand.cpp.o
+
+.PHONY : src/client/clientCommand.o
+
+# target to build an object file
+src/client/clientCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/clientCommand.cpp.o
+.PHONY : src/client/clientCommand.cpp.o
+
+src/client/clientCommand.i: src/client/clientCommand.cpp.i
+
+.PHONY : src/client/clientCommand.i
+
+# target to preprocess a source file
+src/client/clientCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/clientCommand.cpp.i
+.PHONY : src/client/clientCommand.cpp.i
+
+src/client/clientCommand.s: src/client/clientCommand.cpp.s
+
+.PHONY : src/client/clientCommand.s
+
+# target to generate assembly for a file
+src/client/clientCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/client/clientCommand.cpp.s
+.PHONY : src/client/clientCommand.cpp.s
+
 src/client/computer.o: src/client/computer.cpp.o
 
 .PHONY : src/client/computer.o
@@ -803,6 +830,9 @@ help:
 	@echo "... src/client/client.o"
 	@echo "... src/client/client.i"
 	@echo "... src/client/client.s"
+	@echo "... src/client/clientCommand.o"
+	@echo "... src/client/clientCommand.i"
+	@echo "... src/client/clientCommand.s"
 	@echo "... src/client/computer.o"
 	@echo "... src/client/computer.i"
 	@echo "... src/client/computer.s"

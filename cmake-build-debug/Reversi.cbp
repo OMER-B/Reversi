@@ -148,6 +148,12 @@
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/client.h">
 			<Option target="Client"/>
 		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/clientCommand.h">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/computer.cpp">
 			<Option target="Client"/>
 		</Unit>

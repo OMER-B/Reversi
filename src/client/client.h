@@ -36,11 +36,11 @@ class Client : public Human {
   void setDummy_(Dummy *dummy_);
 
   // Establishes a connection with the server.
-  int connectToServer();
+  void connectToServer();
 
-  string  getCommand();
+  int indexOfPlayer();
 
-  void getFeedback();
+  string getCommand();
 
   // Makes the move based on players input.
   int makeMove(Board &board, Logic &logic, Display &display);

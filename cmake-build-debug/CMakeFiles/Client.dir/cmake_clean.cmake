@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Client.dir/src/client/player.cpp.o"
   "CMakeFiles/Client.dir/src/client/point.cpp.o"
   "CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
+  "CMakeFiles/Client.dir/src/client/clientCommand.cpp.o"
   "Client.pdb"
   "Client"
 )

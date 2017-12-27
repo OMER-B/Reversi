@@ -19,6 +19,7 @@ CMakeFiles/Client.dir/src/client/client.cpp.o
  /home/h/CLionProjects/Reversi/src/client/cell.h
  /home/h/CLionProjects/Reversi/src/client/client.cpp
  /home/h/CLionProjects/Reversi/src/client/client.h
+ /home/h/CLionProjects/Reversi/src/client/clientCommand.h
  /home/h/CLionProjects/Reversi/src/client/computer.h
  /home/h/CLionProjects/Reversi/src/client/display.h
  /home/h/CLionProjects/Reversi/src/client/dummy.h
@@ -26,6 +27,9 @@ CMakeFiles/Client.dir/src/client/client.cpp.o
  /home/h/CLionProjects/Reversi/src/client/logic.h
  /home/h/CLionProjects/Reversi/src/client/player.h
  /home/h/CLionProjects/Reversi/src/client/point.h
+CMakeFiles/Client.dir/src/client/clientCommand.cpp.o
+ /home/h/CLionProjects/Reversi/src/client/clientCommand.cpp
+ /home/h/CLionProjects/Reversi/src/client/clientCommand.h
 CMakeFiles/Client.dir/src/client/computer.cpp.o
  /home/h/CLionProjects/Reversi/src/client/board.h
  /home/h/CLionProjects/Reversi/src/client/cell.h
