@@ -15,6 +15,10 @@ Lobby::~Lobby() {
   delete roomsMap_;
 }
 
+bool Lobby::isEmpty() {
+  return roomsMap_->empty();
+}
+
 vector<string> Lobby::getListOfRooms() {
   vector<string> listOfRooms;
   for (map<string, Room *>::iterator it = roomsMap_->begin(); it != roomsMap_->end(); ++it) {

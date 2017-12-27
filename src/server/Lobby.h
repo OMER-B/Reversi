@@ -16,6 +16,7 @@ private:
 public:
   Lobby();
   ~Lobby();
+  bool isEmpty();
   void addRoom(Room &room);
   void removeRoom(string name);
   vector<string> getListOfRooms();

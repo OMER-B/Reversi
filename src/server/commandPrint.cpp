@@ -8,10 +8,15 @@ CommandPrint::CommandPrint(Lobby *lobby) {
 }
 
 void CommandPrint::execute(vector<string> &args, int clientSocket) {
-  char test[BUFFER];
-  strcpy(test, "testing");
+  char list[BUFFER];
+  if(lobby_->isEmpty()) {
+    strcpy(list, "There are no games yet.\n");
+  } else {
+    vector<string> games = lobby_->getListOfRooms();
+    //TODO turn this into one string and send
+  }
   cout << "Sending list of games to socket: " << clientSocket << test << endl;
-  ssize_t n = write(clientSocket, &test, sizeof(test));
+  ssize_t n = write(clientSocket, &list, sizeof(list));
   if(n == -1) {
     throw "Error sending list of games";
   }
