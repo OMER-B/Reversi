@@ -7,5 +7,5 @@ CommandPrint::CommandPrint(Lobby *lobby) {
 void CommandPrint::execute(vector<string> &args, int clientSocket) {
   string listOfGames;
   cout << "Sending list of games to socket: " << clientSocket << endl;
-  //ssize_t n = write(clientSocket, &listOfGames, listOfGames.size());
+  ssize_t n = write(clientSocket, &listOfGames, listOfGames.size());
 }

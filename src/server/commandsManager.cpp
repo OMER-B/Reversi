@@ -15,7 +15,6 @@ CommandsManager::~CommandsManager() {
 }
 
 void CommandsManager::executeCommand(string command, vector<string> &args, int client) {
-  cout << "command:" << command << endl;
+  cout << "Received command: " << command << " from socket: " << client << endl;
   commandsMap_[command]->execute(args, client);
-  cout << "end" << endl;
 }

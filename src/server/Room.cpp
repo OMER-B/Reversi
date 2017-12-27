@@ -5,8 +5,8 @@ const string &Room::getName() const {
   return name_;
 }
 
-void Room::setName(const string &name) {
-  name_ = name_;
+void Room::setName(const string name) {
+  name_ = name;
 }
 
 int Room::getFirstClient() const {
@@ -40,6 +40,8 @@ Status Room::getStatus() const {
 void Room::setStatus(Status status) {
   status_ = status;
 }
+
+
 
 Room::Room() {
   status_ = Ended;

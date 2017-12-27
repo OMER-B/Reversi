@@ -21,19 +21,19 @@ public:
   Room();
   const string &getName() const;
 
-  void setName(const string &name_);
+  void setName(const string name);
 
   int getFirstClient() const;
 
-  void setFirstClient(int firstClient_);
+  void setFirstClient(int firstClient);
 
   int getSecondClient() const;
 
-  void setSecondClient(int secondClient_);
+  void setSecondClient(int secondClient);
 
   int getThreadID() const;
 
-  void setThreadID(int threadID_);
+  void setThreadID(int threadID);
 
   Status getStatus() const;
 
