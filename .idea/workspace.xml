@@ -13,60 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63762f6c-5e37-42d8-b4d8-33d4000ea384" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/15" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/20" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/client_exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/server_exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/settings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/command.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandClose.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandClose.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandJoin.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandJoin.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandPrint.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandPrint.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandStart.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandStart.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandsManager.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/commands/commandsManager.h" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/client/client.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/client/client.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandClose.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandJoin.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandPrint.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandStart.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/src/server/commands/commandsManager.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/client" afterPath="$PROJECT_DIR$/exe/client" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/src/server/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/src/server/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/src/server/server.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/src/server/server.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Server" afterPath="$PROJECT_DIR$/cmake-build-debug/Server" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/server" afterPath="$PROJECT_DIR$/exe/server" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Reversi.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Reversi.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/client.cpp" afterPath="$PROJECT_DIR$/src/client/client.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/client.h" afterPath="$PROJECT_DIR$/src/client/client.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/HandleGame.cpp" afterPath="$PROJECT_DIR$/src/server/HandleGame.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Lobby.cpp" afterPath="$PROJECT_DIR$/src/server/Lobby.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Lobby.h" afterPath="$PROJECT_DIR$/src/server/Lobby.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Room.cpp" afterPath="$PROJECT_DIR$/src/server/Room.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/Room.h" afterPath="$PROJECT_DIR$/src/server/Room.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/makefile" afterPath="$PROJECT_DIR$/src/server/makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/gameFlow.cpp" afterPath="$PROJECT_DIR$/src/client/gameFlow.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/main.cpp" afterPath="$PROJECT_DIR$/src/server/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/server.cpp" afterPath="$PROJECT_DIR$/src/server/server.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/server.h" afterPath="$PROJECT_DIR$/src/server/server.h" />
     </list>
@@ -83,32 +38,8 @@
       <file leaf-file-name="server.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/server.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commandJoin.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/commandJoin.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/client.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            <state relative-caret-position="251">
+              <caret line="116" column="18" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -117,8 +48,8 @@
       <file leaf-file-name="client.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/client.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="84" column="2" lean-forward="false" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+            <state relative-caret-position="-2367">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -126,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandleGame.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/HandleGame.cpp">
+      <file leaf-file-name="gameFlow.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/gameFlow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="262">
+              <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -157,7 +88,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/tests/lib/googletest-master/googlemock/src/gmock-all.cc" />
-        <option value="$PROJECT_DIR$/src/server/main.cpp" />
         <option value="$PROJECT_DIR$/src/client/player.cpp" />
         <option value="$PROJECT_DIR$/src/client/player.h" />
         <option value="$PROJECT_DIR$/src/client/display.h" />
@@ -169,7 +99,6 @@
         <option value="$PROJECT_DIR$/src/server/commands/commandPlay.cpp" />
         <option value="$PROJECT_DIR$/src/server/commands/commandPlay.h" />
         <option value="$PROJECT_DIR$/src/server/commands/commandPrint.cpp" />
-        <option value="$PROJECT_DIR$/src/client/gameFlow.cpp" />
         <option value="$PROJECT_DIR$/src/client/main.cpp" />
         <option value="$PROJECT_DIR$/src/server/commands/command.h" />
         <option value="$PROJECT_DIR$/src/server/commands/commandClose.h" />
@@ -187,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/server/commands/commandJoin.cpp" />
         <option value="$PROJECT_DIR$/src/server/HandleGame.cpp" />
         <option value="$PROJECT_DIR$/src/server/HandleGame.h" />
-        <option value="$PROJECT_DIR$/src/server/server.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/server/commandClose.h" />
         <option value="$PROJECT_DIR$/src/server/commandJoin.h" />
@@ -195,8 +123,11 @@
         <option value="$PROJECT_DIR$/src/server/commandsManager.h" />
         <option value="$PROJECT_DIR$/src/server/commandStart.h" />
         <option value="$PROJECT_DIR$/src/server/commandJoin.cpp" />
-        <option value="$PROJECT_DIR$/src/server/server.cpp" />
         <option value="$PROJECT_DIR$/src/client/client.h" />
+        <option value="$PROJECT_DIR$/src/server/server.h" />
+        <option value="$PROJECT_DIR$/src/server/main.cpp" />
+        <option value="$PROJECT_DIR$/src/server/server.cpp" />
+        <option value="$PROJECT_DIR$/src/client/gameFlow.cpp" />
         <option value="$PROJECT_DIR$/src/client/client.cpp" />
       </list>
     </option>
@@ -274,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
@@ -310,11 +241,13 @@
       <workItem from="1514289886673" duration="21000" />
       <workItem from="1514289909176" duration="18579000" />
       <workItem from="1514312013642" duration="2572000" />
+      <workItem from="1514318049158" duration="1642000" />
+      <workItem from="1514324645648" duration="7700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52069000" />
+    <option name="totallyTimeSpent" value="61411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-5" width="1922" height="1018" extended-state="6" />
@@ -325,11 +258,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.024444444" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.022222223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45555556" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26444444" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -349,7 +282,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -358,17 +291,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/commands/commandPlay.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/server/commands/commandPlay.h" />
-    <entry file="file://$PROJECT_DIR$/src/client/gameManager.h" />
-    <entry file="file://$PROJECT_DIR$/src/client/gameManager.cpp" />
     <entry file="file://$PROJECT_DIR$/src/client/game.cpp" />
     <entry file="file://$PROJECT_DIR$/src/server/HandleGame.cpp" />
     <entry file="file://$PROJECT_DIR$/src/server/HandleGame.h" />
@@ -405,14 +327,6 @@
     <entry file="file://$PROJECT_DIR$/src/server/commands/command.h" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandClose.h" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandPrint.h" />
-    <entry file="file://$PROJECT_DIR$/src/server/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandPrint.cpp" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandStart.h" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandJoin.h" />
@@ -435,14 +349,6 @@
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandsManager.cpp" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandClose.cpp" />
     <entry file="file://$PROJECT_DIR$/src/server/commands/commandJoin.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/server/server.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/Lobby.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -528,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/gameFlow.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -543,49 +442,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/settings" />
-    <entry file="file://$PROJECT_DIR$/src/client/client_config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/gameFlow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/HandleGame.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/commandJoin.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -594,10 +450,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/commandJoin.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/HandleGame.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/move.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/alloc_traits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="550" column="0" lean-forward="false" selection-start-line="550" selection-start-column="0" selection-end-line="550" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1428" column="0" lean-forward="false" selection-start-line="1428" selection-start-column="0" selection-end-line="1428" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/client_config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#51#74#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="116" column="18" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/gameFlow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/client.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="84" column="2" lean-forward="false" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+        <state relative-caret-position="-2367">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

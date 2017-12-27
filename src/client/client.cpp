@@ -1,3 +1,4 @@
+#include <istream>
 #include <cstdlib>
 #include "client.h"
 #include <sys/socket.h>
@@ -9,15 +10,15 @@
 #include <limits>
 #include <fstream>
 
-#define BUFFER 10
+#define BUFFER 128
 
 using namespace std;
 
 Client::Client(char *serverIP, int serverPort)
-    : Human('R'),
-      serverIP_(serverIP),
-      serverPort_(serverPort),
-      clientSocket_(0) {
+        : Human('R'),
+          serverIP_(serverIP),
+          serverPort_(serverPort),
+          clientSocket_(0) {
   dummy_ = NULL;
 }
 
@@ -77,13 +78,21 @@ int Client::connectToServer() {
   }
   cout << "Connected to server. IP: " << serverIP_ << ", Port: " << serverPort_
        << "." << endl << "Waiting for second player." << endl;
-  //TODO delete set up and recieve here a command
-  return setUp();
+  getCommand();
 }
 
 string Client::getCommand() {
-  
+  char command[BUFFER] = "";
+  cin.ignore();
+  cin.clear();
+  cin.getline(command, sizeof(command));
+  ssize_t n = write(clientSocket_, &command, sizeof(command));
+  if (n == -1) {
+    throw "failed to write to server";
+  }
+  cout << "command: " << command << endl;
 }
+
 
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
@@ -100,7 +109,7 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
     strcpy(move, "-1 -1");
     n = write(clientSocket_, &move, sizeof(move));
     int enemyStatus = getRemoteEnemyMovement();
-    if ((enemyStatus == 1 )||(enemyStatus == 2 ) ) {
+    if ((enemyStatus == 1) || (enemyStatus == 2)) {
       cout << endl << "Both players don't have any moves." << endl;
       return 2;
     }

@@ -6,23 +6,27 @@
 #include <fstream>
 #include <arpa/inet.h>
 #include <sstream>
-#include <thread>
+#include <pthread.h>
 
-#define BUFFER 256
-#define MAX_CONNECTED_CLIENTS 5
 
 using namespace std;
+
+static void *acceptClients(void *args);
+
+static void *handleClient(void *args);
+
+static pair<string, vector<string> > seperate(string input);
 
 Server::Server(int port) : serverSocket_(0) {
   port_ = port;
   lobby_ = new Lobby;
-  threads_ = new vector<pthread_t*>;
+  threads_ = new vector<pthread_t *>;
   handleGame_ = new HandleGame;
   manager_ = new CommandsManager(lobby_, handleGame_);
 }
 
 Server::Server(char *fileName) {
-  threads_ = new vector<pthread_t*>;
+  threads_ = new vector<pthread_t *>;
   lobby_ = new Lobby;
   handleGame_ = new HandleGame;
   manager_ = new CommandsManager(lobby_, handleGame_);
@@ -54,53 +58,87 @@ void Server::start() {
   }
   cout << "Binding succeeded." << endl;
   // Start listening to incoming connections
-  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
-  // Define the client socket's structures
+//  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
+//  // Define the client socket's structures
+//  struct sockaddr_in clientAddress[MAX_CONNECTED_CLIENTS];
+//  socklen_t clientAddressLen[MAX_CONNECTED_CLIENTS];
+
+
+  FirstThreadArgs args1;
+  args1.serverSocket = serverSocket_;
+  args1.manager = manager_;
+  args1.threads = threads_;
+
+  pthread_t id;
+  threads_->push_back(&id);
+  pthread_create(&id, nullptr, acceptClients, (void *) &args1);
+
+  string exit;
+  cin >> exit;
+  if (strcmp(exit.c_str(), "exit")) {
+    for (vector<pthread_t *>::iterator it = threads_->begin();
+         it != threads_->end(); ++it) {
+      pthread_exit(*it);
+    }
+  }
+
+}
+
+void *acceptClients(void *args) {
+
+  FirstThreadArgs *args1 = (FirstThreadArgs *) args;
+  int serverSocket = args1->serverSocket;
+
+  vector<pthread_t *> *threads = args1->threads;
+  CommandsManager *manager = args1->manager;
+
+  listen(serverSocket, MAX_CONNECTED_CLIENTS);
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
 
-  //thread main process with (if == exit) ((FOR SERVER)))
-  //TODO create here new thread, that gets all the server parameters in "first thread args"
-
   while (true) {
     // Accept a new clients connections.
-    int clientSocket = accept(serverSocket_,
-                                   (struct sockaddr *) &clientAddress,
-                                   &clientAddressLen);
+    int clientSocket = accept(serverSocket,
+                              (struct sockaddr *) &clientAddress,
+                              &clientAddressLen);
     cout << "First client connected" << endl;
     if (clientSocket == -1) {
       throw "Error on first client accept";
     }
     SecondThreadArgs args;
     args.clientSocket = clientSocket;
-    args.manager = manager_;
+    args.manager = manager;
     pthread_t id;
-    threads_->push_back(&id);
+    threads->push_back(&id);
     pthread_create(&id, NULL, handleClient, &args);
   }
 }
 
-static void* handleClient(void * args) {
-  SecondThreadArgs *clientArgs = (SecondThreadArgs*)args;
+void *handleClient(void *args) {
+  SecondThreadArgs *clientArgs = (SecondThreadArgs *) args;
   CommandsManager *manager = clientArgs->manager;
 
   char input[BUFFER];
   memset(input, 0, sizeof(input));
 
-  cout << "connected to client: " <<clientArgs->clientSocket << endl;
+  cout << "connected to client: " << clientArgs->clientSocket << endl;
 
   ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
-
-  string command;
-  vector<string> stringArgs;
-  command = seperate(input).first;
-  stringArgs = seperate(input).second;
-
-  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+  if (n == -1) {
+    throw "failed to receive read from client";
+  }
+  cout << "handleClient" << endl;
+  cout << input << endl;
+//  string command;
+//  vector<string> stringArgs;
+//  command = seperate(input).first;
+//  stringArgs = seperate(input).second;
+//
+//  manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
   //TODO: close thread here
 }
 
-static std::pair<string, vector<string> > seperate(string input) {
+std::pair<string, vector<string> > seperate(string input) {
   stringstream stream(input);
   string command;
   string buffer;

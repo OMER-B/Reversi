@@ -3,7 +3,7 @@
 #include <stdlib.h>
 using namespace std;
 int main() {
-  char settings[] = "server_config";
+  char settings[] = "/home/h/CLionProjects/Reversi/src/server/settings";
   Server server(settings);
   try {
     server.start();

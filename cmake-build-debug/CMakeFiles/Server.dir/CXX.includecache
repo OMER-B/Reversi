@@ -171,13 +171,19 @@ arpa/inet.h
 -
 sstream
 -
-thread
+pthread.h
 -
 
 /home/h/CLionProjects/Reversi/src/server/server.h
+sys/socket.h
+-
+pthread.h
+-
 string
 -
 vector
+-
+netinet/in.h
 -
 Lobby.h
 /home/h/CLionProjects/Reversi/src/server/Lobby.h

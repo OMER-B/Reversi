@@ -1,19 +1,26 @@
 #ifndef REVERSI_SERVER_H
 #define REVERSI_SERVER_H
 
+#include <sys/socket.h>
+#include <pthread.h>
 #include <string>
 #include <vector>
+#include <netinet/in.h>
 #include "Lobby.h"
 #include "command.h"
 #include "commandsManager.h"
 #include "HandleGame.h"
 
+#define BUFFER 256
+#define MAX_CONNECTED_CLIENTS 10
 
-typedef struct FirstThreadArgs{
-
+typedef struct firstThreadArgs{
+  int serverSocket;
+  CommandsManager *manager;
+  vector<pthread_t *> *threads;
 }FirstThreadArgs;
 
-typedef struct SecondThreadArgs{
+typedef struct secondThreadArgs{
   CommandsManager *manager;
   int clientSocket;
   pthread_t id;
@@ -49,11 +56,5 @@ class Server {
 
 };
 
-
-// in a new thread
-//send the class of game and class of Lobby
-static void* handleClient(void * args);
-
-static pair<string, vector<string> > seperate(string input);
 
 #endif //REVERSI_SERVER_H

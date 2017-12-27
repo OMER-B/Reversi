@@ -29,6 +29,8 @@ point.h
 /home/h/CLionProjects/Reversi/src/client/point.h
 
 /home/h/CLionProjects/Reversi/src/client/client.cpp
+istream
+-
 cstdlib
 -
 client.h
