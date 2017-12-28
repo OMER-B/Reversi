@@ -34,6 +34,10 @@ void Point::setY(int y) {
   y_ = y;
 }
 
+Point Point::decrease() {
+  return Point(x_-1, y_-1);
+}
+
 bool Point::operator==(const Point &point) const {
   return x_ == point.getX() && y_ == point.getY();
 }
@@ -57,7 +61,6 @@ Point::Point(char point[]) {
     y_ += (point[i] - 48);
     i++;
   }
-  cout << x_ << ", " << y_ << endl;
 }
 
 std::ostream &operator<<(std::ostream &out, Point const &point) {

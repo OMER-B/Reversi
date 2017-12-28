@@ -1,7 +1,10 @@
 #include <limits>
 #include <iostream>
+#include <cstring>
 #include "human.h"
 #include "logic.h"
+
+#define BUFFER 15
 
 using namespace std;
 
@@ -10,45 +13,54 @@ Human::Human(char symbol) : Player(symbol) {}
 Human::~Human() {}
 
 int Human::makeMove(Board &board, Logic &logic, Display &display) {
-  Point newCell = getInput(board, logic, display);
-  if (newCell.getX() != -1) {
+  display.printBoard(&board);
+  char input[BUFFER];
+  if(strcmp(input, "close")==0) {
+    return 2;
+  }
+  if(strcmp(input, "nomoves")==0) {
+    return 1;
+  }
+  getInput(board, logic, display, input);
+  Point newCell = Point(input).decrease();
+  if(board.inBoundaries(newCell)) {
     logic.putNewCell(board, *this, newCell);
     return 0;
   }
   return 1;
 }
 
-Point Human::getInput(Board &board, Logic &logic, Display &display) {
-  display.printBoard(&board);
+void Human::getInput(Board &board, Logic &logic, Display &display, char* buffer) {
+  memset(buffer, 0, sizeof(buffer));
   cout << getSymbol() << ", it's your turn." << endl;
   vector<Point> possibleMoves = logic.getOptionalMoves(board, *this);
   if (possibleMoves.empty()) {
-    cout << "You don't have any moves. Trying next player." << endl;
-    return Point(-1, -1);
-  }
-  cout << "Possible moves: ";
-  for (vector<Point>::iterator it = possibleMoves.begin();
-       it != possibleMoves.end(); ++it) {
-    cout << *it;
-  }
-  int moveX = -1, moveY = -1;
-  while (true) {
-    cout << endl << "Enter your move 'row col': ";
-    cin >> moveX >> moveY;
-
-    // Check if input is an integer.
-    if (cin.fail()) {
-      cin.clear();
-      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    cout << "You don't have any moves. Type -1." << endl
+         << "If enemy did not make a move type 0." << endl;
+    strcpy(buffer, "nomoves");
+    return;
+  } else {
+    cout << "Possible moves: ";
+    for (vector<Point>::iterator it = possibleMoves.begin();
+         it != possibleMoves.end(); ++it) {
+      cout << *it;
     }
+    cout << endl;
+  }
+  Point result;
+  while(true) {
 
-    // Minus one for indexes.
-    moveX--;
-    moveY--;
-    if (board.inBoundaries(moveX, moveY)
-        && logic.isOptionInList(Point(moveX, moveY), possibleMoves)) {
-      break;
+    cout << "Enter your move 'row col':" << endl;
+    cin.getline(buffer, sizeof(buffer));
+    if(strcmp(buffer, "close")==0) {
+      return;
+    }
+    result = Point(buffer).decrease();
+    for (vector<Point>::iterator it = possibleMoves.begin();
+         it != possibleMoves.end(); ++it) {
+      if(result==*it) {
+        return;
+      }
     }
   }
-  return Point(moveX, moveY);
 }

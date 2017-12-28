@@ -1,4 +1,4 @@
-#include <istream>
+#include <iostream>
 #include "client.h"
 #include "clientCommand.h"
 #include <sys/socket.h>
@@ -118,33 +118,34 @@ string Client::getCommand() {
 }
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
-  char move[BUFFER] = "";
+  char input[BUFFER];
   ssize_t n;
-  Point newCell = Client::getInput(board, logic, display);
+  Human::getInput(board, logic, display, input);
+  Point newCell;
 
-  if (newCell == Point(0, 0)) {
-    strcpy(move, "0 0");
-    n = write(clientSocket_, &move, sizeof(move));
-    cout << endl << "You have ended the game." << endl;
-    return 2;
-  } else if (newCell == Point(-1, -1)) {
-    strcpy(move, "-1 -1");
-    n = write(clientSocket_, &move, sizeof(move));
-    int enemyStatus = getRemoteEnemyMovement();
-    if ((enemyStatus == 1) || (enemyStatus == 2)) {
-      cout << endl << "Both players don't have any moves." << endl;
-      return 2;
-    }
-  } else {
-    logic.putNewCell(board, *this, newCell);
-    display.printBoard(&board);
-    strcpy(move, newCell.toString().c_str());
-    // Write the points to the socket
-    n = write(clientSocket_, &move, sizeof(move));
-    if (n == -1) {
-      throw "Error input point to socket";
-    }
-  }
+//  if (newCell == Point(0, 0)) {
+//    strcpy(move, "0 0");
+//    n = write(clientSocket_, &move, sizeof(move));
+//    cout << endl << "You have ended the game." << endl;
+//    return 2;
+//  } else if (newCell == Point(-1, -1)) {
+//    strcpy(move, "-1 -1");
+//    n = write(clientSocket_, &move, sizeof(move));
+//    int enemyStatus = getRemoteEnemyMovement();
+//    if ((enemyStatus == 1) || (enemyStatus == 2)) {
+//      cout << endl << "Both players don't have any moves." << endl;
+//      return 2;
+//    }
+//  } else {
+//    logic.putNewCell(board, *this, newCell);
+//    display.printBoard(&board);
+//    strcpy(move, newCell.toString().c_str());
+//    // Write the points to the socket
+//    n = write(clientSocket_, &move, sizeof(move));
+//    if (n == -1) {
+//      throw "Error input point to socket";
+//    }
+//  }
 
   if (getRemoteEnemyMovement() == 2) {
     cout << endl << "Other player has ended the game." << endl;
@@ -152,6 +153,7 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
   }
   return 0;
 }
+
 
 int Client::getRemoteEnemyMovement() {
   cout << "It's enemy's turn. Waiting their input." << endl;
@@ -172,48 +174,6 @@ int Client::getRemoteEnemyMovement() {
   return 0;
 }
 
-Point Client::getInput(Board &board, Logic &logic, Display &display) {
-  cout << getSymbol() << ", it's your turn." << endl;
-  vector<Point> possibleMoves = logic.getOptionalMoves(board, *this);
-  if (possibleMoves.empty()) {
-    cout << "You don't have any moves. Type -1." << endl
-         << "If enemy did not make a move type 0." << endl;
-  } else {
-    cout << "Possible moves: ";
-    for (vector<Point>::iterator it = possibleMoves.begin();
-         it != possibleMoves.end(); ++it) {
-      cout << *it;
-    }
-  }
-  int moveX = -1, moveY = -1;
-  while (true) {
-    cout << endl << "Enter your move 'row col': ";
-    cin >> moveX;
-    if (moveX == 0) {
-      return Point(0, 0);
-    }
-    if (moveX == -1) {
-      return Point(-1, -1);
-    }
-    cin >> moveY;
-
-    // Check if input is an integer.
-    if (cin.fail()) {
-      cin.clear();
-      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
-
-    // Minus one for indexes.
-    moveX--;
-    moveY--;
-    if (board.inBoundaries(moveX, moveY)
-        && logic.isOptionInList(Point(moveX, moveY), possibleMoves)) {
-      break;
-    }
-  }
-
-  return Point(moveX, moveY);
-}
 
 void Client::setUp(int index) {
   char symbol[] = {'X', 'O'};

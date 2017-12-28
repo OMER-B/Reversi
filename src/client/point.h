@@ -28,6 +28,8 @@ class Point {
   // Sets the point's y coordinate as given coordinate.
   void setY(int y);
 
+  Point decrease();
+
   // Compares two points.
   bool operator==(const Point &point) const;
 
