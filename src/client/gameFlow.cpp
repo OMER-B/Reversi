@@ -2,8 +2,12 @@
 #include "gameFlow.h"
 #include "client.h"
 
-Game::Game() : players_(), numberOfPlayers_(), validTurns_(), currentPlayer_() {
-  display_ = new ConsoleDisplay();
+
+Game::Game(Board *board_, Logic *logic_, Display *display_, Player *first, Player*second) : board_(board_), logic_(logic_),
+                                                                                display_(display_) {
+  players_[0] = first;
+  players_[1] = second;
+  validTurns_=0;
 }
 
 Game::~Game() {
@@ -14,73 +18,17 @@ Game::~Game() {
   delete players_[1];
 }
 
-void Game::setGameMode() {
-
-  //TODO move all this to main!!!!
-
-  int gameMode;
-  cout << "Choose a game mode: " << endl << "1) Player vs Player" << endl
-       << "2) Player vs Computer" << endl << "3) Remote player" << endl
-       << "Any other selection will exit the game" << endl;
-  cin >> gameMode;
-  cin.ignore();
-  switch (gameMode) {
-    case 1:
-      players_[0] = new Human('X');
-      players_[1] = new Human('O');
-      board_ = new Board(SIZE, SIZE, players_);
-
-      break;
-    case 2:
-      players_[0] = new Human('X');
-      players_[1] = new Computer('O');
-      board_ = new Board(SIZE, SIZE, players_);
-      break;
-    case 3: {
-      char settings[] = "/home/h/CLionProjects/Reversi/src/client/client_config";
-      Client *client = new Client(settings);
-      Dummy *dummy = new Dummy('D');
-      client->setDummy_(dummy);
-      int current;
-      try {
-        client->connectToServer();
-        dummy->setClientSocket(client->getClientSocket_());
-
-      } catch (const char *msg) {
-        cout << "Failed to connect to server. Reason: " << msg << endl;
-        exit(-1);
-      }
-      cout << "connected to server" << endl;
-      current = client->indexOfPlayer();
-      if (current == -1) {
-        cout << "You did not start a game. see you next time." << endl;
-        exit(0);
-      }
-      players_[current] = client;
-      players_[1 - current] = dummy;
-      board_ = new Board(SIZE, SIZE, players_);
-      display_->printBoard(board_);
-
-      break;
-    }
-    default:
-      cout << "Bye";
-      exit(0);
-  }
-  logic_ = new RegLogic();
-}
-
 void Game::run() {
-  setGameMode();  // Choose if player is human or computer.
-  numberOfPlayers_ = 2;
-
+display_->printBoard(board_);
+  int current = 0;
   // Game loop to play one turn until shouldStop() turns false.
   while (!shouldStop()) {
-    playOneTurn();
+    playOneTurn(current);
+    current = 1 - current;
   }
 
   cout << "The final score is: " << endl;
-  for (int i = 0; i < numberOfPlayers_; i++) {
+  for (int i = 0; i < NUM_OF_PLAYERS; i++) {
     cout << players_[i]->getSymbol() << " with "
          << players_[i]->getScore() << " points." << endl;
   }
@@ -95,20 +43,19 @@ void Game::run() {
   }
 }
 
-void Game::playOneTurn() {
-  cout << "current player: " << players_[currentPlayer_]->getSymbol() << endl;
+void Game::playOneTurn(int current) {
+  cout << "current player: " << players_[current]->getSymbol() << endl;
 
-
-  int temp = validTurns_;
-  int moreTurns =
-          players_[currentPlayer_]->makeMove(*board_, *logic_, *display_);
-  validTurns_ += moreTurns;
-  if (validTurns_ == temp) {
+  int numOfNoMoves=
+          players_[current]->makeMove(*board_, *logic_, *display_);
+  if(numOfNoMoves==0) {
     validTurns_ = 0;
+    return;
   }
-  currentPlayer_ = 1 - currentPlayer_;
+  validTurns_ += numOfNoMoves;
+
 }
 
 bool Game::shouldStop() {
-  return board_->isFull() || (validTurns_ >= numberOfPlayers_);
+  return board_->isFull() || (validTurns_ >= NUM_OF_PLAYERS);
 }
