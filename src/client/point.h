@@ -8,7 +8,7 @@ class Point {
 
  public:
   // Constructor for point by string.
-  Point(std::string point);
+  Point(char point[]);
 
   // Constructor for point by two coordinates.
   Point(int x = -1, int y = -1);

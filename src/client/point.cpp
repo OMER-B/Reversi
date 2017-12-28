@@ -1,6 +1,8 @@
 #include <iostream>
 #include <sstream>
 #include <cstring>
+#include <vector>
+#include <tgmath.h>
 #include "point.h"
 
 using namespace std;
@@ -15,7 +17,7 @@ int Point::getX() const {
 
 string Point::toString() {
   ostringstream ss;
-  ss << x_ << ", " << y_;
+  ss << x_ << " " << y_;
   string s = ss.str();
   return s;
 }
@@ -40,16 +42,22 @@ bool Point::operator!=(const Point &point) const {
   return x_ != point.getX() || y_ != point.getY();
 }
 
-Point::Point(string point) {
-  unsigned long xIndex = point.find_first_not_of(" ");
-  unsigned long yIndex = point.find_last_not_of(" ");
-  x_ = point.at(xIndex) - 48;
-  y_ = point.at(yIndex) - 48;
-
-
-//  unsigned long pos = point.find_first_of(',');
-//  x_ = atoi(point.substr(0, pos).c_str());
-//  y_ = atoi(point.substr(pos + 2).c_str());
+Point::Point(char point[]) {
+  x_ = 0;
+  y_ = 0;
+  int i = 0;
+  while (point[i] != ' ') {
+    x_ *= 10;
+    x_ += (point[i] - 48);
+    i++;
+  }
+  i++;
+  while (point[i] != '\0') {
+    y_ *= 10;
+    y_ += (point[i] - 48);
+    i++;
+  }
+  cout << x_ << ", " << y_ << endl;
 }
 
 std::ostream &operator<<(std::ostream &out, Point const &point) {
