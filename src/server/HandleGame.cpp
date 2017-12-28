@@ -50,7 +50,7 @@ void *HandleGame::play(void *room) {
 
     /* CHANGE INPUT TO COMMAND */
     string command = manager->seperate(move).first;
-    vector<string> stringArgs = manager->seperate(move).second;
+    string stringArgs = manager->seperate(move).second;
 
     if (manager->isLegalCommand(command, clients[(i % 2)])) {
       if (strcmp(command.c_str(), "play") == 0 || strcmp(command.c_str(), "close") == 0) {

@@ -3,8 +3,8 @@
 #include <thread_db.h>
 #include <unistd.h>
 
-void CommandJoin::execute(vector<string> &args, int clientSocket) {
-  string name = args[0];
+void CommandJoin::execute(string arg, int clientSocket) {
+  string name = arg;
   Room *room;
   cout << "Socket " << clientSocket << " requested to join room \'" + name + "\'" << endl;
   if (lobby_->contains(name)) {

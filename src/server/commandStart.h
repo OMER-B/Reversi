@@ -11,7 +11,7 @@ class CommandStart : public Command {
   Lobby *lobby_;
 public:
   explicit CommandStart(Lobby *lobby);
-  void execute(vector<string> &args, int clientSocket);
+  void execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDSTART_H

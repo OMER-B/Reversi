@@ -7,7 +7,7 @@
 
 #include "command.h"
 class CommandPlay : public Command {
-  void execute(vector<string> &args, int clientSocket);
+  void execute(string arg, int clientSocket);
 
 };
 

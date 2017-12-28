@@ -20,8 +20,8 @@ class CommandsManager { // class is singleton
   static CommandsManager *getInstance(Lobby *lobby, HandleGame *handleGame);
   static CommandsManager *getInstance();
   bool isLegalCommand(string command, int client);
-  void executeCommand(string command, vector<string> &args, int client);
-  std::pair<string, vector<string> > seperate(string input);
+  void executeCommand(string command, string arg, int client);
+  std::pair<string, string> seperate(string input);
   ~CommandsManager();
 };
 

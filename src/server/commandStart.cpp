@@ -2,9 +2,9 @@
 #include <unistd.h>
 #include "commandStart.h"
 
-void CommandStart::execute(vector<string> &args, int clientSocket) {
+void CommandStart::execute(string arg, int clientSocket) {
   //TODO add mutex
-  string name = args[0];
+  string name = arg;
   if (lobby_->contains(name)) { // Room name already exists
     char invalid_name[50] = "Name is already taken (-1)\n";
     cout << "Room start failed - name already exists. Socket: " << clientSocket << ", name: " << name << endl;
@@ -19,7 +19,7 @@ void CommandStart::execute(vector<string> &args, int clientSocket) {
   char success[50] = "Successfully opened\n";
   ssize_t n = write(clientSocket, &success, sizeof(success));
   //TODO add mutex
-  cout << "Room name: \'" << name << "\' (should be \'" << args[0] << "\')" << endl;
+  cout << "Room name: \'" << name << "\' (should be \'" << arg << "\')" << endl;
 }
 
 CommandStart::CommandStart(Lobby *lobby) : lobby_(lobby) {

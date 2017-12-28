@@ -20,9 +20,9 @@ CommandsManager::~CommandsManager() {
   delete instance_;
 }
 
-void CommandsManager::executeCommand(string command, vector<string> &args, int client) {
+void CommandsManager::executeCommand(string command, string arg, int client) {
   cout << "Received command: " << command << " from socket: " << client << endl;
-  commandsMap_[command]->execute(args, client);
+  commandsMap_[command]->execute(arg, client);
 }
 bool CommandsManager::isLegalCommand(string command, int client) {
   if (commandsMap_.find(command) == commandsMap_.end()) {
@@ -47,15 +47,11 @@ CommandsManager *CommandsManager::getInstance() {
   return instance_;
 }
 
-std::pair<string, vector<string> > CommandsManager::seperate(string input) {
+std::pair<string, string > CommandsManager::seperate(string input) {
   stringstream stream(input);
   string command;
   string buffer;
-  vector<string> args;
-
+  string arg;
   stream >> command;
-  while (stream >> buffer) {
-    args.push_back(buffer);
-  }
-  return pair<string, vector<string> >(command, args);
+  return pair<string, string>(command, arg);
 }

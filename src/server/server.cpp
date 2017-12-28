@@ -118,9 +118,9 @@ void *Server::handleClient(void *args) {
     throw "failed to receive read from client";
   }
 
-  vector<string> stringArgs;
+  string stringArgs;
 
-  pair<string, vector<string> > result;
+  pair<string, string> result;
   result = manager->seperate(input);
 
   string command = result.first;

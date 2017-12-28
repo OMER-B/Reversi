@@ -22,7 +22,7 @@ private:
 
 public:
   CommandJoin(Lobby *lobby, HandleGame * handleGame);
-  void execute(vector<string> &args, int clientSocket);
+  void execute(string arg, int clientSocket);
   //static void *run(void *runArgs);
 };
 

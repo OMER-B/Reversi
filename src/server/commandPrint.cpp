@@ -7,7 +7,7 @@ CommandPrint::CommandPrint(Lobby *lobby) {
   lobby_ = lobby;
 }
 
-void CommandPrint::execute(vector<string> &args, int clientSocket) {
+void CommandPrint::execute(string arg, int clientSocket) {
   char list[BUFFER];
   string listOfRooms;
   if (lobby_->isEmpty()) {

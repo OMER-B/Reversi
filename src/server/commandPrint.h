@@ -12,7 +12,7 @@ private:
   Lobby *lobby_;
 public:
   CommandPrint(Lobby * lobby);
-  void execute(vector<string> &args, int clientSocket);
+  void execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDPRINT_H

@@ -8,7 +8,7 @@ using namespace std;
 
 class Command {
  public:
-  virtual void execute(vector<string> &args, int clientSocket) = 0;
+  virtual void execute(string arg, int clientSocket) = 0;
 };
 
 #endif //REVERSI_COMMAND_H

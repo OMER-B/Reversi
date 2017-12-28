@@ -2,8 +2,8 @@
 #include <unistd.h>
 #include "commandClose.h"
 
-void CommandClose::execute(vector<string> &args, int clientSocket) {
-  string name = args[0];
+void CommandClose::execute(string arg, int clientSocket) {
+  string name = arg;
   if (lobby_->contains(name)) {
     lobby_->removeRoom(name);
     close(lobby_->getRoom(name)->getFirstClient());
