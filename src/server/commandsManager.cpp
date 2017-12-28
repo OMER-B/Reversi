@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include "commandsManager.h"
 
+CommandsManager *CommandsManager::instance_ = 0;
 CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
   commandsMap_["list_games"] = new CommandPrint(lobby);
   commandsMap_["close"] = new CommandClose(lobby);
@@ -13,6 +14,7 @@ CommandsManager::~CommandsManager() {
   for (it = commandsMap_.begin(); it != commandsMap_.end(); it++) {
     delete it->second;
   }
+  delete instance_;
 }
 
 void CommandsManager::executeCommand(string command, vector<string> &args, int client) {
@@ -29,3 +31,9 @@ bool CommandsManager::isLegalCommand(string command, int client) {
   return true;
 }
 
+CommandsManager *CommandsManager::getInstance(Lobby *lobby, HandleGame *handleGame) {
+  if (!instance_) {
+    instance_ = new CommandsManager(lobby, handleGame);
+  }
+  return instance_;
+}

@@ -18,14 +18,14 @@ Server::Server(int port) : serverSocket_(0) {
   lobby_ = new Lobby;
   threads_ = new vector<pthread_t *>;
   handleGame_ = new HandleGame;
-  manager_ = new CommandsManager(lobby_, handleGame_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_);
 }
 
 Server::Server(char *fileName) {
   threads_ = new vector<pthread_t *>;
   lobby_ = new Lobby;
   handleGame_ = new HandleGame;
-  manager_ = new CommandsManager(lobby_, handleGame_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_);
 
   ifstream inFile;
   inFile.open(fileName);
@@ -71,8 +71,7 @@ void Server::start() {
   string exit;
   cin >> exit;
   if (strcmp(exit.c_str(), "exit")) {
-    for (vector<pthread_t *>::iterator it = threads_->begin();
-         it != threads_->end(); ++it) {
+    for (vector<pthread_t *>::iterator it = threads_->begin(); it != threads_->end(); ++it) {
       pthread_exit(*it);
     }
   }
@@ -130,7 +129,7 @@ void *handleClient(void *args) {
 
   string command = result.first;
   stringArgs = result.second;
-  if(manager->isLegalCommand(command, clientArgs->clientSocket)){
+  if (manager->isLegalCommand(command, clientArgs->clientSocket)) {
     manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
   } else {
     cout << "Illegal command" << endl;

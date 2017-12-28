@@ -10,13 +10,14 @@
 #include "HandleGame.h"
 #include "Lobby.h"
 
-
-class CommandsManager {
+class CommandsManager { // class is singleton
  private:
-  map<string, Command * > commandsMap_;
- public:
   CommandsManager(Lobby *lobby, HandleGame *handleGame);
+  map<string, Command *> commandsMap_;
+  static CommandsManager *instance_;
 
+ public:
+  static CommandsManager *getInstance(Lobby *lobby, HandleGame *handleGame);
   bool isLegalCommand(string command, int client);
   void executeCommand(string command, vector<string> &args, int client);
 
