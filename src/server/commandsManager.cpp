@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include "commandsManager.h"
-#include "commandPlay.h"
 #include <sstream>
 
 CommandsManager *CommandsManager::instance_ = 0;
@@ -9,7 +8,6 @@ CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
   commandsMap_["list_games"] = new CommandPrint(lobby);
   commandsMap_["close"] = new CommandClose(lobby);
   commandsMap_["start"] = new CommandStart(lobby);
-  commandsMap_["play"] = new CommandPlay();
 }
 
 CommandsManager::~CommandsManager() {
@@ -50,8 +48,8 @@ CommandsManager *CommandsManager::getInstance() {
 std::pair<string, string > CommandsManager::seperate(string input) {
   stringstream stream(input);
   string command;
-  string buffer;
   string arg;
   stream >> command;
+  stream >> arg;
   return pair<string, string>(command, arg);
 }

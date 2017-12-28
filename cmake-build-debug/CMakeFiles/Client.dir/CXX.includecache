@@ -29,9 +29,7 @@ point.h
 /home/h/CLionProjects/Reversi/src/client/point.h
 
 /home/h/CLionProjects/Reversi/src/client/client.cpp
-istream
--
-cstdlib
+iostream
 -
 client.h
 /home/h/CLionProjects/Reversi/src/client/client.h
@@ -52,6 +50,8 @@ unistd.h
 limits
 -
 fstream
+-
+sstream
 -
 
 /home/h/CLionProjects/Reversi/src/client/client.h
@@ -103,6 +103,10 @@ display.h
 /home/h/CLionProjects/Reversi/src/client/display.h
 
 /home/h/CLionProjects/Reversi/src/client/dummy.cpp
+cstring
+-
+unistd.h
+-
 dummy.h
 /home/h/CLionProjects/Reversi/src/client/dummy.h
 
@@ -139,12 +143,16 @@ limits
 -
 iostream
 -
+cstring
+-
 human.h
 /home/h/CLionProjects/Reversi/src/client/human.h
 logic.h
 /home/h/CLionProjects/Reversi/src/client/logic.h
 
 /home/h/CLionProjects/Reversi/src/client/human.h
+vector
+-
 player.h
 /home/h/CLionProjects/Reversi/src/client/player.h
 point.h
@@ -187,11 +195,13 @@ display.h
 /home/h/CLionProjects/Reversi/src/client/point.cpp
 iostream
 -
-cstdlib
--
 sstream
 -
 cstring
+-
+vector
+-
+tgmath.h
 -
 point.h
 /home/h/CLionProjects/Reversi/src/client/point.h

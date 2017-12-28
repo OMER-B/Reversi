@@ -17,10 +17,12 @@ unistd.h
 -
 HandleGame.h
 /home/h/CLionProjects/Reversi/src/server/HandleGame.h
-iostream
--
+commandsManager.h
+/home/h/CLionProjects/Reversi/src/server/commandsManager.h
 cstring
 -
+server.h
+/home/h/CLionProjects/Reversi/src/server/server.h
 
 /home/h/CLionProjects/Reversi/src/server/HandleGame.h
 string
@@ -127,8 +129,12 @@ vector
 -
 
 /home/h/CLionProjects/Reversi/src/server/commandsManager.cpp
+unistd.h
+-
 commandsManager.h
 /home/h/CLionProjects/Reversi/src/server/commandsManager.h
+sstream
+-
 
 /home/h/CLionProjects/Reversi/src/server/commandsManager.h
 map
@@ -159,10 +165,6 @@ stdlib.h
 /home/h/CLionProjects/Reversi/src/server/server.cpp
 server.h
 /home/h/CLionProjects/Reversi/src/server/server.h
-sys/socket.h
--
-netinet/in.h
--
 unistd.h
 -
 string.h
@@ -172,8 +174,6 @@ fstream
 arpa/inet.h
 -
 sstream
--
-pthread.h
 -
 
 /home/h/CLionProjects/Reversi/src/server/server.h

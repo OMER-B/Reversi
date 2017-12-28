@@ -23,13 +23,16 @@ void Game::setGameMode() {
        << "2) Player vs Computer" << endl << "3) Remote player" << endl
        << "Any other selection will exit the game" << endl;
   cin >> gameMode;
+  cin.ignore();
   switch (gameMode) {
-    case 1:players_[0] = new Human('X');
+    case 1:
+      players_[0] = new Human('X');
       players_[1] = new Human('O');
       board_ = new Board(SIZE, SIZE, players_);
 
       break;
-    case 2: players_[0] = new Human('X');
+    case 2:
+      players_[0] = new Human('X');
       players_[1] = new Computer('O');
       board_ = new Board(SIZE, SIZE, players_);
       break;
@@ -41,25 +44,27 @@ void Game::setGameMode() {
       int current;
       try {
         client->connectToServer();
+        dummy->setClientSocket(client->getClientSocket_());
+
       } catch (const char *msg) {
         cout << "Failed to connect to server. Reason: " << msg << endl;
         exit(-1);
       }
+      cout << "connected to server" << endl;
       current = client->indexOfPlayer();
-      if(current ==-1) {
-        cout << "you did not start a game. see you next time";
+      if (current == -1) {
+        cout << "You did not start a game. see you next time." << endl;
         exit(0);
       }
       players_[current] = client;
       players_[1 - current] = dummy;
       board_ = new Board(SIZE, SIZE, players_);
       display_->printBoard(board_);
-      if (current == 1) {
-        client->getRemoteEnemyMovement();
-      }
+
       break;
     }
-    default:cout << "Bye";
+    default:
+      cout << "Bye";
       exit(0);
   }
   logic_ = new RegLogic();
@@ -67,8 +72,7 @@ void Game::setGameMode() {
 
 void Game::run() {
   setGameMode();  // Choose if player is human or computer.
-  cin.ignore();
-  numberOfPlayers_ = (sizeof(players_) / sizeof(players_[0]));
+  numberOfPlayers_ = 2;
 
   // Game loop to play one turn until shouldStop() turns false.
   while (!shouldStop()) {
@@ -92,14 +96,17 @@ void Game::run() {
 }
 
 void Game::playOneTurn() {
+  cout << "current player: " << players_[currentPlayer_]->getSymbol() << endl;
+
+
   int temp = validTurns_;
   int moreTurns =
-      players_[currentPlayer_]->makeMove(*board_, *logic_, *display_);
+          players_[currentPlayer_]->makeMove(*board_, *logic_, *display_);
   validTurns_ += moreTurns;
   if (validTurns_ == temp) {
     validTurns_ = 0;
   }
-  currentPlayer_ = (currentPlayer_ + 1) % playersSize_;
+  currentPlayer_ = 1 - currentPlayer_;
 }
 
 bool Game::shouldStop() {

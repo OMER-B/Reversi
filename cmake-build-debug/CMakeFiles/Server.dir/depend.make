@@ -6,7 +6,15 @@ CMakeFiles/Server.dir/src/client/gameManager.cpp.o: ../src/client/gameManager.h
 
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/HandleGame.cpp
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/HandleGame.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/Lobby.h
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/Room.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/command.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/commandClose.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/commandJoin.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/commandPrint.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/commandStart.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/commandsManager.h
+CMakeFiles/Server.dir/src/server/HandleGame.cpp.o: ../src/server/server.h
 
 CMakeFiles/Server.dir/src/server/Lobby.cpp.o: ../src/server/Lobby.cpp
 CMakeFiles/Server.dir/src/server/Lobby.cpp.o: ../src/server/Lobby.h

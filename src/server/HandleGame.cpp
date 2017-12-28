@@ -4,7 +4,7 @@
 #include <cstring>
 #include "server.h"
 using namespace std;
-#define BUFFER 128
+
 
 void notify(int clients[]) {
   char NUM0[2] = "0";
@@ -35,10 +35,22 @@ void *HandleGame::play(void *room) {
 
   int i = 0;
   char move[BUFFER];
-  CommandsManager *manager = CommandsManager::getInstance();
+  char go[] = "go";
+  ssize_t n;
+
   while (true) {
+    memset(move, 0, sizeof(move));
     // Read new point from client.
-    ssize_t n = read(clients[(i % 2)], &move, sizeof(move));
+    n = write(clients[(i)], &go, sizeof(go));
+    cout << "sent feedback to: " << i << endl;
+    n = read(clients[i], &move, sizeof(move));
+    cout << "got move from client" << i << ": " << move << endl;
+    
+    n = write(clients[(1-i)], &move, sizeof(move));
+    cout << "sent to client " << (1-i)<< ": " << move << endl;
+    
+    
+    i = 1-i;
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
       break;
@@ -48,17 +60,11 @@ void *HandleGame::play(void *room) {
       break;
     }
 
-    /* CHANGE INPUT TO COMMAND */
-    string command = manager->seperate(move).first;
-    string stringArgs = manager->seperate(move).second;
-
-    if (manager->isLegalCommand(command, clients[(i % 2)])) {
-      if (strcmp(command.c_str(), "play") == 0 || strcmp(command.c_str(), "close") == 0) {
-        manager->executeCommand(command, stringArgs, clients[(i + 1) % 2]);
-      }
-    } else {
-      // print "invalid command"
+    if (strcmp(move, "close") == 0) {
+      close(clients[i]);
+      close(clients[1-i]);
+      break;
     }
-    i++;
+
   }
 }

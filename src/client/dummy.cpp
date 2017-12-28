@@ -1,25 +1,37 @@
+#include <cstring>
+#include <unistd.h>
 #include "dummy.h"
-Dummy::Dummy(char symbol) : Player(symbol) {}
+#define BUFFER 128
+
 
 int Dummy::makeMove(Board &board, Logic &logic, Display &display) {
-  if(enemyPoint_.getX() == -1) {
-    cout << "Enemy could not make a move." << endl;
-    return 1;
 
-  } else if (enemyPoint_.getX() == 0) {
-    cout << "Other player has ended the game." << endl;
-    return 2;
+  char enemyString[BUFFER];
+  Point enemyPoint;
+  memset(enemyString, 0, sizeof(enemyString));
 
-  } else {
-    logic.putNewCell(board, *this, enemyPoint_);
-    display.printBoard(&board);
-    cout << "The enemy placed '" << *board.getPlayer(enemyPoint_) << "' on "
-         << enemyPoint_ << "." << endl;
-    return 0;
-
+  ssize_t n = read(clientSocket_, &enemyString, sizeof(enemyString));
+  if(strcmp(enemyString, "go") == 0) {
+    n = read(clientSocket_, &enemyString, sizeof(enemyString));
   }
+  enemyPoint = Point(enemyString).decrease();
+  if (n == -1) {
+    throw "Error reading enemy point from socket";
+  }
+  if (strcmp(enemyString, "close") == 0) {
+    return 2;
+  }
+  if (strcmp(enemyString, "nomoves") == 0) {
+    return 1;
+  }
+    logic.putNewCell(board, *this, enemyPoint);
+    display.printBoard(&board);
+    cout << "The enemy chose point " << enemyPoint << "." << endl;
+    return 0;
 }
 
-void Dummy::setEnemyPoint(const Point &point) {
-  enemyPoint_ = point;
+void Dummy::setClientSocket(int clientSocket) {
+  Dummy::clientSocket_ = clientSocket;
 }
+
+Dummy::Dummy(char symbol) : Player(symbol){}

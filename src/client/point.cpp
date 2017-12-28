@@ -46,7 +46,7 @@ bool Point::operator!=(const Point &point) const {
   return x_ != point.getX() || y_ != point.getY();
 }
 
-Point::Point(char point[]) {
+Point::Point(char *point) {
   x_ = 0;
   y_ = 0;
   int i = 0;

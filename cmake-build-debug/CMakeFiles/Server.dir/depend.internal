@@ -7,7 +7,15 @@ CMakeFiles/Server.dir/src/client/gameManager.cpp.o
 CMakeFiles/Server.dir/src/server/HandleGame.cpp.o
  /home/h/CLionProjects/Reversi/src/server/HandleGame.cpp
  /home/h/CLionProjects/Reversi/src/server/HandleGame.h
+ /home/h/CLionProjects/Reversi/src/server/Lobby.h
  /home/h/CLionProjects/Reversi/src/server/Room.h
+ /home/h/CLionProjects/Reversi/src/server/command.h
+ /home/h/CLionProjects/Reversi/src/server/commandClose.h
+ /home/h/CLionProjects/Reversi/src/server/commandJoin.h
+ /home/h/CLionProjects/Reversi/src/server/commandPrint.h
+ /home/h/CLionProjects/Reversi/src/server/commandStart.h
+ /home/h/CLionProjects/Reversi/src/server/commandsManager.h
+ /home/h/CLionProjects/Reversi/src/server/server.h
 CMakeFiles/Server.dir/src/server/Lobby.cpp.o
  /home/h/CLionProjects/Reversi/src/server/Lobby.cpp
  /home/h/CLionProjects/Reversi/src/server/Lobby.h

@@ -15,13 +15,13 @@ Human::~Human() {}
 int Human::makeMove(Board &board, Logic &logic, Display &display) {
   display.printBoard(&board);
   char input[BUFFER];
+  getInput(board, logic, display, input);
   if(strcmp(input, "close")==0) {
     return 2;
   }
   if(strcmp(input, "nomoves")==0) {
     return 1;
   }
-  getInput(board, logic, display, input);
   Point newCell = Point(input).decrease();
   if(board.inBoundaries(newCell)) {
     logic.putNewCell(board, *this, newCell);
@@ -48,19 +48,23 @@ void Human::getInput(Board &board, Logic &logic, Display &display, char* buffer)
     cout << endl;
   }
   Point result;
-  while(true) {
-
+  do {
     cout << "Enter your move 'row col':" << endl;
     cin.getline(buffer, sizeof(buffer));
-    if(strcmp(buffer, "close")==0) {
-      return;
-    }
-    result = Point(buffer).decrease();
-    for (vector<Point>::iterator it = possibleMoves.begin();
-         it != possibleMoves.end(); ++it) {
-      if(result==*it) {
-        return;
-      }
+  }while(!isvalid(possibleMoves, buffer));
+}
+
+
+bool Human::isvalid(vector<Point> possibleMoves, char *input) {
+  if(strcmp(input, "close")==0) {
+    return true;
+  }
+  Point result = Point(input).decrease();
+  for (vector<Point>::iterator it = possibleMoves.begin();
+       it != possibleMoves.end(); ++it) {
+    if(result==*it) {
+      return true;
     }
   }
+  return false;
 }

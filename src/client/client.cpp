@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <limits>
 #include <fstream>
+#include <sstream>
 
 #define BUFFER 128
 
@@ -27,10 +28,10 @@
 using namespace std;
 
 Client::Client(char *serverIP, int serverPort)
-    : Human('R'),
-      serverIP_(serverIP),
-      serverPort_(serverPort),
-      clientSocket_(0) {
+        : Human('R'),
+          serverIP_(serverIP),
+          serverPort_(serverPort),
+          clientSocket_(0) {
   dummy_ = NULL;
 }
 
@@ -88,19 +89,15 @@ void Client::connectToServer() {
   *) &serverAddress, sizeof(serverAddress)) == -1) {
     throw "Error connecting to server";
   }
-  cout << "Connected to server. IP: " << serverIP_ << ", Port: " << serverPort_
-       << "." << endl;
 }
 
 int Client::indexOfPlayer() {
   ClientCommand clientCommand(clientSocket_);
   string command;
   int index;
-  cin.ignore();
   do {
-    cout << "Enter command" << endl;
+    cout << "Enter command:\nstart, join or list_games" << endl;
     command = getCommand();
-    cout << "You entered: " << command << endl;
     index = clientCommand.activate(command);
     if (index != -1) {
       setUp(index);
@@ -118,58 +115,30 @@ string Client::getCommand() {
 }
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
-  char input[BUFFER];
   ssize_t n;
+  char serverAnswer[BUFFER];
+  n = read(clientSocket_, &serverAnswer, sizeof(serverAnswer));
+  char input[BUFFER];
+  memset(input, 0, sizeof(input));
+
   Human::getInput(board, logic, display, input);
-  Point newCell;
 
-//  if (newCell == Point(0, 0)) {
-//    strcpy(move, "0 0");
-//    n = write(clientSocket_, &move, sizeof(move));
-//    cout << endl << "You have ended the game." << endl;
-//    return 2;
-//  } else if (newCell == Point(-1, -1)) {
-//    strcpy(move, "-1 -1");
-//    n = write(clientSocket_, &move, sizeof(move));
-//    int enemyStatus = getRemoteEnemyMovement();
-//    if ((enemyStatus == 1) || (enemyStatus == 2)) {
-//      cout << endl << "Both players don't have any moves." << endl;
-//      return 2;
-//    }
-//  } else {
-//    logic.putNewCell(board, *this, newCell);
-//    display.printBoard(&board);
-//    strcpy(move, newCell.toString().c_str());
-//    // Write the points to the socket
-//    n = write(clientSocket_, &move, sizeof(move));
-//    if (n == -1) {
-//      throw "Error input point to socket";
-//    }
-//  }
-
-  if (getRemoteEnemyMovement() == 2) {
-    cout << endl << "Other player has ended the game." << endl;
+  if (strcmp(input, "close") == 0) {
+    n = write(clientSocket_, &input, sizeof(input));
+    cout << endl << "You have ended the game." << endl;
     return 2;
   }
-  return 0;
-}
 
-
-int Client::getRemoteEnemyMovement() {
-  cout << "It's enemy's turn. Waiting their input." << endl;
-  // Read other player's move from the server
-  char enemyString[10];
-  ssize_t n = read(clientSocket_, &enemyString, sizeof(enemyString));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
-  Point point = Point(enemyString);
-  dummy_->setEnemyPoint(point);
-  if (point.getX() == 0) {
-    return 2;
-  }
-  if (point.getX() == -1) {
+  if (strcmp(input, "nomoves") == 0) {
+    n = write(clientSocket_, &input, sizeof(input));
     return 1;
+  } else {
+
+    Point newCell = Point(input).decrease();
+    logic.putNewCell(board, *this, newCell);
+    display.printBoard(&board);
+    // Write the points to the socket
+    n = write(clientSocket_, &input, sizeof(input));
   }
   return 0;
 }
@@ -183,8 +152,7 @@ void Client::setUp(int index) {
   Client::setSymbol(symbol[index]);
 
   cout << "Game has started. You are: " << symbol[index] << " (" << index << ")" << endl;
-  cout << "To end the game, send 0." << endl;
-  cout << "To announce no more moves, send -1." << endl;
+
 }
 
 Dummy *Client::getDummy() {
@@ -193,4 +161,8 @@ Dummy *Client::getDummy() {
 
 void Client::setDummy_(Dummy *dummy) {
   dummy_ = dummy;
+}
+
+int Client::getClientSocket_() const {
+  return clientSocket_;
 }

@@ -1,8 +1,11 @@
 #ifndef EX2NEW_PLAYER_H
 #define EX2NEW_PLAYER_H
 
+#include <vector>
 #include "player.h"
 #include "point.h"
+
+using namespace std;
 
 class Logic;
 class Board;
@@ -20,6 +23,8 @@ class Human : public Player {
 
   // Get input from the player.
   virtual void getInput(Board &board, Logic &logic, Display &display, char*buffer);
+
+  virtual bool isvalid(vector<Point> possibleMoves, char *input);
 };
 
 #endif //EX2NEW_PLAYER_H
