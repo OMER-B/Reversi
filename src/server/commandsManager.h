@@ -18,9 +18,10 @@ class CommandsManager { // class is singleton
 
  public:
   static CommandsManager *getInstance(Lobby *lobby, HandleGame *handleGame);
+  static CommandsManager *getInstance();
   bool isLegalCommand(string command, int client);
   void executeCommand(string command, vector<string> &args, int client);
-
+  std::pair<string, vector<string> > seperate(string input);
   ~CommandsManager();
 };
 

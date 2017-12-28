@@ -14,36 +14,41 @@
 #define BUFFER 256
 #define MAX_CONNECTED_CLIENTS 10
 
-typedef struct firstThreadArgs{
+typedef struct firstThreadArgs {
   int serverSocket;
   CommandsManager *manager;
   vector<pthread_t *> *threads;
-}FirstThreadArgs;
+} FirstThreadArgs;
 
-typedef struct secondThreadArgs{
+typedef struct secondThreadArgs {
   CommandsManager *manager;
   int clientSocket;
   pthread_t id;
-}SecondThreadArgs;
+} SecondThreadArgs;
 
 using namespace std;
 
 class Server {
  private:
-  Lobby * lobby_;
+  Lobby *lobby_;
   vector<pthread_t *> *threads_;
   CommandsManager *manager_;
-  HandleGame * handleGame_;
+  HandleGame *handleGame_;
   int serverSocket_; // Socket of the server.
   int port_; // Port for the server.
 
  public:
+  static void *acceptClients(void *args);
+
+  static void *handleClient(void *args);
+
+  pair<string, vector<string> > seperate(string input);
+
   // Constructor by port.
   explicit Server(int port__);
 
   // Constructor by file with port details.
   explicit Server(char *fileName);
-
 
   // Destructor for the server.
   ~Server();
@@ -55,6 +60,5 @@ class Server {
   void stop();
 
 };
-
 
 #endif //REVERSI_SERVER_H

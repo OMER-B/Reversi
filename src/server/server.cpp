@@ -7,11 +7,7 @@
 
 using namespace std;
 
-static void *acceptClients(void *args);
 
-static void *handleClient(void *args);
-
-static pair<string, vector<string> > seperate(string input);
 
 Server::Server(int port) : serverSocket_(0) {
   port_ = port;
@@ -78,7 +74,7 @@ void Server::start() {
 
 }
 
-void *acceptClients(void *args) {
+void *Server::acceptClients(void *args) {
 
   FirstThreadArgs *args1 = (FirstThreadArgs *) args;
   int serverSocket = args1->serverSocket;
@@ -108,7 +104,7 @@ void *acceptClients(void *args) {
   }
 }
 
-void *handleClient(void *args) {
+void *Server::handleClient(void *args) {
   SecondThreadArgs *clientArgs = (SecondThreadArgs *) args;
   CommandsManager *manager = clientArgs->manager;
 
@@ -125,7 +121,7 @@ void *handleClient(void *args) {
   vector<string> stringArgs;
 
   pair<string, vector<string> > result;
-  result = seperate(input);
+  result = manager->seperate(input);
 
   string command = result.first;
   stringArgs = result.second;
@@ -134,19 +130,6 @@ void *handleClient(void *args) {
   } else {
     cout << "Illegal command" << endl;
   }
-}
-
-std::pair<string, vector<string> > seperate(string input) {
-  stringstream stream(input);
-  string command;
-  string buffer;
-  vector<string> args;
-
-  stream >> command;
-  while (stream >> buffer) {
-    args.push_back(buffer);
-  }
-  return pair<string, vector<string> >(command, args);
 }
 
 Server::~Server() {

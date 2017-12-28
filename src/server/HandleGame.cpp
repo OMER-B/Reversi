@@ -1,8 +1,8 @@
 #include <unistd.h>
 #include "HandleGame.h"
-#include <iostream>
+#include "commandsManager.h"
 #include <cstring>
-
+#include "server.h"
 using namespace std;
 #define BUFFER 128
 
@@ -35,7 +35,7 @@ void *HandleGame::play(void *room) {
 
   int i = 0;
   char move[BUFFER];
-
+  CommandsManager *manager = CommandsManager::getInstance();
   while (true) {
     // Read new point from client.
     ssize_t n = read(clients[(i % 2)], &move, sizeof(move));
@@ -47,23 +47,17 @@ void *HandleGame::play(void *room) {
       cout << "Client disconnected" << endl;
       break;
     }
-    if (strcmp(move, "0 0") == 0) {
-      n = write(clients[(i + 1) % 2], &move, sizeof(move));
-      if (n == -1) {
-        cout << "Error writing to client" << endl;
-        break;
+
+    /* CHANGE INPUT TO COMMAND */
+    string command = manager->seperate(move).first;
+    vector<string> stringArgs = manager->seperate(move).second;
+
+    if (manager->isLegalCommand(command, clients[(i % 2)])) {
+      if (strcmp(command.c_str(), "play") == 0 || strcmp(command.c_str(), "close") == 0) {
+        manager->executeCommand(command, stringArgs, clients[(i + 1) % 2]);
       }
-      cout << "Game has ended by exit from " << clients[(i % 2)] << endl;
-      break;
-    }
-    if (strcmp(move, "-1 -1") != 0) {
-      cout << "Got move (" << move << ") from " << clients[(i % 2)] << endl;
-    }
-    // Write the point back to the other client.
-    n = write(clients[(i + 1) % 2], &move, sizeof(move));
-    if (n == -1) {
-      cout << "Error writing to socket" << endl;
-      break;
+    } else {
+      // print "invalid command"
     }
     i++;
   }
