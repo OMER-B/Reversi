@@ -45,9 +45,6 @@ class Client : public Human {
   // Makes the move based on players input.
   int makeMove(Board &board, Logic &logic, Display &display);
 
-  // Gets input from the client. Called from makeMove().
-  Point getInput(Board &board, Logic &logic, Display &display);
-
   // Returns the enemy movement that was received so the dummy can make it.
   int getRemoteEnemyMovement();
 

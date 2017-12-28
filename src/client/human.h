@@ -19,7 +19,7 @@ class Human : public Player {
   int makeMove(Board &board, Logic &logic, Display &display);
 
   // Get input from the player.
-  virtual Point getInput(Board &board, Logic &logic, Display &display);
+  virtual void getInput(Board &board, Logic &logic, Display &display, char*buffer);
 };
 
 #endif //EX2NEW_PLAYER_H

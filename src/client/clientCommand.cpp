@@ -71,16 +71,4 @@ void ClientCommand::join(string name) {
   cout << "Trying to join room" << name << endl;
   n = read(clientSocket_, &buffer, sizeof(buffer));
   cout << buffer;
-  //TODO server will send index of player
 }
-
-/**
- * void Client::getFeedback() {
-  char feedback[BUFFER];
-  ssize_t n = read(clientSocket_, &feedback, sizeof(feedback));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
-  cout << feedback;
-}
- */

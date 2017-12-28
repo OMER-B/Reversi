@@ -34,7 +34,7 @@ void Game::setGameMode() {
       board_ = new Board(SIZE, SIZE, players_);
       break;
     case 3: {
-      char settings[] = "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client_config";
+      char settings[] = "/home/h/CLionProjects/Reversi/src/client/client_config";
       Client *client = new Client(settings);
       Dummy *dummy = new Dummy('D');
       client->setDummy_(dummy);
@@ -67,6 +67,7 @@ void Game::setGameMode() {
 
 void Game::run() {
   setGameMode();  // Choose if player is human or computer.
+  cin.ignore();
   numberOfPlayers_ = (sizeof(players_) / sizeof(players_[0]));
 
   // Game loop to play one turn until shouldStop() turns false.
