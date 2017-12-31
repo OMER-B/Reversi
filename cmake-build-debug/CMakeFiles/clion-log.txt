@@ -1,4 +1,4 @@
-/home/h/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/h/CLionProjects/Reversi
+/home/omer/clion-2017.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/h/CLionProjects/Reversi/cmake-build-debug
+-- Build files have been written to: /home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug

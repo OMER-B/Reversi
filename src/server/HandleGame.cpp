@@ -25,7 +25,7 @@ void notify(int clients[]) {
 void *HandleGame::play(void *room) {
   Room *game = (Room *) room;
   //read the move of the first player, and send to the second
-
+  CommandsManager *cm = CommandsManager::getInstance();
   int clients[2];
   clients[0] = game->getFirstClient();
   clients[1] = game->getSecondClient();
@@ -59,10 +59,8 @@ void *HandleGame::play(void *room) {
     }
 
     if (strcmp(move, "close") == 0) {
-      close(clients[i]);
-      close(clients[1 - i]);
+      cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
-
   }
 }

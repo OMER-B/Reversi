@@ -53,10 +53,8 @@ void ClientCommand::start(string name) {
   string startString = "start" + name;
   strcpy(buffer, startString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
-  cout << "Trying to open a new room:" << name << endl;
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  cout << name << ": " << buffer;
-
+  cout << "Opened room" << name << endl;
 }
 
 void ClientCommand::join(string name) {
@@ -64,7 +62,6 @@ void ClientCommand::join(string name) {
   string joinString = "join" + name;
   strcpy(buffer, joinString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
-  cout << "Trying to join room" << name << endl;
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  cout << buffer;
+  cout << buffer << name << endl;
 }

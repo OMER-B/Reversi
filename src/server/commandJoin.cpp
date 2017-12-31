@@ -17,26 +17,21 @@ bool CommandJoin::execute(string arg, int clientSocket) {
       room = lobby_->getRoom(name);
       room->setSecondClient(clientSocket);
       room->setStatus(Active);
-      char success[] = "Successfully joined\n";
+      char success[] = "Successfully joined";
       ssize_t n = write(clientSocket, &success, sizeof(success));
       if (room->getFirstClient() != 0 && room->getSecondClient() != 0) {
         thread_t id;
         pthread_create(&id, NULL, handleGame_->play, room);
         pthread_join(id, NULL);
-        //TODO delete here the thread after opening it
       }
-      cout << "Room name: " + lobby_->getRoom(name)->getName() << ", clients: "
-           << lobby_->getRoom(name)->getFirstClient()
-           << ", " << lobby_->getRoom(name)->getSecondClient() << ", status: "
-           << lobby_->getRoom(name)->getStatus()
-           << endl;
+
     } else {
-      char invalid[] = "Room does not exist.\n";
+      char invalid[] = "Room does not exist:";
       ssize_t n = write(clientSocket, &invalid, sizeof(invalid));
       return true;
     }
   } else {
-    char invalid[] = "Room does not exist.\n";
+    char invalid[] = "Room does not exist:";
     ssize_t n = write(clientSocket, &invalid, sizeof(invalid));
     char negative[] = "-1";
     n = write(clientSocket, &negative, sizeof(negative));

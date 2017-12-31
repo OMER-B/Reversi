@@ -9,6 +9,7 @@ bool CommandClose::execute(string arg, int clientSocket) {
     close(lobby_->getRoom(name)->getFirstClient());
     close(lobby_->getRoom(name)->getSecondClient());
     lobby_->removeRoom(name);
+    cout << "Closed room " << name << endl;
   }
   return false;
 }

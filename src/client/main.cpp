@@ -23,7 +23,7 @@ int main() {
       break;
     case 3: {
       char settings[] =
-          "/home/h/CLionProjects/Reversi/src/client/client_config";
+          "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client_config";
       Client *client = new Client(settings);
       Dummy *dummy = new Dummy('D');
       client->setDummy_(dummy);

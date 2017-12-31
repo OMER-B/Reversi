@@ -4,20 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/h/CLionProjects/Reversi/src/client/board.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/board.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/cell.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/cell.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/client.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/client.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/clientCommand.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/computer.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/computer.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/consoleDisplay.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/dummy.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/dummy.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/gameFlow.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/human.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/human.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/logic.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/logic.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/main.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/main.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/player.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/player.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/point.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/point.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/regLogic.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/board.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/cell.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/client.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/clientCommand.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/computer.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/consoleDisplay.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/dummy.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/gameFlow.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameManager.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/gameManager.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/human.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/logic.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/main.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/main.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/player.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/point.cpp.o"
+  "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.cpp" "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/CMakeFiles/Client.dir/src/client/regLogic.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
