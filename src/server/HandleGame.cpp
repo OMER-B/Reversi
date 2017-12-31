@@ -5,7 +5,6 @@
 #include "server.h"
 using namespace std;
 
-
 void notify(int clients[]) {
   char NUM0[2] = "0";
   char NUM1[2] = "1";
@@ -41,16 +40,15 @@ void *HandleGame::play(void *room) {
   while (true) {
     memset(move, 0, sizeof(move));
     // Read new point from client.
-    n = write(clients[(i)], &go, sizeof(go));
-    cout << "sent feedback to: " << i << endl;
+    n = write(clients[i], &go, sizeof(go));
+    cout << "sent feedback to: " << clients[i] << endl;
     n = read(clients[i], &move, sizeof(move));
     cout << "got move from client" << i << ": " << move << endl;
-    
-    n = write(clients[(1-i)], &move, sizeof(move));
-    cout << "sent to client " << (1-i)<< ": " << move << endl;
-    
-    
-    i = 1-i;
+
+    n = write(clients[(1 - i)], &move, sizeof(move));
+    cout << "sent to client " << (1 - i) << ": " << move << endl;
+
+    i = 1 - i;
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
       break;
@@ -62,7 +60,7 @@ void *HandleGame::play(void *room) {
 
     if (strcmp(move, "close") == 0) {
       close(clients[i]);
-      close(clients[1-i]);
+      close(clients[1 - i]);
       break;
     }
 

@@ -36,13 +36,11 @@ class Server {
   HandleGame *handleGame_;
   int serverSocket_; // Socket of the server.
   int port_; // Port for the server.
+  bool stop_;
 
  public:
-  static void *acceptClients(void *args);
-
+  // Handles the clients as a threaded function.
   static void *handleClient(void *args);
-
-  pair<string, vector<string> > seperate(string input);
 
   // Constructor by port.
   explicit Server(int port__);
@@ -59,6 +57,8 @@ class Server {
   // close the server's socket.
   void stop();
 
+  // Checks if the server should close (by "exit").
+  static void *shouldStop(void *server);
 };
 
 #endif //REVERSI_SERVER_H

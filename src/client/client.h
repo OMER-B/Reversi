@@ -40,13 +40,14 @@ class Client : public Human {
   // Establishes a connection with the server.
   void connectToServer();
 
+  // Returns the index of the player.
   int indexOfPlayer();
 
   string getCommand();
 
   // Makes the move based on players input.
   int makeMove(Board &board, Logic &logic, Display &display);
-  
+
   // Returns the client's dummy.
   Dummy *getDummy();
 };

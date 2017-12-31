@@ -22,7 +22,10 @@ class Human : public Player {
   int makeMove(Board &board, Logic &logic, Display &display);
 
   // Get input from the player.
-  virtual void getInput(Board &board, Logic &logic, Display &display, char*buffer);
+  virtual void getInput(Board &board,
+                        Logic &logic,
+                        Display &display,
+                        char *buffer);
 
   virtual bool isvalid(vector<Point> possibleMoves, char *input);
 };

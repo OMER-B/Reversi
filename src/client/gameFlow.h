@@ -30,7 +30,11 @@ class Game {
   int validTurns_;
 
  public:
-  Game(Board *board, Logic *logic, Display *display, Player *first, Player *second);
+  Game(Board *board,
+       Logic *logic,
+       Display *display,
+       Player *first,
+       Player *second);
 
   // Destructor for game. Deleted everything that is allocated.
   ~Game();

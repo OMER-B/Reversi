@@ -1,13 +1,16 @@
-#include <stdlib.h>
+
 #include "gameFlow.h"
-#include "client.h"
 
-
-Game::Game(Board *board_, Logic *logic_, Display *display_, Player *first, Player*second) : board_(board_), logic_(logic_),
-                                                                                display_(display_) {
+Game::Game(Board *board_,
+           Logic *logic_,
+           Display *display_,
+           Player *first,
+           Player *second) : board_(board_),
+                             logic_(logic_),
+                             display_(display_) {
   players_[0] = first;
   players_[1] = second;
-  validTurns_=0;
+  validTurns_ = 0;
 }
 
 Game::~Game() {
@@ -19,7 +22,7 @@ Game::~Game() {
 }
 
 void Game::run() {
-display_->printBoard(board_);
+  display_->printBoard(board_);
   int current = 0;
   // Game loop to play one turn until shouldStop() turns false.
   while (!shouldStop()) {
@@ -46,9 +49,9 @@ display_->printBoard(board_);
 void Game::playOneTurn(int current) {
   cout << "current player: " << players_[current]->getSymbol() << endl;
 
-  int numOfNoMoves=
-          players_[current]->makeMove(*board_, *logic_, *display_);
-  if(numOfNoMoves==0) {
+  int numOfNoMoves =
+      players_[current]->makeMove(*board_, *logic_, *display_);
+  if (numOfNoMoves == 0) {
     validTurns_ = 0;
     return;
   }

@@ -9,21 +9,23 @@
 #include <vector>
 using namespace std;
 
-typedef struct runArgs{
+typedef struct runArgs {
   Room room;
   HandleGame *handleGame;
 } runArgs;
 
 class CommandJoin : public Command {
 
-private:
+ private:
   Lobby *lobby_;
-  HandleGame * handleGame_;
+  HandleGame *handleGame_;
 
-public:
-  CommandJoin(Lobby *lobby, HandleGame * handleGame);
+ public:
+  // Constructor for join command.
+  CommandJoin(Lobby *lobby, HandleGame *handleGame);
+  
+  // Command to join an existing game.
   void execute(string arg, int clientSocket);
-  //static void *run(void *runArgs);
 };
 
 #endif //REVERSI_COMMANDJOIN_H

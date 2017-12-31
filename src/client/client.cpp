@@ -7,9 +7,7 @@
 #include <netdb.h>
 #include <string.h>
 #include <unistd.h>
-#include <limits>
 #include <fstream>
-#include <sstream>
 
 #define BUFFER 128
 
@@ -28,10 +26,10 @@
 using namespace std;
 
 Client::Client(char *serverIP, int serverPort)
-        : Human('R'),
-          serverIP_(serverIP),
-          serverPort_(serverPort),
-          clientSocket_(0) {
+    : Human('R'),
+      serverIP_(serverIP),
+      serverPort_(serverPort),
+      clientSocket_(0) {
   dummy_ = NULL;
 }
 
@@ -96,14 +94,16 @@ int Client::indexOfPlayer() {
   string command;
   int index;
   do {
-    cout << "Enter command:\nstart, join or list_games" << endl;
+    cout << "Enter command:" << endl
+         << "'start <room>', 'join <room>' or 'list_games'" << endl;
     command = getCommand();
     index = clientCommand.activate(command);
     if (index != -1) {
       setUp(index);
       return index;
     }
-  } while ((strcmp(command.c_str(), "close") != 0) && (strcmp(command.c_str(), "exit") != 0));
+  } while ((strcmp(command.c_str(), "close") != 0)
+      && (strcmp(command.c_str(), "exit") != 0));
   return -1;
 }
 
@@ -126,6 +126,7 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
   if (strcmp(input, "close") == 0) {
     n = write(clientSocket_, &input, sizeof(input));
     cout << endl << "You have ended the game." << endl;
+    close(clientSocket_);
     return 2;
   }
 
@@ -143,7 +144,6 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
   return 0;
 }
 
-
 void Client::setUp(int index) {
   char symbol[] = {'X', 'O'};
 
@@ -151,7 +151,8 @@ void Client::setUp(int index) {
 
   Client::setSymbol(symbol[index]);
 
-  cout << "Game has started. You are: " << symbol[index] << " (" << index << ")" << endl;
+  cout << "Game has started. You are: " << symbol[index] << " (" << index << ")"
+       << endl;
 
 }
 

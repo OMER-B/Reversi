@@ -8,10 +8,14 @@
 using namespace std;
 
 class CommandPrint : public Command {
-private:
+ private:
   Lobby *lobby_;
-public:
-  CommandPrint(Lobby * lobby);
+  
+ public:
+  // Constructor for print command.
+  CommandPrint(Lobby *lobby);
+
+  // Command to print all existing available games.
   void execute(string arg, int clientSocket);
 };
 

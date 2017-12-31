@@ -9,8 +9,11 @@ using namespace std;
 
 class CommandStart : public Command {
   Lobby *lobby_;
-public:
+ public:
+  // Constructor for the start command.
   explicit CommandStart(Lobby *lobby);
+  
+  // Execute the start command to start a new room.
   void execute(string arg, int clientSocket);
 };
 

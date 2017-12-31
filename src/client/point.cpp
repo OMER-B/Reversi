@@ -35,7 +35,7 @@ void Point::setY(int y) {
 }
 
 Point Point::decrease() {
-  return Point(x_-1, y_-1);
+  return Point(x_ - 1, y_ - 1);
 }
 
 bool Point::operator==(const Point &point) const {

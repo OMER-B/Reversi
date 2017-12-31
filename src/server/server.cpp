@@ -3,11 +3,8 @@
 #include <string.h>
 #include <fstream>
 #include <arpa/inet.h>
-#include <sstream>
 
 using namespace std;
-
-
 
 Server::Server(int port) : serverSocket_(0) {
   port_ = port;
@@ -15,6 +12,7 @@ Server::Server(int port) : serverSocket_(0) {
   threads_ = new vector<pthread_t *>;
   handleGame_ = new HandleGame;
   manager_ = CommandsManager::getInstance(lobby_, handleGame_);
+  stop_ = false;
 }
 
 Server::Server(char *fileName) {
@@ -22,7 +20,7 @@ Server::Server(char *fileName) {
   lobby_ = new Lobby;
   handleGame_ = new HandleGame;
   manager_ = CommandsManager::getInstance(lobby_, handleGame_);
-
+  stop_ = false;
   ifstream inFile;
   inFile.open(fileName);
   inFile >> port_;
@@ -47,7 +45,7 @@ void Server::start() {
            sizeof(serverAddress)) == -1) {
     throw "Error on binding";
   }
-  cout << "Binding succeeded." << endl;
+  cout << "Binding succeeded. Server is up." << endl;
   // Start listening to incoming connections
 //  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
 //  // Define the client socket's structures
@@ -55,51 +53,27 @@ void Server::start() {
 //  socklen_t clientAddressLen[MAX_CONNECTED_CLIENTS];
 
 
-  FirstThreadArgs args1;
-  args1.serverSocket = serverSocket_;
-  args1.manager = manager_;
-  args1.threads = threads_;
+  pthread_t serv;
+  pthread_create(&serv, NULL, shouldStop, (void *) this);
 
-  pthread_t id;
-  threads_->push_back(&id);
-  pthread_create(&id, nullptr, acceptClients, (void *) &args1);
-
-  string exit;
-  cin >> exit;
-  if (strcmp(exit.c_str(), "exit")) {
-    for (vector<pthread_t *>::iterator it = threads_->begin(); it != threads_->end(); ++it) {
-      pthread_exit(*it);
-    }
-  }
-
-}
-
-void *Server::acceptClients(void *args) {
-
-  FirstThreadArgs *args1 = (FirstThreadArgs *) args;
-  int serverSocket = args1->serverSocket;
-
-  vector<pthread_t *> *threads = args1->threads;
-  CommandsManager *manager = args1->manager;
-
-  listen(serverSocket, MAX_CONNECTED_CLIENTS);
+  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
 
-  while (true) {
+  while (!stop_) {
     // Accept a new clients connections.
-    int clientSocket = accept(serverSocket,
+    int clientSocket = accept(serverSocket_,
                               (struct sockaddr *) &clientAddress,
                               &clientAddressLen);
-    cout << "First client connected" << endl;
+    cout << "Client connected" << endl;
     if (clientSocket == -1) {
       throw "Error on first client accept";
     }
     SecondThreadArgs args;
     args.clientSocket = clientSocket;
-    args.manager = manager;
+    args.manager = manager_;
     pthread_t id;
-    threads->push_back(&id);
+    threads_->push_back(&id);
     pthread_create(&id, NULL, handleClient, &args);
   }
 }
@@ -112,10 +86,9 @@ void *Server::handleClient(void *args) {
   memset(input, 0, sizeof(input));
 
   cout << "connected to client: " << clientArgs->clientSocket << endl;
-
   ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
   if (n == -1) {
-    throw "failed to receive read from client";
+    throw "Failed to receive read from client";
   }
 
   string stringArgs;
@@ -133,6 +106,7 @@ void *Server::handleClient(void *args) {
 }
 
 Server::~Server() {
+  close(serverSocket_);
   stop();
   delete threads_;
   delete lobby_;
@@ -141,10 +115,36 @@ Server::~Server() {
 }
 
 void Server::stop() {
+  cout << "Closing the server..." << endl;
+  stop_ = true;
   map<string, Room *> *mappa = lobby_->getMap();
-  for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end(); ++it) {
-    close((*it).second->getFirstClient());
-    close((*it).second->getSecondClient());
+  for (vector<pthread_t *>::iterator it = threads_->begin();
+       it != threads_->end(); ++it) {
+    pthread_cancel(**it);
+
   }
-  close(serverSocket_);
+
+  char input[] = "close";
+  for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end();
+       ++it) {
+    cout << "Closing room '" << (*it).second->getName() << "'" << endl;
+    ssize_t n = write((*it).second->getFirstClient(), &input, sizeof(input));
+    n = write((*it).second->getSecondClient(), &input, sizeof(input));
+  }
+
+  exit(0);
+}
+
+void *Server::shouldStop(void *serv) {
+  Server *server = (Server *) serv;
+  string exit;
+  cout << "Type 'exit' to close the server." << endl;
+  while (true) {
+    cin.clear();
+    cin >> exit;
+    if (exit == "exit") {
+      server->stop();
+      break;
+    }
+  }
 }

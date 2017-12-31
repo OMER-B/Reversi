@@ -1,7 +1,3 @@
-//
-// Created by h on 27/12/17.
-//
-
 #include <cstring>
 #include <unistd.h>
 #include <iostream>

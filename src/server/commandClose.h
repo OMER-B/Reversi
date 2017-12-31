@@ -8,11 +8,12 @@
 using namespace std;
 
 class CommandClose : public Command {
-private:
+ private:
   Lobby *lobby_;
-public:
+ public:
   CommandClose(Lobby *lobby);
 
+  // Currently unused command for closing the players' sockets.
   void execute(string arg, int clientSocket);
 };
 

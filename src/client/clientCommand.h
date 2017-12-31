@@ -10,19 +10,22 @@
 using namespace std;
 
 class ClientCommand {
-private:
+ private:
   int clientSocket_;
-public:
+ public:
   ClientCommand(int clientSocket);
 
+  // Activates a command from the player.
   int activate(string command);
 
+  // Activates the list_games command.
   void getGameList();
 
+  // Activates the start command.
   void start(string name);
 
+  // Activates the join command
   void join(string name);
 };
-
 
 #endif //REVERSI_CLIENTCOMMAND_H

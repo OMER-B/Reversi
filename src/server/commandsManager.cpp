@@ -32,7 +32,8 @@ bool CommandsManager::isLegalCommand(string command, int client) {
   return true;
 }
 
-CommandsManager *CommandsManager::getInstance(Lobby *lobby, HandleGame *handleGame) {
+CommandsManager *CommandsManager::getInstance(Lobby *lobby,
+                                              HandleGame *handleGame) {
   if (!instance_) {
     instance_ = new CommandsManager(lobby, handleGame);
   }
@@ -45,7 +46,7 @@ CommandsManager *CommandsManager::getInstance() {
   return instance_;
 }
 
-std::pair<string, string > CommandsManager::seperate(string input) {
+std::pair<string, string> CommandsManager::seperate(string input) {
   stringstream stream(input);
   string command;
   string arg;

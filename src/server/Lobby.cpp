@@ -9,14 +9,11 @@ Lobby::Lobby() {
 }
 
 Lobby::~Lobby() {
-  for (map<string, Room *>::iterator it = roomsMap_->begin(); it != roomsMap_->end(); ++it) {
+  for (map<string, Room *>::iterator it = roomsMap_->begin();
+       it != roomsMap_->end(); ++it) {
     delete &it;
   }
   delete roomsMap_;
-}
-
-bool Lobby::isEmpty() {
-  return roomsMap_->empty();
 }
 
 map<string, Room *> *Lobby::getMap() {
@@ -24,8 +21,11 @@ map<string, Room *> *Lobby::getMap() {
 }
 vector<string> Lobby::getListOfRooms() {
   vector<string> listOfRooms;
-  for (map<string, Room *>::iterator it = roomsMap_->begin(); it != roomsMap_->end(); ++it) {
-    listOfRooms.push_back(it->first);
+  for (map<string, Room *>::iterator it = roomsMap_->begin();
+       it != roomsMap_->end(); ++it) {
+    if (it->second->getStatus() == Waiting) {
+      listOfRooms.push_back(it->first);
+    }
   }
   return listOfRooms;
 }
@@ -36,12 +36,6 @@ bool Lobby::contains(string name) {
 
 void Lobby::removeRoom(string name) {
   roomsMap_->erase(name);
-}
-
-void Lobby::addRoom(Room &room) {
-
-  string name = room.getName();
-  (*roomsMap_)[name] = &room;
 }
 
 Room *Lobby::getRoom(string name) {
