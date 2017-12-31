@@ -32,7 +32,7 @@ class CommandsManager { // class is singleton
   bool isLegalCommand(string command, int client);
   
   // Calls the execute() method of commands.
-  void executeCommand(string command, string arg, int client);
+  bool executeCommand(string command, string arg, int client);
   
   // Seperates input to two strings by space.
   std::pair<string, string> seperate(string input);

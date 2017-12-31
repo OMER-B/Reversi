@@ -16,7 +16,7 @@ class CommandPrint : public Command {
   CommandPrint(Lobby *lobby);
 
   // Command to print all existing available games.
-  void execute(string arg, int clientSocket);
+  bool execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDPRINT_H

@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "commandClose.h"
 
-void CommandClose::execute(string arg, int clientSocket) {
+bool CommandClose::execute(string arg, int clientSocket) {
   string name = arg;
   if (lobby_->contains(name)) {
     lobby_->getRoom(name)->setStatus(Ended);
@@ -10,6 +10,7 @@ void CommandClose::execute(string arg, int clientSocket) {
     close(lobby_->getRoom(name)->getSecondClient());
     lobby_->removeRoom(name);
   }
+  return false;
 }
 
 CommandClose::CommandClose(Lobby *lobby) : lobby_(lobby) {

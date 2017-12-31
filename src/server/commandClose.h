@@ -14,7 +14,7 @@ class CommandClose : public Command {
   CommandClose(Lobby *lobby);
 
   // Currently unused command for closing the players' sockets.
-  void execute(string arg, int clientSocket);
+  bool execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDCLOSE_H

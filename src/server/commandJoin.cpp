@@ -3,7 +3,7 @@
 #include <thread_db.h>
 #include <unistd.h>
 
-void CommandJoin::execute(string arg, int clientSocket) {
+bool CommandJoin::execute(string arg, int clientSocket) {
   string name = arg;
   Room *room;
   cout << "Socket " << clientSocket
@@ -33,13 +33,16 @@ void CommandJoin::execute(string arg, int clientSocket) {
     } else {
       char invalid[] = "Room does not exist.\n";
       ssize_t n = write(clientSocket, &invalid, sizeof(invalid));
+      return true;
     }
   } else {
     char invalid[] = "Room does not exist.\n";
     ssize_t n = write(clientSocket, &invalid, sizeof(invalid));
     char negative[] = "-1";
     n = write(clientSocket, &negative, sizeof(negative));
+    return true;
   }
+  return false;
 }
 
 CommandJoin::CommandJoin(Lobby *lobby, HandleGame *handleGame) {

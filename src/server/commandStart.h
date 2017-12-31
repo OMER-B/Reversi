@@ -14,7 +14,7 @@ class CommandStart : public Command {
   explicit CommandStart(Lobby *lobby);
   
   // Execute the start command to start a new room.
-  void execute(string arg, int clientSocket);
+  bool execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDSTART_H

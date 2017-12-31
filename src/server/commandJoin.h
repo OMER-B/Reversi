@@ -25,7 +25,7 @@ class CommandJoin : public Command {
   CommandJoin(Lobby *lobby, HandleGame *handleGame);
   
   // Command to join an existing game.
-  void execute(string arg, int clientSocket);
+  bool execute(string arg, int clientSocket);
 };
 
 #endif //REVERSI_COMMANDJOIN_H

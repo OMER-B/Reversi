@@ -18,10 +18,11 @@ CommandsManager::~CommandsManager() {
   delete instance_;
 }
 
-void CommandsManager::executeCommand(string command, string arg, int client) {
+bool CommandsManager::executeCommand(string command, string arg, int client) {
   cout << "Received command: " << command << " from socket: " << client << endl;
-  commandsMap_[command]->execute(arg, client);
+  return commandsMap_[command]->execute(arg, client);
 }
+
 bool CommandsManager::isLegalCommand(string command, int client) {
   if (commandsMap_.find(command) == commandsMap_.end()) {
     cout << "Unrecognized command received: " << command << endl;
