@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
   char settings[] =
-      "/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/settings";
+      "/home/h/CLionProjects/Reversi/src/server/settings";
   Server server(settings);
   try {
     server.start();

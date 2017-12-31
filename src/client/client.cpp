@@ -118,6 +118,10 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
   ssize_t n;
   char serverAnswer[BUFFER];
   n = read(clientSocket_, &serverAnswer, sizeof(serverAnswer));
+  if((strcmp(serverAnswer, "close")==0) || (n==-1)) {
+    cout << "game over!" << endl;
+    return 2;
+  }
   char input[BUFFER];
   memset(input, 0, sizeof(input));
 
@@ -132,6 +136,9 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
 
   if (strcmp(input, "nomoves") == 0) {
     n = write(clientSocket_, &input, sizeof(input));
+    if(n==-1) {
+      return 2;
+    }
     return 1;
   } else {
 
@@ -140,6 +147,9 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
     display.printBoard(&board);
     // Write the points to the socket
     n = write(clientSocket_, &input, sizeof(input));
+    if(n==-1) {
+      return 2;
+    }
   }
   return 0;
 }

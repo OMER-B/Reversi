@@ -82,26 +82,31 @@ void *Server::handleClient(void *args) {
   SecondThreadArgs *clientArgs = (SecondThreadArgs *) args;
   CommandsManager *manager = clientArgs->manager;
 
-  char input[BUFFER];
-  memset(input, 0, sizeof(input));
+  bool shoulContinue = true;
 
-  cout << "connected to client: " << clientArgs->clientSocket << endl;
-  ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
-  if (n == -1) {
-    throw "Failed to receive read from client";
-  }
+  while(shoulContinue) {
+    char input[BUFFER];
+    memset(input, 0, sizeof(input));
 
-  string stringArgs;
+    cout << "connected to client: " << clientArgs->clientSocket << endl;
+    ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
+    if (n == -1) {
+      throw "Failed to receive read from client";
+    }
 
-  pair<string, string> result;
-  result = manager->seperate(input);
+    string stringArgs;
 
-  string command = result.first;
-  stringArgs = result.second;
-  if (manager->isLegalCommand(command, clientArgs->clientSocket)) {
-    manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
-  } else {
-    cout << "Illegal command" << endl;
+    pair<string, string> result;
+    result = manager->seperate(input);
+
+    string command = result.first;
+    stringArgs = result.second;
+    if (manager->isLegalCommand(command, clientArgs->clientSocket)) {
+      shoulContinue = manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+    } else {
+      cout << "Illegal command" << endl;
+    }
+
   }
 }
 

@@ -30,5 +30,5 @@ bool CommandPrint::execute(string arg, int clientSocket) {
   if (n == 0) {
     throw "could not send list of games";
   }
-  return false;
+  return true;
 }
