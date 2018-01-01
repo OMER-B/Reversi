@@ -10,11 +10,13 @@ int ClientCommand::activate(string command) {
   char buffer[BUFFER_SIZE];
   memset(buffer, 0, sizeof(buffer));
   ssize_t n;
+
   if (strcmp(command.c_str(), "list_games") == 0) {
     getGameList();
     return -1;
   }
   string firstWord = command.substr(0, command.find(" "));
+
   if (strcmp(firstWord.c_str(), "start") == 0) {
     start(command.substr(command.find(" "), command.size()));
     n = read(clientSocket_, &buffer, sizeof(buffer));
@@ -25,20 +27,25 @@ int ClientCommand::activate(string command) {
     }
     return -1;
   }
+
+
   if (strcmp(firstWord.c_str(), "join") == 0) {
-    join(command.substr(command.find(" "), command.size()));
+    if (!join(command.substr(command.find(" "), command.size()))){
+      return -1;
+    }
     n = read(clientSocket_, &buffer, sizeof(buffer));
     if (strcmp(buffer, "1") == 0) {
       return 1;
     } else if (strcmp(buffer, "0") == 0) {
       return 0;
     }
-    return -1;
   }
+
   cout << "\'" << command << "\' is not a valid command." << endl;
   return -1;
 }
 
+//asks the list of games from the server and prints them
 void ClientCommand::getGameList() {
   char buffer[BUFFER_SIZE];
   strcpy(buffer, "list_games");
@@ -48,6 +55,7 @@ void ClientCommand::getGameList() {
   cout << "Available rooms: " << buffer;
 }
 
+//asks the server to start room "name"
 void ClientCommand::start(string name) {
   char buffer[BUFFER_SIZE];
   string startString = "start" + name;
@@ -57,11 +65,15 @@ void ClientCommand::start(string name) {
   cout << "Opened room" << name << endl;
 }
 
-void ClientCommand::join(string name) {
+bool ClientCommand::join(string name) {
   char buffer[BUFFER_SIZE];
   string joinString = "join" + name;
   strcpy(buffer, joinString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  cout << buffer << name << endl;
+  if(strcmp(buffer, "-1")==0) {
+    cout << "room is not available";
+    return false;
+  }
+  return true;
 }

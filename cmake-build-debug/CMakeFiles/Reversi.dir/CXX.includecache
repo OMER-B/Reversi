@@ -6,35 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.cpp
+/home/h/CLionProjects/Reversi/src/client/board.cpp
 board.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 cell.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.h
+/home/h/CLionProjects/Reversi/src/client/cell.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.cpp
+/home/h/CLionProjects/Reversi/src/client/cell.cpp
 cell.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.h
+/home/h/CLionProjects/Reversi/src/client/cell.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.h
+/home/h/CLionProjects/Reversi/src/client/cell.h
 iostream
 -
 ostream
 -
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.cpp
+/home/h/CLionProjects/Reversi/src/client/client.cpp
 iostream
 -
 client.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.h
+/home/h/CLionProjects/Reversi/src/client/client.h
 clientCommand.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.h
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
 sys/socket.h
 -
 netinet/in.h
@@ -50,19 +50,19 @@ unistd.h
 fstream
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.h
+/home/h/CLionProjects/Reversi/src/client/client.h
 string
 -
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 board.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 human.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.h
+/home/h/CLionProjects/Reversi/src/client/human.h
 dummy.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.h
+/home/h/CLionProjects/Reversi/src/client/dummy.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.cpp
+/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp
 cstring
 -
 unistd.h
@@ -70,69 +70,69 @@ unistd.h
 iostream
 -
 clientCommand.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.h
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.h
+/home/h/CLionProjects/Reversi/src/client/clientCommand.h
 string
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.cpp
+/home/h/CLionProjects/Reversi/src/client/computer.cpp
 computer.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.h
+/home/h/CLionProjects/Reversi/src/client/computer.h
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.h
+/home/h/CLionProjects/Reversi/src/client/computer.h
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.cpp
+/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp
 consoleDisplay.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.h
+/home/h/CLionProjects/Reversi/src/client/consoleDisplay.h
 board.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.h
+/home/h/CLionProjects/Reversi/src/client/consoleDisplay.h
 display.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/display.h
+/home/h/CLionProjects/Reversi/src/client/display.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/display.h
+/home/h/CLionProjects/Reversi/src/client/display.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.cpp
+/home/h/CLionProjects/Reversi/src/client/dummy.cpp
 cstring
 -
 unistd.h
 -
 dummy.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.h
+/home/h/CLionProjects/Reversi/src/client/dummy.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.h
+/home/h/CLionProjects/Reversi/src/client/dummy.h
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.cpp
+/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp
 gameFlow.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.h
+/home/h/CLionProjects/Reversi/src/client/gameFlow.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.h
+/home/h/CLionProjects/Reversi/src/client/gameFlow.h
 board.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 regLogic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.h
+/home/h/CLionProjects/Reversi/src/client/regLogic.h
 display.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/display.h
+/home/h/CLionProjects/Reversi/src/client/display.h
 consoleDisplay.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.h
+/home/h/CLionProjects/Reversi/src/client/consoleDisplay.h
 human.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.h
+/home/h/CLionProjects/Reversi/src/client/human.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameManager.cpp
+/home/h/CLionProjects/Reversi/src/client/gameManager.cpp
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.cpp
+/home/h/CLionProjects/Reversi/src/client/human.cpp
 limits
 -
 iostream
@@ -140,55 +140,55 @@ iostream
 cstring
 -
 human.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.h
+/home/h/CLionProjects/Reversi/src/client/human.h
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.h
+/home/h/CLionProjects/Reversi/src/client/human.h
 vector
 -
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.cpp
+/home/h/CLionProjects/Reversi/src/client/logic.cpp
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 vector
 -
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 board.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h
+/home/h/CLionProjects/Reversi/src/client/board.h
 computer.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.h
+/home/h/CLionProjects/Reversi/src/client/computer.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/main.cpp
+/home/h/CLionProjects/Reversi/src/client/main.cpp
 gameFlow.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.h
+/home/h/CLionProjects/Reversi/src/client/gameFlow.h
 client.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.h
+/home/h/CLionProjects/Reversi/src/client/client.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.cpp
+/home/h/CLionProjects/Reversi/src/client/player.cpp
 exception
 -
 player.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h
+/home/h/CLionProjects/Reversi/src/client/player.h
 iostream
 -
 display.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/display.h
+/home/h/CLionProjects/Reversi/src/client/display.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.cpp
+/home/h/CLionProjects/Reversi/src/client/point.cpp
 iostream
 -
 sstream
@@ -200,21 +200,21 @@ vector
 tgmath.h
 -
 point.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h
+/home/h/CLionProjects/Reversi/src/client/point.h
 string
 -
 ostream
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.cpp
+/home/h/CLionProjects/Reversi/src/client/regLogic.cpp
 regLogic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.h
+/home/h/CLionProjects/Reversi/src/client/regLogic.h
 climits
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.h
+/home/h/CLionProjects/Reversi/src/client/regLogic.h
 logic.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h
+/home/h/CLionProjects/Reversi/src/client/logic.h
 

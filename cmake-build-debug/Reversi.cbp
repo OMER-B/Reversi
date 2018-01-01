@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Server">
-				<Option output="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Server/fast">
-				<Option output="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,15 +77,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Reversi">
-				<Option output="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/Reversi" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Reversi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -100,15 +100,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reversi"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reversi"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Reversi/fast">
-				<Option output="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug/Reversi" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/cmake-build-debug"/>
+				<Option output="/home/h/CLionProjects/Reversi/cmake-build-debug/Reversi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/h/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -123,164 +123,164 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reversi/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/omer/Desktop/לימודים/שנה\ ב/תכנות\ מתקדם\ 1/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reversi/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/h/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/board.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/board.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/board.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/cell.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/cell.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/cell.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/client.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/client.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/client.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/clientCommand.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/clientCommand.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/clientCommand.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/computer.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/computer.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/computer.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/consoleDisplay.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/consoleDisplay.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/display.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/display.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/dummy.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/dummy.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/dummy.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameFlow.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameFlow.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameManager.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/gameManager.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/human.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/logic.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/logic.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/logic.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/main.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/main.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/player.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/player.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/player.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/point.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/point.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/point.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/regLogic.cpp">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/client/regLogic.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/client/regLogic.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/HandleGame.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/HandleGame.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Lobby.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Lobby.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Room.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/Room.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/command.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandClose.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandClose.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandJoin.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandJoin.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandPrint.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandPrint.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandStart.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandStart.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandsManager.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/commandsManager.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/main.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/main.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.cpp">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/server.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.h">
+		<Unit filename="/home/h/CLionProjects/Reversi/src/server/server.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/CMakeLists.txt">
+		<Unit filename="/home/h/CLionProjects/Reversi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

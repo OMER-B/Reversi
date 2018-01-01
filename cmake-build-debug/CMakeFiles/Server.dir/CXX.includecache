@@ -6,155 +6,155 @@
 
 #IncludeRegexTransform: 
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.cpp
+/home/h/CLionProjects/Reversi/src/server/HandleGame.cpp
 unistd.h
 -
 HandleGame.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h
+/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 commandsManager.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.h
+/home/h/CLionProjects/Reversi/src/server/commandsManager.h
 cstring
 -
 server.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.h
+/home/h/CLionProjects/Reversi/src/server/server.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h
+/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 string
 -
 Room.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.h
+/home/h/CLionProjects/Reversi/src/server/Room.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.cpp
+/home/h/CLionProjects/Reversi/src/server/Lobby.cpp
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 vector
 -
 map
 -
 Room.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.h
+/home/h/CLionProjects/Reversi/src/server/Room.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.cpp
+/home/h/CLionProjects/Reversi/src/server/Room.cpp
 Room.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.h
+/home/h/CLionProjects/Reversi/src/server/Room.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Room.h
+/home/h/CLionProjects/Reversi/src/server/Room.h
 string
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 iostream
 -
 vector
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.cpp
+/home/h/CLionProjects/Reversi/src/server/commandClose.cpp
 map
 -
 unistd.h
 -
 commandClose.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.h
+/home/h/CLionProjects/Reversi/src/server/commandClose.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.h
+/home/h/CLionProjects/Reversi/src/server/commandClose.h
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 iostream
 -
 vector
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.cpp
+/home/h/CLionProjects/Reversi/src/server/commandJoin.cpp
 commandJoin.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.h
+/home/h/CLionProjects/Reversi/src/server/commandJoin.h
 thread_db.h
 -
 unistd.h
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.h
+/home/h/CLionProjects/Reversi/src/server/commandJoin.h
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 HandleGame.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h
+/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 iostream
 -
 vector
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.cpp
+/home/h/CLionProjects/Reversi/src/server/commandPrint.cpp
 unistd.h
 -
 cstring
 -
 commandPrint.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.h
+/home/h/CLionProjects/Reversi/src/server/commandPrint.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.h
+/home/h/CLionProjects/Reversi/src/server/commandPrint.h
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 vector
 -
 iostream
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.cpp
+/home/h/CLionProjects/Reversi/src/server/commandStart.cpp
 map
 -
 unistd.h
 -
 commandStart.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.h
+/home/h/CLionProjects/Reversi/src/server/commandStart.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.h
+/home/h/CLionProjects/Reversi/src/server/commandStart.h
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 vector
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.cpp
+/home/h/CLionProjects/Reversi/src/server/commandsManager.cpp
 unistd.h
 -
 commandsManager.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.h
+/home/h/CLionProjects/Reversi/src/server/commandsManager.h
 sstream
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.h
+/home/h/CLionProjects/Reversi/src/server/commandsManager.h
 map
 -
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 commandJoin.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandJoin.h
+/home/h/CLionProjects/Reversi/src/server/commandJoin.h
 commandStart.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandStart.h
+/home/h/CLionProjects/Reversi/src/server/commandStart.h
 commandClose.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandClose.h
+/home/h/CLionProjects/Reversi/src/server/commandClose.h
 commandPrint.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandPrint.h
+/home/h/CLionProjects/Reversi/src/server/commandPrint.h
 HandleGame.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h
+/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/main.cpp
+/home/h/CLionProjects/Reversi/src/server/main.cpp
 server.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.h
+/home/h/CLionProjects/Reversi/src/server/server.h
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.cpp
+/home/h/CLionProjects/Reversi/src/server/server.cpp
 server.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.h
+/home/h/CLionProjects/Reversi/src/server/server.h
 unistd.h
 -
 string.h
@@ -164,7 +164,7 @@ fstream
 arpa/inet.h
 -
 
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/server.h
+/home/h/CLionProjects/Reversi/src/server/server.h
 sys/socket.h
 -
 pthread.h
@@ -176,11 +176,11 @@ vector
 netinet/in.h
 -
 Lobby.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/Lobby.h
+/home/h/CLionProjects/Reversi/src/server/Lobby.h
 command.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 commandsManager.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/commandsManager.h
+/home/h/CLionProjects/Reversi/src/server/commandsManager.h
 HandleGame.h
-/home/omer/Desktop/לימודים/שנה ב/תכנות מתקדם 1/Reversi/src/server/HandleGame.h
+/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 

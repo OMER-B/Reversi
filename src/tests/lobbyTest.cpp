@@ -51,4 +51,4 @@ TEST_F(lobbyTest, checkListOfRooms) {
   EXPECT_EQ(list.size(), 2);
   EXPECT_EQ(list.at(0), "room3");
   EXPECT_EQ(list.at(1), "room4");
-}
+};

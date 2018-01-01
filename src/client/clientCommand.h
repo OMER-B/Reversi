@@ -25,7 +25,7 @@ class ClientCommand {
   void start(string name);
 
   // Activates the join command
-  void join(string name);
+  bool join(string name);
 };
 
 #endif //REVERSI_CLIENTCOMMAND_H
