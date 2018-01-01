@@ -18,7 +18,10 @@ int ClientCommand::activate(string command) {
   string firstWord = command.substr(0, command.find(" "));
 
   if (strcmp(firstWord.c_str(), "start") == 0) {
-    start(command.substr(command.find(" "), command.size()));
+    // start() return false if the room is taken. in that case return
+    if (!start(command.substr(command.find(" "), command.size()))){
+      return -1;
+    }
     n = read(clientSocket_, &buffer, sizeof(buffer));
     if (strcmp(buffer, "1") == 0) {
       return 1;
@@ -56,13 +59,18 @@ void ClientCommand::getGameList() {
 }
 
 //asks the server to start room "name"
-void ClientCommand::start(string name) {
+bool ClientCommand::start(string name) {
   char buffer[BUFFER_SIZE];
   string startString = "start" + name;
   strcpy(buffer, startString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  cout << "Opened room" << name << endl;
+  if(strcmp(buffer, "-1")==0) {
+    cout << "room is already taken." << endl;
+    return false;
+  }
+  cout << buffer << "waiting for the second client, don't leave!" << endl;
+  return true;
 }
 
 bool ClientCommand::join(string name) {
@@ -72,7 +80,7 @@ bool ClientCommand::join(string name) {
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   n = read(clientSocket_, &buffer, sizeof(buffer));
   if(strcmp(buffer, "-1")==0) {
-    cout << "room is not available";
+    cout << "room is not available" << endl;
     return false;
   }
   return true;

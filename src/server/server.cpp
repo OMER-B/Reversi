@@ -46,12 +46,6 @@ void Server::start() {
     throw "Error on binding";
   }
   cout << "Binding succeeded. Server is up." << endl;
-  // Start listening to incoming connections
-//  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
-//  // Define the client socket's structures
-//  struct sockaddr_in clientAddress[MAX_CONNECTED_CLIENTS];
-//  socklen_t clientAddressLen[MAX_CONNECTED_CLIENTS];
-
 
   pthread_t serv;
   pthread_create(&serv, NULL, shouldStop, (void *) this);
@@ -90,6 +84,9 @@ void *Server::handleClient(void *args) {
 
     cout << "connected to client: " << clientArgs->clientSocket << endl;
     ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
+    if(n==0) {
+      break;
+    }
     if (n == -1) {
       throw "Failed to receive read from client";
     }
@@ -105,6 +102,7 @@ void *Server::handleClient(void *args) {
       shoulContinue = manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
     } else {
       cout << "Illegal command" << endl;
+      break;
     }
 
   }

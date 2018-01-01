@@ -9,7 +9,7 @@ bool CommandStart::execute(string arg, int clientSocket) {
   string name = arg;
 
   if (lobby_->contains(name)) { // Room name already exists
-    char invalid_name[50] = "Name is already taken (-1)\n";
+    char invalid_name[] = "-1";
     cout << "Room start failed - name already exists. Socket: " << clientSocket
          << ", name: " << name << endl;
     ssize_t n = write(clientSocket, &invalid_name, sizeof(invalid_name));

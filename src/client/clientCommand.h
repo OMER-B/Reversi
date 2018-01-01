@@ -22,7 +22,7 @@ class ClientCommand {
   void getGameList();
 
   // Activates the start command.
-  void start(string name);
+  bool start(string name);
 
   // Activates the join command
   bool join(string name);
