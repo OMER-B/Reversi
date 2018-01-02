@@ -67,11 +67,6 @@ void *HandleGame::play(void *room) {
       cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
-    if (n == 0) {
-      cout << "Client disconnected" << endl;
-      cm->executeCommand("close", game->getName(), clients[i]);
-      break;
-    }
 
     if (strcmp(move, "close") == 0) {
       cm->executeCommand("close", game->getName(), clients[i]);

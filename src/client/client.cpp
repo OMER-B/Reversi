@@ -106,7 +106,7 @@ string Client::getCommand() {
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
   ssize_t n;
   char serverAnswer[BUFFER];
-
+  memset(serverAnswer, 0, sizeof(serverAnswer));
   //notify client it can make a move
   n = read(clientSocket_, &serverAnswer, sizeof(serverAnswer));
   if ((strcmp(serverAnswer, "close") == 0) || (n == -1)) {
