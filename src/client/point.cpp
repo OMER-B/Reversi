@@ -2,7 +2,6 @@
 #include <sstream>
 #include <cstring>
 #include <vector>
-#include <tgmath.h>
 #include "point.h"
 
 using namespace std;

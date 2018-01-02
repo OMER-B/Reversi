@@ -10,7 +10,7 @@ using namespace std;
 class CommandPrint : public Command {
  private:
   Lobby *lobby_;
-  
+
  public:
   // Constructor for print command.
   CommandPrint(Lobby *lobby);

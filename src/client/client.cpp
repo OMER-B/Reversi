@@ -8,20 +8,9 @@
 #include <string.h>
 #include <unistd.h>
 #include <fstream>
+#include <cstdlib>
 
 #define BUFFER 128
-
-/**
- * 1. connect to server, here
- * 2. send a command, here
- * 3. a class to handle the command:
- *      a. if he wants the list of games: read from socket
- *      b. if he wants to start a new game: wait for someone to join
- *      c. if he wants to join a game: go to set up and run from gameflow
- * 4. return here in a loop, until "close"
- *
- */
-
 
 using namespace std;
 
@@ -117,14 +106,18 @@ string Client::getCommand() {
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
   ssize_t n;
   char serverAnswer[BUFFER];
+
+  //notify client it can make a move
   n = read(clientSocket_, &serverAnswer, sizeof(serverAnswer));
-  if((strcmp(serverAnswer, "close")==0) || (n==-1)) {
+  if ((strcmp(serverAnswer, "close") == 0) || (n == -1)) {
     cout << "game over!" << endl;
+    close(clientSocket_);
     return 2;
   }
   char input[BUFFER];
   memset(input, 0, sizeof(input));
 
+  //recieve input from the user
   Human::getInput(board, logic, display, input);
 
   if (strcmp(input, "close") == 0) {
@@ -136,7 +129,8 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
 
   if (strcmp(input, "nomoves") == 0) {
     n = write(clientSocket_, &input, sizeof(input));
-    if(n==-1) {
+    if (n == -1) {
+      close(clientSocket_);
       return 2;
     }
     return 1;
@@ -147,7 +141,8 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
     display.printBoard(&board);
     // Write the points to the socket
     n = write(clientSocket_, &input, sizeof(input));
-    if(n==-1) {
+    if (n == -1) {
+      close(clientSocket_);
       return 2;
     }
   }
@@ -156,14 +151,10 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
 
 void Client::setUp(int index) {
   char symbol[] = {'X', 'O'};
-
   dummy_->Dummy::setSymbol(symbol[1 - index]);
-
   Client::setSymbol(symbol[index]);
-
   cout << "Game has started. You are: " << symbol[index] << " (" << index << ")"
        << endl;
-
 }
 
 Dummy *Client::getDummy() {

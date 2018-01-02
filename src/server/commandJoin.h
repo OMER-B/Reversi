@@ -19,11 +19,12 @@ class CommandJoin : public Command {
  private:
   Lobby *lobby_;
   HandleGame *handleGame_;
+  vector<pthread_t *> *threads_;
 
  public:
   // Constructor for join command.
-  CommandJoin(Lobby *lobby, HandleGame *handleGame);
-  
+  CommandJoin(Lobby *, HandleGame *, vector<pthread_t *> *);
+
   // Command to join an existing game.
   bool execute(string arg, int clientSocket);
 };

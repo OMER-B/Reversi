@@ -12,7 +12,7 @@ class CommandStart : public Command {
  public:
   // Constructor for the start command.
   explicit CommandStart(Lobby *lobby);
-  
+
   // Execute the start command to start a new room.
   bool execute(string arg, int clientSocket);
 };

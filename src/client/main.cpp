@@ -22,8 +22,7 @@ int main() {
       players[1] = new Computer('O');
       break;
     case 3: {
-      char settings[] =
-          "/home/h/CLionProjects/Reversi/src/client/client_config";
+      char settings[] = "client_config";
       Client *client = new Client(settings);
       Dummy *dummy = new Dummy('D');
       client->setDummy_(dummy);
@@ -34,20 +33,20 @@ int main() {
 
       } catch (const char *msg) {
         cout << "Failed to connect to server. Reason: " << msg << endl;
-        exit(-1);
+        return -1;
       }
       cout << "connected to server" << endl;
       current = client->indexOfPlayer();
       if (current == -1) {
         cout << "You did not start a game. see you next time." << endl;
-        exit(0);
+        return 0;
       }
       players[current] = client;
       players[1 - current] = dummy;
       break;
     }
     default:cout << "Bye";
-      exit(0);
+      return 0;
   }
   display = new ConsoleDisplay;
   board = new Board(SIZE, SIZE, players);

@@ -10,7 +10,7 @@
 
 class HandleGame {
  public:
-  
+
   // This is the read/write game loop.
   static void *play(void *room);
 };

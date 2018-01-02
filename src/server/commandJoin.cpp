@@ -9,7 +9,8 @@ bool CommandJoin::execute(string name, int clientSocket) {
   ssize_t n;
   cout << "Socket " << clientSocket
        << " requested to join room \'" + name + "\'" << endl;
-  if ((lobby_->contains(name))&&(lobby_->getRoom(name)->getStatus() == Waiting)) {
+  if ((lobby_->contains(name))
+      && (lobby_->getRoom(name)->getStatus() == Waiting)) {
     pthread_mutex_trylock(&joinLock);
     room = lobby_->getRoom(name);
     room->setSecondClient(clientSocket);
@@ -19,15 +20,19 @@ bool CommandJoin::execute(string name, int clientSocket) {
     n = write(clientSocket, &success, sizeof(success));
     thread_t id;
     pthread_create(&id, NULL, handleGame_->play, room);
+    threads_->push_back(&id);
     pthread_join(id, NULL);
     return false;
   }
-    char negative[] = "-1";
-    n = write(clientSocket, &negative, sizeof(negative));
-    return true;
+  char negative[] = "-1";
+  n = write(clientSocket, &negative, sizeof(negative));
+  return true;
 }
 
-CommandJoin::CommandJoin(Lobby *lobby, HandleGame *handleGame) {
+CommandJoin::CommandJoin(Lobby *lobby,
+                         HandleGame *handleGame,
+                         vector<pthread_t *> *threads) {
   lobby_ = lobby;
   handleGame_ = handleGame;
+  threads_ = threads;
 }

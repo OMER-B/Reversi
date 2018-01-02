@@ -3,10 +3,13 @@
 #include <sstream>
 
 CommandsManager *CommandsManager::instance_ = 0;
-CommandsManager::CommandsManager(Lobby *lobby, HandleGame *handleGame) {
-  commandsMap_["join"] = new CommandJoin(lobby, handleGame);
+CommandsManager::CommandsManager(Lobby *lobby,
+                                 HandleGame *handleGame,
+                                 vector<pthread_t *> *threads) {
+  threads_ = threads;
+  commandsMap_["join"] = new CommandJoin(lobby, handleGame, threads);
   commandsMap_["list_games"] = new CommandPrint(lobby);
-  commandsMap_["close"] = new CommandClose(lobby);
+  commandsMap_["close"] = new CommandClose(lobby, threads);
   commandsMap_["start"] = new CommandStart(lobby);
 }
 
@@ -34,9 +37,10 @@ bool CommandsManager::isLegalCommand(string command, int client) {
 }
 
 CommandsManager *CommandsManager::getInstance(Lobby *lobby,
-                                              HandleGame *handleGame) {
+                                              HandleGame *handleGame,
+                                              vector<pthread_t *> *threads) {
   if (!instance_) {
-    instance_ = new CommandsManager(lobby, handleGame);
+    instance_ = new CommandsManager(lobby, handleGame, threads);
   }
   return instance_;
 }

@@ -12,12 +12,15 @@ typedef enum Status { Waiting, Active, Ended } Status;
 class Room {
  private:
   string name_;
-  int firstClient_, secondClient_, threadID_;
+  int firstClient_, secondClient_;
+  pthread_t threadID_;
+ private:
   Status status_;
 
  public:
 
   Room();
+  pthread_t getThreadID() const;
 
   // Returns room name.
   const string &getName() const;
@@ -37,9 +40,7 @@ class Room {
   // Sets second client of the room.
   void setSecondClient(int secondClient);
 
-  int getThreadID() const;
-
-  void setThreadID(int threadID);
+  void setThreadID(pthread_t threadID);
 
   // Returns room status.
   Status getStatus() const;

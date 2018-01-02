@@ -31,7 +31,7 @@ using namespace std;
 class Server {
  private:
   Lobby *lobby_;
-  vector<pthread_t *> *threads_;
+  vector<pthread_t *> *threads_; // li
   CommandsManager *manager_;
   HandleGame *handleGame_;
   int serverSocket_; // Socket of the server.

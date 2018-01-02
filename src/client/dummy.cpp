@@ -15,7 +15,9 @@ int Dummy::makeMove(Board &board, Logic &logic, Display &display) {
   }
   enemyPoint = Point(enemyString).decrease();
   if (n == -1) {
-    throw "Error reading enemy point from socket";
+    cout << "Error. Disconnected." << endl;
+    close(clientSocket_);
+    return 2;
   }
   if (strcmp(enemyString, "close") == 0) {
     close(clientSocket_);

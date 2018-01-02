@@ -19,7 +19,7 @@ int ClientCommand::activate(string command) {
 
   if (strcmp(firstWord.c_str(), "start") == 0) {
     // start() return false if the room is taken. in that case return
-    if (!start(command.substr(command.find(" "), command.size()))){
+    if (!start(command.substr(command.find(" "), command.size()))) {
       return -1;
     }
     n = read(clientSocket_, &buffer, sizeof(buffer));
@@ -31,9 +31,8 @@ int ClientCommand::activate(string command) {
     return -1;
   }
 
-
   if (strcmp(firstWord.c_str(), "join") == 0) {
-    if (!join(command.substr(command.find(" "), command.size()))){
+    if (!join(command.substr(command.find(" "), command.size()))) {
       return -1;
     }
     n = read(clientSocket_, &buffer, sizeof(buffer));
@@ -65,7 +64,7 @@ bool ClientCommand::start(string name) {
   strcpy(buffer, startString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  if(strcmp(buffer, "-1")==0) {
+  if (strcmp(buffer, "-1") == 0) {
     cout << "room is already taken." << endl;
     return false;
   }
@@ -79,7 +78,7 @@ bool ClientCommand::join(string name) {
   strcpy(buffer, joinString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   n = read(clientSocket_, &buffer, sizeof(buffer));
-  if(strcmp(buffer, "-1")==0) {
+  if (strcmp(buffer, "-1") == 0) {
     cout << "room is not available" << endl;
     return false;
   }

@@ -36,13 +36,25 @@ void *HandleGame::play(void *room) {
   char move[BUFFER];
   char go[] = "go";
   ssize_t n;
-
+  char error[] = "close";
   while (true) {
     memset(move, 0, sizeof(move));
     // Read new point from client.
     n = write(clients[i], &go, sizeof(go));
+    if (n == -1) {
+      cout << "Error reading from client " << clients[i % 2] << endl;
+      n = write(clients[1 - i], &error, sizeof(error));
+      cm->executeCommand("close", game->getName(), clients[i]);
+      break;
+    }
     cout << "sent feedback to: " << clients[i] << endl;
     n = read(clients[i], &move, sizeof(move));
+    if (n == -1) {
+      cout << "Error reading from client " << clients[i % 2] << endl;
+      n = write(clients[1 - i], &error, sizeof(error));
+      cm->executeCommand("close", game->getName(), clients[i]);
+      break;
+    }
     cout << "got move from client" << i << ": " << move << endl;
 
     n = write(clients[(1 - i)], &move, sizeof(move));
@@ -51,10 +63,13 @@ void *HandleGame::play(void *room) {
     i = 1 - i;
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
+      n = write(clients[1 - i], &error, sizeof(error));
+      cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
     if (n == 0) {
       cout << "Client disconnected" << endl;
+      cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
 

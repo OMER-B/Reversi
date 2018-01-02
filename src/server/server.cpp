@@ -3,6 +3,7 @@
 #include <string.h>
 #include <fstream>
 #include <arpa/inet.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ Server::Server(int port) : serverSocket_(0) {
   lobby_ = new Lobby;
   threads_ = new vector<pthread_t *>;
   handleGame_ = new HandleGame;
-  manager_ = CommandsManager::getInstance(lobby_, handleGame_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_, threads_);
   stop_ = false;
 }
 
@@ -19,7 +20,7 @@ Server::Server(char *fileName) {
   threads_ = new vector<pthread_t *>;
   lobby_ = new Lobby;
   handleGame_ = new HandleGame;
-  manager_ = CommandsManager::getInstance(lobby_, handleGame_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_, threads_);
   stop_ = false;
   ifstream inFile;
   inFile.open(fileName);
@@ -78,13 +79,13 @@ void *Server::handleClient(void *args) {
 
   bool shoulContinue = true;
 
-  while(shoulContinue) {
+  while (shoulContinue) {
     char input[BUFFER];
     memset(input, 0, sizeof(input));
 
     cout << "connected to client: " << clientArgs->clientSocket << endl;
     ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
-    if(n==0) {
+    if (n == 0) {
       break;
     }
     if (n == -1) {
@@ -99,7 +100,9 @@ void *Server::handleClient(void *args) {
     string command = result.first;
     stringArgs = result.second;
     if (manager->isLegalCommand(command, clientArgs->clientSocket)) {
-      shoulContinue = manager->executeCommand(command, stringArgs, clientArgs->clientSocket);
+      shoulContinue = manager->executeCommand(command,
+                                              stringArgs,
+                                              clientArgs->clientSocket);
     } else {
       cout << "Illegal command" << endl;
       break;
@@ -109,8 +112,8 @@ void *Server::handleClient(void *args) {
 }
 
 Server::~Server() {
-  close(serverSocket_);
   stop();
+  close(serverSocket_);
   delete threads_;
   delete lobby_;
   delete manager_;
@@ -127,12 +130,12 @@ void Server::stop() {
 
   }
 
-  char input[] = "close";
+  char close[] = "close";
   for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end();
        ++it) {
     cout << "Closing room '" << (*it).second->getName() << "'" << endl;
-    ssize_t n = write((*it).second->getFirstClient(), &input, sizeof(input));
-    n = write((*it).second->getSecondClient(), &input, sizeof(input));
+    ssize_t n = write((*it).second->getFirstClient(), &close, sizeof(close));
+    n = write((*it).second->getSecondClient(), &close, sizeof(close));
   }
 
   exit(0);

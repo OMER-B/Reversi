@@ -24,11 +24,7 @@ void Room::setSecondClient(int secondClient) {
   secondClient_ = secondClient;
 }
 
-int Room::getThreadID() const {
-  return threadID_;
-}
-
-void Room::setThreadID(int threadID) {
+void Room::setThreadID(pthread_t threadID) {
   threadID_ = threadID;
 }
 
@@ -46,4 +42,8 @@ Room::Room() {
   secondClient_ = 0;
   firstClient_ = 0;
   name_ = "";
+}
+
+pthread_t Room::getThreadID() const {
+  return threadID_;
 }
