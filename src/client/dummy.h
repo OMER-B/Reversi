@@ -7,15 +7,14 @@
 
 class Dummy : public Player {
  private:
+  int clientSocket_;
   // Holds the next dummy's move.
-  Point enemyPoint_;
 
  public:
-  // This will be the next dummy's move.
-  void setEnemyPoint(const Point &enemyPoint);
+  Dummy(char symbol);
 
-  // Constructor for dummy.
-  explicit Dummy(char symbol);
+  // Sets the dummys socket.
+  void setClientSocket(int clientSocket);
 
   // Makes move based on the "enemyPoint_" member.
   int makeMove(Board &board, Logic &logic, Display &display);

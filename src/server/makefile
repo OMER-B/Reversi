@@ -8,7 +8,7 @@ create_all: obj server clean
 server: $(SERVER_CPP_FILES) $(SERVER_H_FILES)
 	$(CC) -c $(SERVER_CPP_FILES)
 	mv *.o obj/server_obj
-	$(CC) $(SERVER_O_FILES) -o ../../exe/server
+	$(CC) -pthread $(SERVER_O_FILES) -o ../../exe/server
 
 obj:
 	mkdir obj

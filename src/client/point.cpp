@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cstdlib>
 #include <sstream>
 #include <cstring>
+#include <vector>
 #include "point.h"
 
 using namespace std;
@@ -16,7 +16,7 @@ int Point::getX() const {
 
 string Point::toString() {
   ostringstream ss;
-  ss << x_ << ", " << y_;
+  ss << x_ << " " << y_;
   string s = ss.str();
   return s;
 }
@@ -33,6 +33,10 @@ void Point::setY(int y) {
   y_ = y;
 }
 
+Point Point::decrease() {
+  return Point(x_ - 1, y_ - 1);
+}
+
 bool Point::operator==(const Point &point) const {
   return x_ == point.getX() && y_ == point.getY();
 }
@@ -41,10 +45,21 @@ bool Point::operator!=(const Point &point) const {
   return x_ != point.getX() || y_ != point.getY();
 }
 
-Point::Point(string point) {
-  unsigned long pos = point.find_first_of(',');
-  x_ = atoi(point.substr(0, pos).c_str());
-  y_ = atoi(point.substr(pos + 2).c_str());
+Point::Point(char *point) {
+  x_ = 0;
+  y_ = 0;
+  int i = 0;
+  while (point[i] != ' ') {
+    x_ *= 10;
+    x_ += (point[i] - 48);
+    i++;
+  }
+  i++;
+  while (point[i] != '\0') {
+    y_ *= 10;
+    y_ += (point[i] - 48);
+    i++;
+  }
 }
 
 std::ostream &operator<<(std::ostream &out, Point const &point) {

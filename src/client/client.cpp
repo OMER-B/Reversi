@@ -1,15 +1,16 @@
-#include <cstdlib>
+#include <iostream>
 #include "client.h"
+#include "clientCommand.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
 #include <unistd.h>
-#include <limits>
 #include <fstream>
+#include <cstdlib>
 
-#define BUFFER 10
+#define BUFFER 50
 
 using namespace std;
 
@@ -39,7 +40,7 @@ Client::~Client() {
   close(clientSocket_);
 }
 
-int Client::connectToServer() {
+void Client::connectToServer() {
   // Create a socket point
   clientSocket_ = socket(AF_INET, SOCK_STREAM, 0);
   if (clientSocket_ == -1) {
@@ -75,129 +76,85 @@ int Client::connectToServer() {
   *) &serverAddress, sizeof(serverAddress)) == -1) {
     throw "Error connecting to server";
   }
-  cout << "Connected to server. IP: " << serverIP_ << ", Port: " << serverPort_
-       << "." << endl << "Waiting for second player." << endl;
-  return setUp();
+}
+
+int Client::indexOfPlayer() {
+  ClientCommand clientCommand(clientSocket_);
+  string command;
+  int index;
+  do {
+    cout << "Enter command:" << endl
+         << "'start <room>', 'join <room>' or 'list_games'" << endl;
+    command = getCommand();
+    index = clientCommand.activate(command);
+    if (index != -1) {
+      setUp(index);
+      return index;
+    }
+  } while ((strcmp(command.c_str(), "close") != 0)
+      && (strcmp(command.c_str(), "exit") != 0));
+  return -1;
+}
+
+string Client::getCommand() {
+  char command[BUFFER] = "";
+  cin.clear();
+  cin.getline(command, sizeof(command));
+  return string(command);
 }
 
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
-  char move[BUFFER] = "";
   ssize_t n;
-  Point newCell = Client::getInput(board, logic, display);
-
-  if (newCell == Point(0, 0)) {
-    strcpy(move, "0 0");
-    n = write(clientSocket_, &move, sizeof(move));
-    cout << endl << "You have ended the game." << endl;
+  char serverAnswer[BUFFER];
+  memset(serverAnswer, 0, sizeof(serverAnswer));
+  //notify client it can make a move
+  n = read(clientSocket_, &serverAnswer, sizeof(serverAnswer));
+  if ((strcmp(serverAnswer, "close") == 0) || (n == -1)) {
+    cout << "game over!" << endl;
+    close(clientSocket_);
     return 2;
-  } else if (newCell == Point(-1, -1)) {
-    strcpy(move, "-1 -1");
-    n = write(clientSocket_, &move, sizeof(move));
-    int enemyStatus = getRemoteEnemyMovement();
-    if ((enemyStatus == 1 )||(enemyStatus == 2 ) ) {
-      cout << endl << "Both players don't have any moves." << endl;
+  }
+  char input[BUFFER];
+  memset(input, 0, sizeof(input));
+
+  //recieve input from the user
+  Human::getInput(board, logic, display, input);
+
+  if (strcmp(input, "close") == 0) {
+    n = write(clientSocket_, &input, sizeof(input));
+    cout << endl << "You have ended the game." << endl;
+    close(clientSocket_);
+    return 2;
+  }
+
+  if (strcmp(input, "nomoves") == 0) {
+    n = write(clientSocket_, &input, sizeof(input));
+    if (n == -1) {
+      close(clientSocket_);
       return 2;
     }
+    return 1;
   } else {
+
+    Point newCell = Point(input).decrease();
     logic.putNewCell(board, *this, newCell);
     display.printBoard(&board);
-    strcpy(move, newCell.toString().c_str());
     // Write the points to the socket
-    n = write(clientSocket_, &move, sizeof(move));
+    n = write(clientSocket_, &input, sizeof(input));
     if (n == -1) {
-      throw "Error input point to socket";
+      close(clientSocket_);
+      return 2;
     }
-  }
-
-  if (getRemoteEnemyMovement() == 2) {
-    cout << endl << "Other player has ended the game." << endl;
-    return 2;
   }
   return 0;
 }
 
-int Client::getRemoteEnemyMovement() {
-  cout << "It's enemy's turn. Waiting their input." << endl;
-  // Read other player's move from the server
-  char enemyString[10];
-  ssize_t n = read(clientSocket_, &enemyString, sizeof(enemyString));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
-  Point point = Point(enemyString);
-  dummy_->setEnemyPoint(point);
-  if (point.getX() == 0) {
-    return 2;
-  }
-  if (point.getX() == -1) {
-    return 1;
-  }
-  return 0;
-}
-
-Point Client::getInput(Board &board, Logic &logic, Display &display) {
-  cout << getSymbol() << ", it's your turn." << endl;
-  vector<Point> possibleMoves = logic.getOptionalMoves(board, *this);
-  if (possibleMoves.empty()) {
-    cout << "You don't have any moves. Type -1." << endl
-         << "If enemy did not make a move type 0." << endl;
-  } else {
-    cout << "Possible moves: ";
-    for (vector<Point>::iterator it = possibleMoves.begin();
-         it != possibleMoves.end(); ++it) {
-      cout << *it;
-    }
-  }
-  int moveX = -1, moveY = -1;
-  while (true) {
-    cout << endl << "Enter your move 'row col': ";
-    cin >> moveX;
-    if (moveX == 0) {
-      return Point(0, 0);
-    }
-    if (moveX == -1) {
-      return Point(-1, -1);
-    }
-    cin >> moveY;
-
-    // Check if input is an integer.
-    if (cin.fail()) {
-      cin.clear();
-      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
-
-    // Minus one for indexes.
-    moveX--;
-    moveY--;
-    if (board.inBoundaries(moveX, moveY)
-        && logic.isOptionInList(Point(moveX, moveY), possibleMoves)) {
-      break;
-    }
-  }
-
-  return Point(moveX, moveY);
-}
-
-int Client::setUp() {
-  int turn;
-  char c = 'O';
-  ssize_t n = read(clientSocket_, &turn, sizeof(turn));
-  if (n == -1) {
-    throw "Error reading enemy point from socket";
-  }
-
-  if (turn == 0) {
-    c = 'X';
-    dummy_->Dummy::setSymbol('O');
-  } else {
-    dummy_->Dummy::setSymbol('X');
-  }
-
-  cout << "Game has started. You are: " << c << " (" << turn << ")" << endl;
-  cout << "To end the game, send 0." << endl;
-  cout << "To announce no more moves, send -1." << endl;
-  Client::setSymbol(c);
-  return turn;
+void Client::setUp(int index) {
+  char symbol[] = {'X', 'O'};
+  dummy_->Dummy::setSymbol(symbol[1 - index]);
+  Client::setSymbol(symbol[index]);
+  cout << "Game has started. You are: " << symbol[index] << " (" << index << ")"
+       << endl;
 }
 
 Dummy *Client::getDummy() {
@@ -206,4 +163,8 @@ Dummy *Client::getDummy() {
 
 void Client::setDummy_(Dummy *dummy) {
   dummy_ = dummy;
+}
+
+int Client::getClientSocket_() const {
+  return clientSocket_;
 }

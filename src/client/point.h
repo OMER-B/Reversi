@@ -8,7 +8,7 @@ class Point {
 
  public:
   // Constructor for point by string.
-  Point(std::string point);
+  Point(char *point);
 
   // Constructor for point by two coordinates.
   Point(int x = -1, int y = -1);
@@ -27,6 +27,8 @@ class Point {
 
   // Sets the point's y coordinate as given coordinate.
   void setY(int y);
+
+  Point decrease();
 
   // Compares two points.
   bool operator==(const Point &point) const;

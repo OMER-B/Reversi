@@ -3,6 +3,8 @@
 
 #define SIZE 8
 
+#define NUM_OF_PLAYERS 2
+
 #include "board.h"
 #include "regLogic.h"
 #include "display.h"
@@ -11,8 +13,6 @@
 
 class Game {
  private:
-  // Currently set for a game of two players.
-  static const int playersSize_ = 2;
 
   // The board of the game.
   Board *board_;
@@ -24,20 +24,23 @@ class Game {
   Display *display_;
 
   // An array of players playing.
-  Player *players_[playersSize_];
+  Player *players_[NUM_OF_PLAYERS];
 
   // Few integers. Can tell from their names.
-  int numberOfPlayers_, validTurns_, currentPlayer_;
+  int validTurns_;
 
  public:
-  // Constructor for game.
-  Game();
+  Game(Board *board,
+       Logic *logic,
+       Display *display,
+       Player *first,
+       Player *second);
 
   // Destructor for game. Deleted everything that is allocated.
   ~Game();
 
   // Plays one turn in the current game.
-  void playOneTurn();
+  void playOneTurn(int current);
 
   // Starts to play the game until no more valid moves.
   void run();
@@ -45,8 +48,6 @@ class Game {
   // Returns a boolean if the game should stop or continue playing.
   bool shouldStop();
 
-  // Sets the game mode as player vs player, player vs computer, etc...
-  void setGameMode();
 };
 
 #endif //EX2NEW_GAME_H
