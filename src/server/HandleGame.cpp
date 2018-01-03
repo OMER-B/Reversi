@@ -9,7 +9,7 @@ void notify(int clients[]) {
   char NUM0[2] = "0";
   char NUM1[2] = "1";
 
-  cout << "Notifying clients who is who." << endl;
+  cout << "Notifying clients who is who. First is " << clients[0] << endl;
 
   ssize_t n = write(clients[0], &NUM0, sizeof(NUM0));
   if (n == -1) {
@@ -47,7 +47,7 @@ void *HandleGame::play(void *room) {
       cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
-    cout << "sent feedback to: " << clients[i] << endl;
+    cout << "Sent feedback to: " << clients[i] << endl;
     n = read(clients[i], &move, sizeof(move));
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
