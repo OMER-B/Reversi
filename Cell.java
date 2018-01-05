@@ -7,10 +7,14 @@ public class Cell {
     }
 
     public Cell(Point point) {
+
         this.point = point;
     }
 
     public char getSymbol() {
+        if (this.player == null) {
+            return ' ';
+        }
         return this.player.getSymbol();
     }
 
