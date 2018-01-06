@@ -2,7 +2,6 @@ import java.util.Vector;
 
 public class regLogic extends Logic {
 
-
     public Vector<Point> getOptionalMoves(Board board, Player player) {
         Vector<Point> playerCells = super.getPlayerCell(board, player);
         Vector<Point> options = new Vector<>();
@@ -33,7 +32,7 @@ public class regLogic extends Logic {
         boolean passedAtLeastOneRival = false;
         int x = point.getX() + xChange, y = point.getY() + yChange;
         // While the cell being checked is in the board.
-        while ((x >= 0) && (x < board.getWidth()) && (y >= 0) && (y < board.getHeight())) {
+        while ((x >= 0) && (x < board.getSize()) && (y >= 0) && (y < board.getSize())) {
             if (player == board.getPlayer(x, y)) {
                 // If the cell already belongs to the player, return an "empty" cell.
                 return new Point(-1, -1);

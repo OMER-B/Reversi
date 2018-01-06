@@ -3,11 +3,11 @@ import java.util.Vector;
 
 public class Player {
     private char symbol;
-    private Score score;
+    private Counter score;
 
     public Player(char symbol) {
         this.symbol = symbol;
-        this.score = new Score();
+        this.score = new Counter(2);
     }
 
     public char getSymbol() {
@@ -15,23 +15,23 @@ public class Player {
     }
 
     public int getScore() {
-        return this.score.getScore();
+        return this.score.getValue();
     }
 
     public void setScore(int score) {
-        this.score.setScore(score);
+        this.score.setValue(score);
     }
 
     public void increaseScore() {
-        this.score.increaseScore();
+        this.score.increaseCounter();
     }
 
     public void decreaseScore() {
-        this.score.decreaseScore();
+        this.score.decreaseCounter();
     }
 
     public int compare(Player player) {
-        return Integer.compare(this.score.getScore(), player.getScore());
+        return Integer.compare(this.score.getValue(), player.getScore());
     }
 
     public int makeMove(Board board, Logic logic) {
@@ -50,18 +50,26 @@ public class Player {
         int moveX = -1, moveY = -1;
         System.out.println("Enter your move 'row col': ");
         while (true) {
-            Scanner numberScanner = new Scanner(System.in);
-            moveX = numberScanner.nextInt();
-            moveY = numberScanner.nextInt();
+            try {
+                Scanner numberScanner = new Scanner(System.in);
+                moveX = numberScanner.nextInt();
+                moveY = numberScanner.nextInt();
 
-
+            } catch (Exception e) {
+                System.out.println("Game has ended by request from '" + this + "'.");
+                return 2;
+            }
             if (board.inBoundaries(moveX, moveY) && logic.isOptionInList(new Point(moveX, moveY), possibleMoves)) {
                 break;
             }
-            System.out.println("Invalid input. Try again.");
+            System.out.println("Input not in list of moves. Try again.");
         }
         Point newCell = new Point(moveX, moveY);
         logic.putNewCell(board, this, newCell);
         return 0;
+    }
+
+    public String toString() {
+        return Character.toString(this.symbol);
     }
 }

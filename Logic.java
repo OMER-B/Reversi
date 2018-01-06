@@ -3,10 +3,9 @@ import java.util.Vector;
 abstract public class Logic {
     public Vector<Point> getPlayerCell(Board board, Player player) {
         Vector<Point> playerCells = new Vector<Point>();
-        int x = board.getWidth();
-        int y = board.getHeight();
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        int boardSize = board.getSize();
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 if (board.getPlayer(i, j) != null) {
                     if (board.getPlayer(i, j) == player) {
                         playerCells.add(new Point(i, j));
@@ -31,10 +30,9 @@ abstract public class Logic {
     }
 
     public Player findRival(Player currentPlayer, Board board) {
-        int x = board.getWidth();
-        int y = board.getHeight();
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        int boardSize = board.getSize();
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 if ((!board.getCell(i, j).isEmpty())
                         && (board.getPlayer(i, j) != currentPlayer)) {
                     return board.getPlayer(i, j);
@@ -52,9 +50,6 @@ abstract public class Logic {
     }
 
     public boolean isEnemy(Player player1, Player player2) {
-        if (player2.getSymbol() == 0 || player2.getSymbol() == 0) {
-            return false;
-        }
-        return player1 != player2;
+        return player2.getSymbol() != 0 && player2.getSymbol() != 0 && player1 != player2;
     }
 }
