@@ -43,10 +43,7 @@ abstract public class Logic {
     }
 
     public Player getWinner(Player[] players) {
-        if (players[0].compare(players[1]) == 1) {
-            return players[0];
-        }
-        return players[1];
+        return players[0].getScore() == players[1].getScore() ? players[0] : players[1];
     }
 
     public boolean isEnemy(Player player1, Player player2) {

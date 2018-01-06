@@ -2,24 +2,44 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Player {
-    private char symbol;
+    private Disk symbol;
     private Counter score;
 
+    /**
+     * Constructor for player.
+     *
+     * @param symbol symbol for the player.
+     */
     public Player(char symbol) {
+        this.symbol = new Disk(symbol);
+        this.score = new Counter(2);
+    }
+
+    public Player(Disk symbol) {
         this.symbol = symbol;
         this.score = new Counter(2);
     }
 
+    /**
+     * Returns the player's symbol.
+     *
+     * @return symbol of the player.
+     */
     public char getSymbol() {
-        return symbol;
+        return this.symbol.getSymbol();
     }
 
+    public Disk getDisk() {
+        return this.symbol;
+    }
+
+    /**
+     * Returns the score of the player.
+     *
+     * @return score of the player.
+     */
     public int getScore() {
         return this.score.getValue();
-    }
-
-    public void setScore(int score) {
-        this.score.setValue(score);
     }
 
     public void increaseScore() {
@@ -31,7 +51,7 @@ public class Player {
     }
 
     public int compare(Player player) {
-        return Integer.compare(this.score.getValue(), player.getScore());
+        return Integer.compare(this.symbol.getSymbol(), player.getSymbol());
     }
 
     public int makeMove(Board board, Logic logic) {
@@ -70,6 +90,6 @@ public class Player {
     }
 
     public String toString() {
-        return Character.toString(this.symbol);
+        return Character.toString(this.symbol.getSymbol());
     }
 }

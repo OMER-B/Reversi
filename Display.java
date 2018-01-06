@@ -1,4 +1,8 @@
 public class Display {
+    /**
+     * Prints the board to the console.
+     * @param board board to print.
+     */
     void printBoard(Board board) {
         int boardSize = board.getSize();
         System.out.print("+");
