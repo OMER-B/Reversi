@@ -1,6 +1,8 @@
-public class SettingsInfo {
+import java.io.Serializable;
+
+public class SettingsInfo implements Serializable {
     private int size;
-    private int first=0;
+    private int first = 0;
 
     public int getSize() {
         return size;

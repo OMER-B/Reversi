@@ -1,14 +1,17 @@
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 
 import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class SettingsController {
-    private SettingsInfo settings;
+public class SettingsController implements Initializable {
+    private SettingsInfo settings = new SettingsInfo();
     private static final String SETTINGS_FILE = "settings";
 
     @FXML
@@ -17,11 +20,13 @@ public class SettingsController {
     private ToggleGroup firstPlayer;
 
     @FXML
+    private RadioButton black;
+    @FXML
+    private RadioButton white;
+
+    @FXML
     protected void resume() throws IOException {
-        System.out.println("TOGGLED: " + ((RadioButton) firstPlayer.getSelectedToggle()).getText());
-        System.out.println("SLIDER: " + sizeSlider.getValue());
-        File settingsFile = new File(SETTINGS_FILE);
-        save(settingsFile);
+        setNewSettings();
         Pane welcome = (Pane) FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
         FXMLLoader fxmlLoader = new
                 FXMLLoader(getClass().getResource("StartScreen.fxml"));
@@ -34,6 +39,26 @@ public class SettingsController {
         }
     }
 
+    @FXML
+    protected void reset() {
+        settings.setSize(8);
+        settings.setFirst(0);
+        getNewSettings();
+    }
+
+    public void setNewSettings() throws IOException {
+
+
+        File settingsFile = new File(SETTINGS_FILE);
+
+        settings.setSize((int) sizeSlider.getValue());
+        if (black.isSelected()) {
+            settings.setFirst(0);
+        } else {
+            settings.setFirst(1);
+        }
+        save(settingsFile);
+    }
 
     /**
      * Save table data to the specified file.
@@ -61,6 +86,15 @@ public class SettingsController {
         }
     }
 
+    public void getNewSettings() {
+        if (this.settings.getFirst() == 1) {
+            this.firstPlayer.selectToggle(this.white);
+        } else {
+            this.firstPlayer.selectToggle(this.black);
+        }
+        this.sizeSlider.setValue(this.settings.getSize());
+    }
+
     /**
      * Load table data from file. Current table data is cleared.
      *
@@ -72,7 +106,8 @@ public class SettingsController {
         try {
             ois = new ObjectInputStream(new FileInputStream(filename));
             this.settings = (SettingsInfo) ois.readObject();
-        } catch (Exception e) {
+            getNewSettings();
+        } catch (Exception e) { // File does not exist.
             System.err.println("Error while loading file.");
             e.printStackTrace();
         } finally {
@@ -84,6 +119,16 @@ public class SettingsController {
                 System.err.println("Failed closing the file after loading.");
                 e.printStackTrace();
             }
+        }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        File settingsFile = new File(SETTINGS_FILE);
+        try {
+            load(settingsFile);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

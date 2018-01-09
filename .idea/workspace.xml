@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afd37436-b4f0-407e-84fe-b2d3ed236eb4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/SettingsController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/StartScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/Board.java" afterPath="$PROJECT_DIR$/Board.java" />
-      <change beforePath="$PROJECT_DIR$/Display.java" afterPath="$PROJECT_DIR$/Display.java" />
-      <change beforePath="$PROJECT_DIR$/Gameflow.java" afterPath="$PROJECT_DIR$/Gameflow.java" />
-      <change beforePath="$PROJECT_DIR$/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Reversi.java" afterPath="$PROJECT_DIR$/Reversi.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Settings.fxml" afterPath="$PROJECT_DIR$/Settings.fxml" />
+      <change beforePath="$PROJECT_DIR$/SettingsController.java" afterPath="$PROJECT_DIR$/SettingsController.java" />
+      <change beforePath="$PROJECT_DIR$/SettingsInfo.java" afterPath="$PROJECT_DIR$/SettingsInfo.java" />
+      <change beforePath="$PROJECT_DIR$/application.css" afterPath="$PROJECT_DIR$/application.css" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/Settings.fxml" afterPath="$PROJECT_DIR$/out/production/Reversi/Settings.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/SettingsController.class" afterPath="$PROJECT_DIR$/out/production/Reversi/SettingsController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/SettingsInfo.class" afterPath="$PROJECT_DIR$/out/production/Reversi/SettingsInfo.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/application.css" afterPath="$PROJECT_DIR$/out/production/Reversi/application.css" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/settings" afterPath="$PROJECT_DIR$/out/production/Reversi/settings" />
+      <change beforePath="$PROJECT_DIR$/settings" afterPath="$PROJECT_DIR$/settings" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="140">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +58,7 @@
       <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
+            <state relative-caret-position="28">
               <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,8 +70,8 @@
       <file leaf-file-name="Settings.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Settings.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="28" column="105" lean-forward="false" selection-start-line="28" selection-start-column="105" selection-end-line="28" selection-end-column="105" />
+            <state relative-caret-position="294">
+              <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -76,15 +80,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SettingsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="20" column="99" lean-forward="false" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+            <state relative-caret-position="476">
+              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#save#0;class#SettingsController#0" expanded="false" />
                 <element signature="docComment;method#load#0;class#SettingsController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SettingsInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+              <folding>
+                <element signature="e#157#158#0" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,7 +191,6 @@
       <list>
         <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/Settings.java" />
-        <option value="$PROJECT_DIR$/SettingsInfo.java" />
         <option value="$PROJECT_DIR$/Board.java" />
         <option value="$PROJECT_DIR$/StartScreen.fxml" />
         <option value="$PROJECT_DIR$/StartScreenController.java" />
@@ -168,8 +200,10 @@
         <option value="$PROJECT_DIR$/BoardController.java" />
         <option value="$PROJECT_DIR$/Reversi.java" />
         <option value="$PROJECT_DIR$/settings" />
-        <option value="$PROJECT_DIR$/Settings.fxml" />
+        <option value="$PROJECT_DIR$/SettingsInfo.java" />
         <option value="$PROJECT_DIR$/SettingsController.java" />
+        <option value="$PROJECT_DIR$/Settings.fxml" />
+        <option value="$PROJECT_DIR$/application.css" />
       </list>
     </option>
   </component>
@@ -194,7 +228,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -207,8 +243,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -372,7 +406,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4599686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21350078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -399,12 +433,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SettingsController.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/StartScreenController.java</url>
           <line>48</line>
           <properties />
@@ -422,6 +450,122 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#getCell#0;class#Board#0" expanded="false" />
+            <element signature="docComment;method#getPlayer#0;class#Board#0" expanded="false" />
+            <element signature="docComment;method#getPlayer#1;class#Board#0" expanded="false" />
+            <element signature="docComment;method#inBoundaries#0;class#Board#0" expanded="false" />
+            <element signature="docComment;method#inBoundaries#1;class#Board#0" expanded="false" />
+            <element signature="docComment;method#getSize#0;class#Board#0" expanded="false" />
+            <element signature="docComment;method#fillCell#0;class#Board#0" expanded="false" />
+            <element signature="docComment;method#isFull#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#save#0;class#SettingsController#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#SettingsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SettingsInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardXML.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reversi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gameflow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
@@ -525,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -551,19 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="286" column="40" lean-forward="false" selection-start-line="286" selection-start-column="40" selection-end-line="286" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;class#Application#0" expanded="false" />
-            <element signature="docComment;field#STYLESHEET_CASPIAN#0;class#Application#0" expanded="false" />
-            <element signature="docComment;field#STYLESHEET_MODENA#0;class#Application#0" expanded="false" />
-            <element signature="docComment;method#launch#0;class#Application#0" expanded="false" />
-            <element signature="method#launch#0;class#Application#0" expanded="false" />
-            <element signature="docComment;method#launch#1;class#Application#0" expanded="false" />
-            <element signature="method#launch#1;class#Application#0" expanded="false" />
-            <element signature="docComment;method#Application#0;class#Application#0" expanded="false" />
-            <element signature="method#Application#0;class#Application#0" expanded="false" />
-            <element signature="docComment;method#init#0;class#Application#0" expanded="false" />
-            <element signature="method#init#0;class#Application#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,23 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SettingsInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <element signature="e#101#102#0" expanded="true" />
-            <element signature="e#128#129#0" expanded="true" />
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StartScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -663,16 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -724,20 +821,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardController.java">
+    <entry file="file://$PROJECT_DIR$/SettingsInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        <state relative-caret-position="28">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#save#0;class#SettingsController#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#SettingsController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Settings.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="105" lean-forward="false" selection-start-line="28" selection-start-column="105" selection-end-line="28" selection-end-column="105" />
+        <state relative-caret-position="294">
+          <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -745,14 +861,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SettingsController.java">
+    <entry file="file://$PROJECT_DIR$/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="20" column="99" lean-forward="false" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+        <state relative-caret-position="28">
+          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#save#0;class#SettingsController#0" expanded="false" />
-            <element signature="docComment;method#load#0;class#SettingsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

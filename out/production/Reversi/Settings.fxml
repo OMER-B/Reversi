@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-      prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="SettingsController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsController">
     <children>
-        <Text layoutX="132.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings"
-              wrappingWidth="232.7294921875">
+        <Text layoutX="132.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" wrappingWidth="232.7294921875">
             <font>
-                <Font name="DejaVu Sans Mono Bold" size="41.0"/>
+                <Font name="DejaVu Sans Mono Bold" size="41.0" />
             </font>
         </Text>
-        <Text layoutX="110.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="who will go first?"/>
-        <Text layoutX="335.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose board size"/>
-        <Slider fx:id="sizeSlider" blockIncrement="1.0" layoutX="314.0" layoutY="203.0" majorTickUnit="4.0" max="20.0" min="4.0"
-                minorTickCount="4" prefHeight="38.0" prefWidth="191.0" showTickLabels="true" showTickMarks="true"
-                snapToTicks="true" value="8.0"/>
-        <Button layoutX="370.0" layoutY="347.0" mnemonicParsing="false" onAction="#resume" text="Apply &amp; Return"/>
-        <Button layoutX="496.0" layoutY="346.0" mnemonicParsing="false" onAction="#resume" text="Accept"/>
-        <RadioButton layoutX="109.0" layoutY="199.0" mnemonicParsing="false" selected="true" text="Black">
+        <Text layoutX="45.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="who will go first?" />
+        <Text layoutX="261.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose board size" />
+        <Slider id="slider" fx:id="sizeSlider" blockIncrement="1.0" layoutX="112.0" layoutY="172.0" majorTickUnit="4.0" max="20.0" min="4.0" minorTickCount="4" prefHeight="38.0" prefWidth="409.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@application.css" value="8.0" />
+        <Button layoutX="370.0" layoutY="345.0" mnemonicParsing="false" onAction="#resume" text="Apply &amp; Return" />
+        <Button layoutX="496.0" layoutY="345.0" mnemonicParsing="false" onAction="#resume" text="Accept" />
+        <RadioButton fx:id="black" layoutX="45.0" layoutY="306.0" mnemonicParsing="false" selected="true" text="Black">
             <toggleGroup>
-                <ToggleGroup fx:id="firstPlayer"/>
+                <ToggleGroup fx:id="firstPlayer" />
             </toggleGroup>
         </RadioButton>
-        <RadioButton layoutX="109.0" layoutY="223.0" mnemonicParsing="false" text="White" toggleGroup="$firstPlayer"/>
+        <RadioButton fx:id="white" layoutX="45.0" layoutY="330.0" mnemonicParsing="false" text="White" toggleGroup="$firstPlayer" />
+        <Button layoutX="295.0" layoutY="345.0" mnemonicParsing="false" onAction="#reset" text="Default" />
     </children>
 </Pane>
