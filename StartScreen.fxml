@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane fx:controller="StartScreenController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Text layoutX="211.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reversi"
+              textAlignment="CENTER" wrappingWidth="160.7294921875">
+            <font>
+                <Font name="Kinnari Bold Oblique" size="43.0"/>
+            </font>
+        </Text>
+        <Button layoutX="207.0" layoutY="178.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="168.0"
+                text="Start Game" onAction="#startGame">
+            <font>
+                <Font name="FreeSans Bold Oblique" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="208.0" layoutY="240.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="168.0"
+                text="Settings" onAction="#settings">
+            <font>
+                <Font name="FreeSans Bold Oblique" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="207.0" layoutY="298.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="168.0" text="Close"
+                onAction="#close">
+            <font>
+                <Font name="FreeSans Bold Oblique" size="14.0"/>
+            </font>
+        </Button>
+    </children>
+</Pane>

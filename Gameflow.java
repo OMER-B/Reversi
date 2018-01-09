@@ -1,3 +1,7 @@
+import javafx.scene.layout.GridPane;
+
+import java.io.IOException;
+
 public class Gameflow {
     private Board board;
     private Player[] players;
@@ -10,13 +14,13 @@ public class Gameflow {
     /**
      * Constructor for Gameflow.
      */
-    public Gameflow() {
-        this.display = new Display();
+    public Gameflow(int size, int firstPlayer) throws IOException {
         this.logic = new regLogic();
         this.players = new Player[2];
-        this.players[0] = new Player(new Disk('X'));
-        this.players[1] = new Player(new Disk('O'));
-        this.board = new Board(SIZE, this.players);
+        this.players[firstPlayer] = new Player(new Disk('X'));
+        this.players[1 - firstPlayer] = new Player(new Disk('O'));
+        this.board = new Board(size, this.players);
+        this.display = new Display(this.board);
     }
 
     /**
@@ -30,7 +34,7 @@ public class Gameflow {
         }
         //ANNOUNCE WINNER
         System.out.println("No more moves to play");
-        this.display.printBoard(this.board);
+        this.display.draw();
         Player winner = this.logic.getWinner(this.players);
         System.out.println("Scoreboard:");
         System.out.println(this.players[0] + "\t\t\t" + this.players[0].getScore());
@@ -44,7 +48,7 @@ public class Gameflow {
      */
     public void playOneTurn() {
         System.out.println("Current board:");
-        this.display.printBoard(this.board);
+        this.display.draw();
         int temp = this.validTurns;
         this.validTurns += this.players[this.currentPlayer].makeMove(this.board, this.logic);
         if (this.validTurns == temp) {
@@ -54,6 +58,7 @@ public class Gameflow {
 
     /**
      * Checks if the game should end.
+     *
      * @return true if board is full or no more moves for a player, false otherwise.
      */
     public boolean shouldStop() {
