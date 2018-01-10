@@ -28,15 +28,7 @@ public class SettingsController implements Initializable {
     protected void resume() throws IOException {
         setNewSettings();
         Pane welcome = (Pane) FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
-        FXMLLoader fxmlLoader = new
-                FXMLLoader(getClass().getResource("StartScreen.fxml"));
-
         StartScreenController.primaryStage.getScene().setRoot(welcome);
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
     }
 
     @FXML
