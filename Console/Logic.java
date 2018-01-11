@@ -10,8 +10,8 @@ abstract public class Logic {
         int boardSize = board.getSize();
         for (int i = 0; i < boardSize; i++) {
             for (int j = 0; j < boardSize; j++) {
-                if (board.getPlayer(i, j) != null) {
-                    if (board.getPlayer(i, j) == player) {
+                if (!board.getCell(i,j).isEmpty()) {
+                    if (board.getCell(i, j).getSymbol() == player.getSymbol()) {
                         playerCells.add(new Point(i, j));
                     }
                 }

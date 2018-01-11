@@ -18,6 +18,7 @@ public class Reversi extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
+
             VBox root = (VBox) FXMLLoader.load(getClass().getResource("FXMLs/Reversi.fxml"));
             Scene scene = new Scene(root, WIDTH, HEIGHT);
             scene.getStylesheets().add(getClass().getResource("StyleSheet.css").toExternalForm());

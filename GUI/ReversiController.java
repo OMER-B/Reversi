@@ -18,8 +18,9 @@ public class ReversiController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        GUIGameInfo gameInfo = GUIGameInfo.getInstance();
 
+        GUIGameInfo gameInfo = GUIGameInfo.getInstance();
+        gameInfo.setGame();
         this.GUIBoard = gameInfo.getBoard();
         this.GUIBoard.setPrefWidth(Reversi.WIDTH);
         this.GUIBoard.setPrefHeight(Reversi.HEIGHT);

@@ -25,16 +25,16 @@ public class GUIGameInfo {
         this.players = new Player[2];
         this.players[0] = new Player(Symbol.BLACK);
         this.players[1] = new Player(Symbol.WHITE);
-        this.game = new GUIGameflow();
-        this.listener = new CellListener(game);
+
     }
 
     public GUIGameflow getGame() {
         return game;
     }
 
-    public void setGame(GUIGameflow game) {
-        this.game = game;
+    public void setGame() {
+        this.game = new GUIGameflow();
+        this.listener = new CellListener(game);
     }
 
     public CellListener getListener() {

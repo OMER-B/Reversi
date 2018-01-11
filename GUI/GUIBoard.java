@@ -4,6 +4,8 @@ import Console.Board;
 import Console.Cell;
 import Console.ConsoleGameInfo;
 import Console.Player;
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
@@ -41,6 +43,12 @@ public class GUIBoard extends GridPane {
         for (int i = 0; i < this.board.getSize(); i++) {
             for (int j = 0; j < this.board.getSize(); j++) {
                 GUICell cell = new GUICell(cellWidth, cellHeight, Color.FUCHSIA, this.board.getCell(i, j));
+                cell.setOnMouseClicked((new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent event) {
+                        System.out.println("cell pressed");
+                        cell.notifyListener();
+                    }
+                }));
                 cell.draw();
             }
         }

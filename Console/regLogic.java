@@ -95,18 +95,18 @@ public class regLogic extends Logic {
 
         // While the cells in the path are inside the board:
         while (board.inBoundaries(toFlip.getX() + xChange, toFlip.getY() + yChange)) {
-            toFlip = new Point(toFlip.getX() + xChange, toFlip.getY() + yChange);
-            if (board.getPlayer(toFlip.getX(), toFlip.getY()) == null) {
+            int newX = toFlip.getX() + xChange;
+            int newY = toFlip.getY() + yChange;
+            toFlip = new Point(newX, newY);
+            if (board.getCell(newX, newY).getSymbol() == Symbol.EMPTY) {
 
                 // If there is an empty cell in the middle, no cell should be flipped.
                 cellsToFlip.clear();
                 return cellsToFlip;
-            } else if (board.getPlayer(toFlip.getX(), toFlip.getY()) != player) {
-
+            } else if (board.getCell(newX, newY).getSymbol() != player.getSymbol()) {
                 // If the cell belongs to the rival add to the list of cells to be flipped.
                 cellsToFlip.add(toFlip);
-            } else if (board.getPlayer(toFlip.getX(), toFlip.getY()) == player) {
-
+            } else if (board.getCell(newX, newY).getSymbol() == player.getSymbol()) {
                 // End of path, return the cells to be flipped.
                 return cellsToFlip;
             }

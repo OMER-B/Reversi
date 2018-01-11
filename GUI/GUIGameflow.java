@@ -4,6 +4,7 @@ import Console.Board;
 import Console.Logic;
 import Console.Player;
 import Console.Point;
+import javafx.stage.Stage;
 
 import java.util.Vector;
 
@@ -32,17 +33,20 @@ public class GUIGameflow {
         if(moves.isEmpty()){
             if(previousDidNotMakeMove){
                 shouldContinue = false;
-                exit(0);
-                //TODO close stage!
+                Stage stage = (Stage)this.board.getScene().getWindow();
+                stage.close();
             }
             previousDidNotMakeMove = true;
             currentPlayer = 1-currentPlayer;
             return;
         }
-        if(moves.contains(point)){
-            logic.putNewCell(board.getBoard(), players[currentPlayer], point);
-            currentPlayer = 1-currentPlayer;
-            previousDidNotMakeMove = false;
+        for(Point p : moves){
+            if(p.getX()==point.getX() && p.getY()==point.getY()){
+                logic.putNewCell(board.getBoard(), players[currentPlayer], point);
+                currentPlayer = 1-currentPlayer;
+                previousDidNotMakeMove = false;
+                board.draw();
+            }
         }
     }
 }

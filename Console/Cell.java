@@ -32,6 +32,10 @@ public class Cell {
         return this.player == null ? Symbol.EMPTY : this.player.getSymbol();
     }
 
+    public Point getPoint(){
+        return this.point;
+    }
+
     /**
      * Returns the x coordinate of the cell.
      *

@@ -34,5 +34,7 @@ public class GUICell extends Rectangle {
 
     }
 
-    //handle click - notify game
+    public void notifyListener(){
+        this.cellListener.notifyGame(cell.getPoint());
+    }
 }
