@@ -1,0 +1,69 @@
+.root {
+  -fx-background-color: #914aa5;
+}
+
+.slider {
+  -fx-text-fill: white;
+}
+
+.slider .track {
+  -fx-background-color: #5f1c72;
+  -fx-background-radius: 5;
+  -fx-background-insets: 0;
+  -fx-pref-width: 12px;
+  -fx-pref-height: 5px;
+}
+
+.slider .thumb {
+  -fx-background-color: #5f1c72;
+  -fx-background-radius: 15;
+  -fx-background-insets: 0;
+  -fx-border-color: white;
+  -fx-border-radius: 15;
+}
+
+.slider .thumb:hover {
+  -fx-background-color: #8b39a3;
+}
+
+.slider .thumb:pressed {
+  -fx-background-color: #280633;
+}
+
+.radio-button .dot {
+  -fx-background-color: TRANSPARENT;
+}
+
+.radio-button:selected .radio {
+  -fx-background-color: black;
+  -fx-background-radius: 15;
+  -fx-background-insets: 0;
+}
+
+.radio-button .radio {
+  -fx-background-color: white;
+  -fx-background-radius: 15;
+}
+
+.button {
+  -fx-text-fill: white;
+  -fx-background-color: #5f1c72;
+  -fx-background-radius: 15;
+  -fx-border-radius: 15;
+  -fx-border-color: white;
+  -fx-border-size: 2px;
+}
+
+.button:hover {
+  -fx-background-color: #8b39a3;
+}
+
+.button:pressed {
+  -fx-background-color: #280633;
+}
+
+.welcome {
+  -fx-text-style: underline;
+  -fx-fill: #fafafa;
+  -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}

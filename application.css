@@ -1,9 +1,0 @@
-.root {
--fx-background-color: #00ffff;
-}
-
-
-.root #slider .thumb {
-    -fx-padding: 3px;
-    -fx-background-color: #ff0000;
-    }
