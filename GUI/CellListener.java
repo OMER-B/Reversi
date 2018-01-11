@@ -1,5 +1,7 @@
 package GUI;
 
+import Console.Point;
+
 public class CellListener {
     private GUIGameflow game;
 
@@ -7,7 +9,7 @@ public class CellListener {
         this.game = game;
     }
 
-//    public void notifyGame {
-//
-//    }
+    public void notifyGame(Point point) {
+        game.makeMove(point);
+    }
 }

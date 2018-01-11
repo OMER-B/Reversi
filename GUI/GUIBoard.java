@@ -3,6 +3,7 @@ package GUI;
 import Console.Board;
 import Console.Cell;
 import Console.ConsoleGameInfo;
+import Console.Player;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
@@ -13,15 +14,14 @@ public class GUIBoard extends GridPane {
 
     private Board board;
 
-    private GUIPlayer[] players;
 
     public GUIBoard() {
         ConsoleGameInfo gameInfo = ConsoleGameInfo.getInstance();
         this.board = gameInfo.getBoard();
     }
 
-    public void addPlayers(GUIPlayer[] players) {
-        this.players = players;
+    public Board getBoard(){
+        return this.board;
     }
 
     public int getSize() {

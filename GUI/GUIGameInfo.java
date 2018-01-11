@@ -1,6 +1,8 @@
 package GUI;
 
 import Console.Logic;
+import Console.Player;
+import Console.Symbol;
 import Console.regLogic;
 import javafx.scene.paint.Color;
 
@@ -11,30 +13,43 @@ public class GUIGameInfo {
         return ourInstance;
     }
 
-    private GUIPlayer[] players;
+    private Player[] players;
     private GUIBoard board;
     private Logic logic;
+    private GUIGameflow game;
+    private CellListener listener;
 
     private GUIGameInfo() {
         this.board = new GUIBoard();
-
-        int height = (int) this.board.getPrefWidth();
-        int width = (int) this.board.getPrefWidth();
-        Color color1 = Color.BLACK;
-        Color color2 = Color.WHITE;
         this.logic = new regLogic();
-        this.players = new GUIPlayer[2];
-        this.players[0] = new GUIPlayer(this.board, height, width, color1);
-        this.players[1] = new GUIPlayer(this.board, height, width, color2);
-
-        this.board.addPlayers(this.players);
+        this.players = new Player[2];
+        this.players[0] = new Player(Symbol.BLACK);
+        this.players[1] = new Player(Symbol.WHITE);
+        this.game = new GUIGameflow();
+        this.listener = new CellListener(game);
     }
 
-    public GUIPlayer[] getPlayers() {
+    public GUIGameflow getGame() {
+        return game;
+    }
+
+    public void setGame(GUIGameflow game) {
+        this.game = game;
+    }
+
+    public CellListener getListener() {
+        return listener;
+    }
+
+    public void setListener(CellListener listener) {
+        this.listener = listener;
+    }
+
+    public Player[] getPlayers() {
         return this.players;
     }
 
-    public void setPlayers(GUIPlayer[] players) {
+    public void setPlayers(Player[] players) {
         this.players = players;
     }
 

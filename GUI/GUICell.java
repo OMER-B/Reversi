@@ -11,6 +11,7 @@ import static Console.Symbol.WHITE;
 public class GUICell extends Rectangle {
     private Cell cell;
     private GUIBoard board;
+    private CellListener cellListener;
 
     public GUICell(double width, double height, Paint fill, Cell cell) {
         super(width, height, fill);
@@ -18,6 +19,7 @@ public class GUICell extends Rectangle {
         this.board = gameInfo.getBoard();
         this.cell = cell;
         this.setFill(Color.DARKGREEN);
+        this.cellListener = GUIGameInfo.getInstance().getListener();
     }
 
     public void draw() {
