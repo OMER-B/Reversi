@@ -28,8 +28,8 @@ public class Cell {
      *
      * @return occupying player's symbol.
      */
-    public int getSymbol() {
-        return this.player == null ? -1 : this.player.getSymbol();
+    public Symbol getSymbol() {
+        return this.player == null ? Symbol.EMPTY : this.player.getSymbol();
     }
 
     /**

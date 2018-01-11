@@ -1,17 +1,17 @@
 package Console;
 
 public class Disk {
-    private int symbol;
+    private Symbol symbol;
 
-    public Disk(int symbol) {
+    public Disk(Symbol symbol) {
         this.symbol = symbol;
     }
 
-    public int getSymbol() {
+    public Symbol getSymbol() {
         return symbol;
     }
 
-    public void setSymbol(char symbol) {
+    public void setSymbol(Symbol symbol) {
         this.symbol = symbol;
     }
 }

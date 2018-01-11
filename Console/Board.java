@@ -8,8 +8,9 @@ public class Board {
 
     /**
      * Constructor for the board. Calls the initialize() method.
-     * @param size      size of the board.
-     * @param players   array of two players.
+     *
+     * @param size    size of the board.
+     * @param players array of two players.
      */
     public Board(int size, Player players[]) {
         this.counter = new Counter(4);
@@ -38,9 +39,10 @@ public class Board {
 
     /**
      * Returns the cell at position (i,j) of the board.
+     *
      * @param i vertical position of the requested cell.
      * @param j horizonal position of the requested cell.
-     * @return  cell at position (i,j).
+     * @return cell at position (i,j).
      */
     public Cell getCell(int i, int j) {
         return this.cells[i][j];
@@ -48,9 +50,10 @@ public class Board {
 
     /**
      * Returns the player at position (i,j) of the board.
+     *
      * @param i vertical position of the requested cell.
      * @param j horizonal position of the requested cell.
-     * @return  player at cell (i,j).
+     * @return player at cell (i,j).
      */
     public Player getPlayer(int i, int j) {
         return this.cells[i][j].getPlayer();
@@ -58,6 +61,7 @@ public class Board {
 
     /**
      * Returns the player at the given point.
+     *
      * @param point requested point location for the player
      * @return player at the location of the point.
      */
@@ -67,6 +71,7 @@ public class Board {
 
     /**
      * Returns if the input x, y coordinates are in the board's boundaries.
+     *
      * @param x coordinate to check
      * @param y coordinate to check
      * @return true if (x,y) is a valid coordinate, false otherwise.
@@ -77,6 +82,7 @@ public class Board {
 
     /**
      * Returns if the input point is in the board's boundaries.
+     *
      * @param point point to check
      * @return true if the point is in valid range, false otherwise.
      */
@@ -87,6 +93,7 @@ public class Board {
 
     /**
      * Returns the size of the board.
+     *
      * @return an integer size of the board.
      */
     public int getSize() {
@@ -95,6 +102,7 @@ public class Board {
 
     /**
      * Fills cell with a player.
+     *
      * @param point  point which cell's to fill
      * @param player player to fill with
      */
@@ -107,6 +115,7 @@ public class Board {
 
     /**
      * Checks if the board is full or not.
+     *
      * @return true if the board is full, false otherwise.
      */
     public boolean isFull() {

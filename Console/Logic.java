@@ -2,6 +2,8 @@ package Console;
 
 import java.util.Vector;
 
+import static Console.Symbol.EMPTY;
+
 abstract public class Logic {
     public Vector<Point> getPlayerCell(Board board, Player player) {
         Vector<Point> playerCells = new Vector<Point>();
@@ -49,6 +51,6 @@ abstract public class Logic {
     }
 
     public boolean isEnemy(Player player1, Player player2) {
-        return player2.getSymbol() != 0 && player2.getSymbol() != 0 && player1 != player2;
+        return player2.getSymbol() != EMPTY && player2.getSymbol() != EMPTY && player1 != player2;
     }
 }

@@ -12,7 +12,7 @@ public class Player {
      *
      * @param symbol symbol for the player.
      */
-    public Player(int symbol) {
+    public Player(Symbol symbol) {
         this.symbol = new Disk(symbol);
         this.score = new Counter(2);
     }
@@ -27,7 +27,7 @@ public class Player {
      *
      * @return symbol of the player.
      */
-    public int getSymbol() {
+    public Symbol getSymbol() {
         return this.symbol.getSymbol();
     }
 
@@ -50,10 +50,6 @@ public class Player {
 
     public void decreaseScore() {
         this.score.decreaseCounter();
-    }
-
-    public int compare(Player player) {
-        return Integer.compare(this.symbol.getSymbol(), player.getSymbol());
     }
 
     public int makeMove(Board board, Logic logic) {
@@ -92,6 +88,6 @@ public class Player {
     }
 
     public String toString() {
-        return Integer.toString(this.symbol.getSymbol());
+        return Symbol.toString(this.symbol.getSymbol());
     }
 }

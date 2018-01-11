@@ -1,20 +1,34 @@
 package GUI;
 
 import Console.Board;
+import Console.Cell;
+import Console.ConsoleGameInfo;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+
+import static Console.Symbol.BLACK;
+import static Console.Symbol.WHITE;
 
 public class GUIBoard extends GridPane {
 
     private Board board;
 
-    public GUIBoard(Board board) {
-        this.board = board;
+    private GUIPlayer[] players;
+
+    public GUIBoard() {
+        ConsoleGameInfo gameInfo = ConsoleGameInfo.getInstance();
+        this.board = gameInfo.getBoard();
+    }
+
+    public void addPlayers(GUIPlayer[] players) {
+        this.players = players;
+    }
+
+    public int getSize() {
+        return this.board.getSize();
     }
 
     public void draw() {
-
 
         this.getChildren().clear();
 
@@ -24,19 +38,15 @@ public class GUIBoard extends GridPane {
         int cellHeight = height / Reversi.SIZE;
         int cellWidth = width / Reversi.SIZE;
 
-        GUIPlayer player1 = new GUIPlayer(this, 0, this.board, cellHeight, cellWidth);
-        GUIPlayer player2 = new GUIPlayer(this, 1, this.board, cellHeight, cellWidth);
         for (int i = 0; i < this.board.getSize(); i++) {
             for (int j = 0; j < this.board.getSize(); j++) {
-                Rectangle rect = new Rectangle(cellWidth, cellHeight, Color.BLUE);
-                rect.setStroke(Color.BLACK);
-                this.add(rect, j, i);
-                if (this.board.getCell(i, j).getSymbol() == 0) {
-                    player1.draw(j, i);
-                } else if (this.board.getCell(i, j).getSymbol() == 1) {
-                    player2.draw(j, i);
-                }
+                GUICell cell = new GUICell(cellWidth, cellHeight, Color.FUCHSIA, this.board.getCell(i, j));
+                cell.draw();
             }
         }
+    }
+
+    public Cell getCell(int i, int j) {
+        return this.board.getCell(i, j);
     }
 }

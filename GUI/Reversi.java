@@ -21,7 +21,7 @@ public class Reversi extends Application {
             VBox root = (VBox) FXMLLoader.load(getClass().getResource("FXMLs/Reversi.fxml"));
             Scene scene = new Scene(root, WIDTH, HEIGHT);
             scene.getStylesheets().add(getClass().getResource("StyleSheet.css").toExternalForm());
-            primaryStage.setTitle("Maze game");
+            primaryStage.setTitle("Reversi game");
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {

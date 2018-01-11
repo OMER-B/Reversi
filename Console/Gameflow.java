@@ -10,15 +10,14 @@ public class Gameflow {
     private static final int SIZE = 8;
 
     /**
-     * Constructor for Console.Gameflow.
+     * Constructor for Gameflow.
      */
     public Gameflow() {
+        ConsoleGameInfo gameInfo = ConsoleGameInfo.getInstance();
+        this.board = gameInfo.getBoard();
+        this.players = gameInfo.getPlayers();
+        this.logic = gameInfo.getLogic();
         this.display = new ConsoleUI();
-        this.logic = new regLogic();
-        this.players = new Player[2];
-        this.players[0] = new Player(new Disk('X'));
-        this.players[1] = new Player(new Disk('O'));
-        this.board = new Board(SIZE, this.players);
     }
 
     /**
@@ -56,6 +55,7 @@ public class Gameflow {
 
     /**
      * Checks if the game should end.
+     *
      * @return true if board is full or no more moves for a player, false otherwise.
      */
     public boolean shouldStop() {
