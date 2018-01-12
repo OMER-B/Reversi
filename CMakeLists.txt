@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.8)
-project(Reversi)
+project(ex5)
 
-set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS -pthread)
-add_executable(Reversi
+set(CMAKE_CXX_STANDARD 98)
+
+set(CLIENT
         src/client/board.cpp
         src/client/board.h
         src/client/cell.cpp
@@ -21,8 +22,6 @@ add_executable(Reversi
         src/client/dummy.h
         src/client/gameFlow.cpp
         src/client/gameFlow.h
-        src/client/gameManager.cpp
-        src/client/gameManager.h
         src/client/human.cpp
         src/client/human.h
         src/client/logic.cpp
@@ -33,8 +32,9 @@ add_executable(Reversi
         src/client/point.cpp
         src/client/point.h
         src/client/regLogic.cpp
-        src/client/regLogic.h)
-add_executable(Server
+        src/client/regLogic.h
+        )
+set(SERVER
         src/server/command.h
         src/server/commandClose.cpp
         src/server/commandClose.h
@@ -54,4 +54,7 @@ add_executable(Server
         src/server/Room.cpp
         src/server/Room.h
         src/server/server.cpp
-        src/server/server.h)
+        src/server/server.h src/server/Task.cpp src/server/Task.h src/server/ThreadPool.cpp src/server/ThreadPool.h)
+
+add_executable(client ${CLIENT})
+add_executable(server ${SERVER})

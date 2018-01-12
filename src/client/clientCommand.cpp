@@ -2,12 +2,12 @@
 #include <unistd.h>
 #include <iostream>
 #include "clientCommand.h"
-#define BUFFER_SIZE 128
+#define BUFFER 50
 
 ClientCommand::ClientCommand(int clientSocket) : clientSocket_(clientSocket) {}
 
 int ClientCommand::activate(string command) {
-  char buffer[BUFFER_SIZE];
+  char buffer[BUFFER];
   memset(buffer, 0, sizeof(buffer));
   ssize_t n;
 
@@ -36,6 +36,7 @@ int ClientCommand::activate(string command) {
       return -1;
     }
     n = read(clientSocket_, &buffer, sizeof(buffer));
+    cout << "index is: " << buffer << endl;
     if (strcmp(buffer, "1") == 0) {
       return 1;
     } else if (strcmp(buffer, "0") == 0) {
@@ -49,7 +50,7 @@ int ClientCommand::activate(string command) {
 
 //asks the list of games from the server and prints them
 void ClientCommand::getGameList() {
-  char buffer[BUFFER_SIZE];
+  char buffer[BUFFER];
   strcpy(buffer, "list_games");
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
   cout << "Waiting for list of games from server" << endl;
@@ -59,7 +60,7 @@ void ClientCommand::getGameList() {
 
 //asks the server to start room "name"
 bool ClientCommand::start(string name) {
-  char buffer[BUFFER_SIZE];
+  char buffer[BUFFER];
   string startString = "start" + name;
   strcpy(buffer, startString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
@@ -73,7 +74,7 @@ bool ClientCommand::start(string name) {
 }
 
 bool ClientCommand::join(string name) {
-  char buffer[BUFFER_SIZE];
+  char buffer[BUFFER];
   string joinString = "join" + name;
   strcpy(buffer, joinString.c_str());
   ssize_t n = write(clientSocket_, &buffer, sizeof(buffer));
@@ -82,5 +83,6 @@ bool ClientCommand::join(string name) {
     cout << "room is not available" << endl;
     return false;
   }
+  cout << "recieved from server: " << endl;
   return true;
 }

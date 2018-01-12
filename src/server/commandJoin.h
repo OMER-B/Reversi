@@ -4,6 +4,7 @@
 #include "command.h"
 #include "HandleGame.h"
 #include "Lobby.h"
+#include "ThreadPool.h"
 
 #include <iostream>
 #include <vector>
@@ -19,11 +20,11 @@ class CommandJoin : public Command {
  private:
   Lobby *lobby_;
   HandleGame *handleGame_;
-  vector<pthread_t *> *threads_;
+  ThreadPool *pool_;
 
  public:
   // Constructor for join command.
-  CommandJoin(Lobby *, HandleGame *, vector<pthread_t *> *);
+  CommandJoin(Lobby *, HandleGame *, ThreadPool *pool);
 
   // Command to join an existing game.
   bool execute(string arg, int clientSocket);

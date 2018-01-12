@@ -249,33 +249,9 @@ CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o.provides: CMakeFiles/Reversi.di
 CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o
 
 
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o: CMakeFiles/Reversi.dir/flags.make
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o: ../src/client/gameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o -c /home/h/CLionProjects/Reversi/src/client/gameManager.cpp
-
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/client/gameManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h/CLionProjects/Reversi/src/client/gameManager.cpp > CMakeFiles/Reversi.dir/src/client/gameManager.cpp.i
-
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/client/gameManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h/CLionProjects/Reversi/src/client/gameManager.cpp -o CMakeFiles/Reversi.dir/src/client/gameManager.cpp.s
-
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.requires:
-
-.PHONY : CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.requires
-
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.provides: CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.provides.build
-.PHONY : CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.provides
-
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o
-
-
 CMakeFiles/Reversi.dir/src/client/human.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/human.cpp.o: ../src/client/human.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Reversi.dir/src/client/human.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Reversi.dir/src/client/human.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/human.cpp.o -c /home/h/CLionProjects/Reversi/src/client/human.cpp
 
 CMakeFiles/Reversi.dir/src/client/human.cpp.i: cmake_force
@@ -299,7 +275,7 @@ CMakeFiles/Reversi.dir/src/client/human.cpp.o.provides.build: CMakeFiles/Reversi
 
 CMakeFiles/Reversi.dir/src/client/logic.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/logic.cpp.o: ../src/client/logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Reversi.dir/src/client/logic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Reversi.dir/src/client/logic.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/logic.cpp.o -c /home/h/CLionProjects/Reversi/src/client/logic.cpp
 
 CMakeFiles/Reversi.dir/src/client/logic.cpp.i: cmake_force
@@ -323,7 +299,7 @@ CMakeFiles/Reversi.dir/src/client/logic.cpp.o.provides.build: CMakeFiles/Reversi
 
 CMakeFiles/Reversi.dir/src/client/main.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/main.cpp.o: ../src/client/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Reversi.dir/src/client/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Reversi.dir/src/client/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/main.cpp.o -c /home/h/CLionProjects/Reversi/src/client/main.cpp
 
 CMakeFiles/Reversi.dir/src/client/main.cpp.i: cmake_force
@@ -347,7 +323,7 @@ CMakeFiles/Reversi.dir/src/client/main.cpp.o.provides.build: CMakeFiles/Reversi.
 
 CMakeFiles/Reversi.dir/src/client/player.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/player.cpp.o: ../src/client/player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Reversi.dir/src/client/player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Reversi.dir/src/client/player.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/player.cpp.o -c /home/h/CLionProjects/Reversi/src/client/player.cpp
 
 CMakeFiles/Reversi.dir/src/client/player.cpp.i: cmake_force
@@ -371,7 +347,7 @@ CMakeFiles/Reversi.dir/src/client/player.cpp.o.provides.build: CMakeFiles/Revers
 
 CMakeFiles/Reversi.dir/src/client/point.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/point.cpp.o: ../src/client/point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Reversi.dir/src/client/point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Reversi.dir/src/client/point.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/point.cpp.o -c /home/h/CLionProjects/Reversi/src/client/point.cpp
 
 CMakeFiles/Reversi.dir/src/client/point.cpp.i: cmake_force
@@ -395,7 +371,7 @@ CMakeFiles/Reversi.dir/src/client/point.cpp.o.provides.build: CMakeFiles/Reversi
 
 CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o: ../src/client/regLogic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o -c /home/h/CLionProjects/Reversi/src/client/regLogic.cpp
 
 CMakeFiles/Reversi.dir/src/client/regLogic.cpp.i: cmake_force
@@ -427,7 +403,6 @@ Reversi_OBJECTS = \
 "CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o" \
 "CMakeFiles/Reversi.dir/src/client/dummy.cpp.o" \
 "CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o" \
-"CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o" \
 "CMakeFiles/Reversi.dir/src/client/human.cpp.o" \
 "CMakeFiles/Reversi.dir/src/client/logic.cpp.o" \
 "CMakeFiles/Reversi.dir/src/client/main.cpp.o" \
@@ -446,7 +421,6 @@ Reversi: CMakeFiles/Reversi.dir/src/client/computer.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/dummy.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o
-Reversi: CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/human.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/logic.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/main.cpp.o
@@ -455,7 +429,7 @@ Reversi: CMakeFiles/Reversi.dir/src/client/point.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o
 Reversi: CMakeFiles/Reversi.dir/build.make
 Reversi: CMakeFiles/Reversi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Reversi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Reversi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Reversi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -471,7 +445,6 @@ CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/computer.cpp.
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/dummy.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o.requires
-CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/human.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/logic.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/client/main.cpp.o.requires

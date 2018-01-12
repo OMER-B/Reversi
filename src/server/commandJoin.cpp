@@ -2,9 +2,12 @@
 
 #include <thread_db.h>
 #include <unistd.h>
+#include <cstring>
+#define BUFFER 50
 
 bool CommandJoin::execute(string name, int clientSocket) {
   pthread_mutex_t joinLock;
+  pthread_mutex_init(&joinLock, NULL);
   Room *room;
   ssize_t n;
   cout << "Socket " << clientSocket
@@ -16,12 +19,13 @@ bool CommandJoin::execute(string name, int clientSocket) {
     room->setSecondClient(clientSocket);
     room->setStatus(Active);
     pthread_mutex_unlock(&joinLock);
-    char success[] = "Successfully joined";
+    char success[BUFFER];
+    strcpy(success, "Successfully joined");
     n = write(clientSocket, &success, sizeof(success));
-    thread_t id;
-    pthread_create(&id, NULL, handleGame_->play, room);
-    threads_->push_back(&id);
-    pthread_join(id, NULL);
+
+    Task *game = new Task(handleGame_->play, room);
+    pool_->addTask(game);
+    
     return false;
   }
   char negative[] = "-1";
@@ -31,8 +35,8 @@ bool CommandJoin::execute(string name, int clientSocket) {
 
 CommandJoin::CommandJoin(Lobby *lobby,
                          HandleGame *handleGame,
-                         vector<pthread_t *> *threads) {
+                         ThreadPool *pool) {
   lobby_ = lobby;
   handleGame_ = handleGame;
-  threads_ = threads;
+  pool_ = pool;
 }

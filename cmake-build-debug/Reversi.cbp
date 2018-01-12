@@ -181,12 +181,6 @@
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameFlow.h">
 			<Option target="Reversi"/>
 		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.cpp">
-			<Option target="Reversi"/>
-		</Unit>
-		<Unit filename="/home/h/CLionProjects/Reversi/src/client/gameManager.h">
-			<Option target="Reversi"/>
-		</Unit>
 		<Unit filename="/home/h/CLionProjects/Reversi/src/client/human.cpp">
 			<Option target="Reversi"/>
 		</Unit>

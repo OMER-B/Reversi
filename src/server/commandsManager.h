@@ -9,6 +9,7 @@
 #include "commandPrint.h"
 #include "HandleGame.h"
 #include "Lobby.h"
+#include "ThreadPool.h"
 
 class CommandsManager { // class is singleton
  private:
@@ -19,16 +20,16 @@ class CommandsManager { // class is singleton
   static CommandsManager *instance_;
 
   // list of threads for join command.
-  vector<pthread_t *> *threads_;
+  ThreadPool *pool_;
 
   //Constructor for CommandsManager.
-  CommandsManager(Lobby *, HandleGame *, vector<pthread_t *> *);
+  CommandsManager(Lobby *, HandleGame *, ThreadPool *pool);
 
  public:
   // Command manager is a singleton. getInstance() calls the constructor if no instance exists, and returns the existing one if does.
   static CommandsManager *getInstance(Lobby *,
                                       HandleGame *,
-                                      vector<pthread_t *> *);
+                                      ThreadPool *pool);
 
   // Command manager is a singleton. getInstance() calls the constructor if no instance exists, and returns the existing one if does.
   static CommandsManager *getInstance();

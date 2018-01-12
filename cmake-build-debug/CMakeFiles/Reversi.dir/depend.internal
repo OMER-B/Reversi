@@ -70,8 +70,6 @@ CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o
  /home/h/CLionProjects/Reversi/src/client/player.h
  /home/h/CLionProjects/Reversi/src/client/point.h
  /home/h/CLionProjects/Reversi/src/client/regLogic.h
-CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o
- /home/h/CLionProjects/Reversi/src/client/gameManager.cpp
 CMakeFiles/Reversi.dir/src/client/human.cpp.o
  /home/h/CLionProjects/Reversi/src/client/board.h
  /home/h/CLionProjects/Reversi/src/client/cell.h

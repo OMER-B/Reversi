@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/h/CLionProjects/Reversi/src/client/consoleDisplay.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/dummy.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/dummy.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/gameFlow.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o"
-  "/home/h/CLionProjects/Reversi/src/client/gameManager.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/human.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/human.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/logic.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/logic.cpp.o"
   "/home/h/CLionProjects/Reversi/src/client/main.cpp" "/home/h/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/src/client/main.cpp.o"

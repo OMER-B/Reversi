@@ -1,0 +1,23 @@
+commit 1f87fa5b1b0848998eec660dfa1c02c897c8a501
+Author: H <h@ubuntu.ubuntu-domain>
+Date:   Mon Dec 25 21:01:07 2017 +0200
+
+    ex4 working
+
+commit b2e679705783ff718b65e755bbbcf8d599667dd2
+Author: H <h@ubuntu.ubuntu-domain>
+Date:   Tue Dec 26 20:26:30 2017 +0200
+
+    added commands
+
+commit fe54dc550b9b37721c5119065fbdf37cf5ef857a
+Author: H <h@ubuntu.ubuntu-domain>
+Date:   Fri Dec 29 22:46:02 2017 +0200
+
+    added threads and tests
+
+commit e210b554e90295939e5534c5b481b818050ac277
+Author: OMER <omer5656@gmail.com>
+Date:   Mon Jan 1 20:36:44 2018 +0200
+
+    finished ex5

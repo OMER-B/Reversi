@@ -10,28 +10,22 @@
 #include "command.h"
 #include "commandsManager.h"
 #include "HandleGame.h"
+#include "ThreadPool.h"
 
-#define BUFFER 256
+#define THREADS_NUM 5
+#define BUFFER 50
 #define MAX_CONNECTED_CLIENTS 10
 
-typedef struct firstThreadArgs {
-  int serverSocket;
-  CommandsManager *manager;
-  vector<pthread_t *> *threads;
-} FirstThreadArgs;
-
-typedef struct secondThreadArgs {
-  CommandsManager *manager;
-  int clientSocket;
-  pthread_t id;
-} SecondThreadArgs;
 
 using namespace std;
 
 class Server {
  private:
+  ThreadPool * pool;
+  vector<Task*> *tasks;
+  
   Lobby *lobby_;
-  vector<pthread_t *> *threads_; // li
+  //vector<pthread_t *> *threads_; // li
   CommandsManager *manager_;
   HandleGame *handleGame_;
   int serverSocket_; // Socket of the server.

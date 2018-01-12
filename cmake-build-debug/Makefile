@@ -352,33 +352,6 @@ src/client/gameFlow.cpp.s:
 	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.s
 .PHONY : src/client/gameFlow.cpp.s
 
-src/client/gameManager.o: src/client/gameManager.cpp.o
-
-.PHONY : src/client/gameManager.o
-
-# target to build an object file
-src/client/gameManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o
-.PHONY : src/client/gameManager.cpp.o
-
-src/client/gameManager.i: src/client/gameManager.cpp.i
-
-.PHONY : src/client/gameManager.i
-
-# target to preprocess a source file
-src/client/gameManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameManager.cpp.i
-.PHONY : src/client/gameManager.cpp.i
-
-src/client/gameManager.s: src/client/gameManager.cpp.s
-
-.PHONY : src/client/gameManager.s
-
-# target to generate assembly for a file
-src/client/gameManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameManager.cpp.s
-.PHONY : src/client/gameManager.cpp.s
-
 src/client/human.o: src/client/human.cpp.o
 
 .PHONY : src/client/human.o
@@ -845,9 +818,6 @@ help:
 	@echo "... src/client/gameFlow.o"
 	@echo "... src/client/gameFlow.i"
 	@echo "... src/client/gameFlow.s"
-	@echo "... src/client/gameManager.o"
-	@echo "... src/client/gameManager.i"
-	@echo "... src/client/gameManager.s"
 	@echo "... src/client/human.o"
 	@echo "... src/client/human.i"
 	@echo "... src/client/human.s"

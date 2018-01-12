@@ -5,7 +5,7 @@
 bool CommandStart::execute(string arg, int clientSocket) {
 
   pthread_mutex_t startLock;
-
+  pthread_mutex_init(&startLock, NULL);
   string name = arg;
 
   if (lobby_->contains(name)) { // Room name already exists

@@ -49,6 +49,8 @@ unistd.h
 -
 fstream
 -
+cstdlib
+-
 
 /home/h/CLionProjects/Reversi/src/client/client.h
 string
@@ -129,8 +131,6 @@ consoleDisplay.h
 /home/h/CLionProjects/Reversi/src/client/consoleDisplay.h
 human.h
 /home/h/CLionProjects/Reversi/src/client/human.h
-
-/home/h/CLionProjects/Reversi/src/client/gameManager.cpp
 
 /home/h/CLionProjects/Reversi/src/client/human.cpp
 limits

@@ -8,19 +8,21 @@
 using namespace std;
 
 Server::Server(int port) : serverSocket_(0) {
+  pool = new ThreadPool(THREADS_NUM);
+  tasks = new vector<Task*>();
   port_ = port;
   lobby_ = new Lobby;
-  threads_ = new vector<pthread_t *>;
   handleGame_ = new HandleGame;
-  manager_ = CommandsManager::getInstance(lobby_, handleGame_, threads_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_, pool);
   stop_ = false;
 }
 
 Server::Server(char *fileName) {
-  threads_ = new vector<pthread_t *>;
+  pool = new ThreadPool(THREADS_NUM);
+  tasks = new vector<Task*>();
   lobby_ = new Lobby;
   handleGame_ = new HandleGame;
-  manager_ = CommandsManager::getInstance(lobby_, handleGame_, threads_);
+  manager_ = CommandsManager::getInstance(lobby_, handleGame_, pool);
   stop_ = false;
   ifstream inFile;
   inFile.open(fileName);
@@ -48,8 +50,9 @@ void Server::start() {
   }
   cout << "Binding succeeded. Server is up." << endl;
 
-  pthread_t serv;
-  pthread_create(&serv, NULL, shouldStop, (void *) this);
+  //TODO add option to exit
+//  Task* exitTask = new Task(shouldStop, (void*)this);
+//  pool->addTask(exitTask);
 
   listen(serverSocket_, MAX_CONNECTED_CLIENTS);
   struct sockaddr_in clientAddress;
@@ -60,22 +63,20 @@ void Server::start() {
     int clientSocket = accept(serverSocket_,
                               (struct sockaddr *) &clientAddress,
                               &clientAddressLen);
-    cout << "Client connected" << endl;
+    cout << clientSocket << endl;
     if (clientSocket == -1) {
-      throw "Error on first client accept";
+      continue;
     }
-    SecondThreadArgs args;
-    args.clientSocket = clientSocket;
-    args.manager = manager_;
-    pthread_t id;
-    threads_->push_back(&id);
-    pthread_create(&id, NULL, handleClient, &args);
+
+    Task *handleClientTask = new Task(handleClient, &clientSocket);
+    pool->addTask(handleClientTask);
   }
 }
 
 void *Server::handleClient(void *args) {
-  SecondThreadArgs *clientArgs = (SecondThreadArgs *) args;
-  CommandsManager *manager = clientArgs->manager;
+  int clientSocket = *((int*)args);
+
+  CommandsManager *manager = CommandsManager::getInstance();
 
   bool shoulContinue = true;
 
@@ -83,8 +84,8 @@ void *Server::handleClient(void *args) {
     char input[BUFFER];
     memset(input, 0, sizeof(input));
 
-    cout << "connected to client: " << clientArgs->clientSocket << endl;
-    ssize_t n = read(clientArgs->clientSocket, &input, sizeof(input));
+    cout << "connected to client: " << clientSocket << endl;
+    ssize_t n = read(clientSocket, &input, sizeof(input));
     if (n == 0) {
       break;
     }
@@ -99,10 +100,10 @@ void *Server::handleClient(void *args) {
 
     string command = result.first;
     stringArgs = result.second;
-    if (manager->isLegalCommand(command, clientArgs->clientSocket)) {
+    if (manager->isLegalCommand(command, clientSocket)) {
       shoulContinue = manager->executeCommand(command,
                                               stringArgs,
-                                              clientArgs->clientSocket);
+                                              clientSocket);
     } else {
       cout << "Illegal command" << endl;
       break;
@@ -114,7 +115,8 @@ void *Server::handleClient(void *args) {
 Server::~Server() {
   stop();
   close(serverSocket_);
-  delete threads_;
+  delete pool;
+  delete tasks;
   delete lobby_;
   delete manager_;
   delete handleGame_;
@@ -124,11 +126,6 @@ void Server::stop() {
   cout << "Closing the server..." << endl;
   stop_ = true;
   map<string, Room *> *mappa = lobby_->getMap();
-  for (vector<pthread_t *>::iterator it = threads_->begin();
-       it != threads_->end(); ++it) {
-    pthread_cancel(**it);
-
-  }
 
   char close[] = "close";
   for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end();
@@ -137,7 +134,7 @@ void Server::stop() {
     ssize_t n = write((*it).second->getFirstClient(), &close, sizeof(close));
     n = write((*it).second->getSecondClient(), &close, sizeof(close));
   }
-
+  pool->terminate();
   exit(0);
 }
 

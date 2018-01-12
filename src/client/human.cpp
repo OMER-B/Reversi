@@ -4,7 +4,7 @@
 #include "human.h"
 #include "logic.h"
 
-#define BUFFER 15
+#define BUFFER 50
 
 using namespace std;
 

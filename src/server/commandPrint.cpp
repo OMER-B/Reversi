@@ -2,7 +2,7 @@
 #include <cstring>
 #include "commandPrint.h"
 
-#define BUFFER 128
+#define BUFFER 50
 CommandPrint::CommandPrint(Lobby *lobby) {
   lobby_ = lobby;
 }

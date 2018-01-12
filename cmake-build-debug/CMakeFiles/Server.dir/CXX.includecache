@@ -59,10 +59,10 @@ commandClose.h
 /home/h/CLionProjects/Reversi/src/server/commandClose.h
 
 /home/h/CLionProjects/Reversi/src/server/commandClose.h
-command.h
-/home/h/CLionProjects/Reversi/src/server/command.h
 Lobby.h
 /home/h/CLionProjects/Reversi/src/server/Lobby.h
+command.h
+/home/h/CLionProjects/Reversi/src/server/command.h
 iostream
 -
 vector
@@ -143,8 +143,6 @@ commandClose.h
 /home/h/CLionProjects/Reversi/src/server/commandClose.h
 commandPrint.h
 /home/h/CLionProjects/Reversi/src/server/commandPrint.h
-HandleGame.h
-/home/h/CLionProjects/Reversi/src/server/HandleGame.h
 Lobby.h
 /home/h/CLionProjects/Reversi/src/server/Lobby.h
 

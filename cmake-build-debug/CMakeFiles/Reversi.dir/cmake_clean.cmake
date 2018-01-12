@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o"
   "CMakeFiles/Reversi.dir/src/client/dummy.cpp.o"
   "CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o"
-  "CMakeFiles/Reversi.dir/src/client/gameManager.cpp.o"
   "CMakeFiles/Reversi.dir/src/client/human.cpp.o"
   "CMakeFiles/Reversi.dir/src/client/logic.cpp.o"
   "CMakeFiles/Reversi.dir/src/client/main.cpp.o"

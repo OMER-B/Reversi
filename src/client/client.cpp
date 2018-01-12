@@ -10,7 +10,7 @@
 #include <fstream>
 #include <cstdlib>
 
-#define BUFFER 128
+#define BUFFER 50
 
 using namespace std;
 

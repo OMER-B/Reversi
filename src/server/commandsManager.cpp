@@ -5,11 +5,11 @@
 CommandsManager *CommandsManager::instance_ = 0;
 CommandsManager::CommandsManager(Lobby *lobby,
                                  HandleGame *handleGame,
-                                 vector<pthread_t *> *threads) {
-  threads_ = threads;
-  commandsMap_["join"] = new CommandJoin(lobby, handleGame, threads);
+                                 ThreadPool *pool) {
+  pool_ = pool;
+  commandsMap_["join"] = new CommandJoin(lobby, handleGame, pool_);
   commandsMap_["list_games"] = new CommandPrint(lobby);
-  commandsMap_["close"] = new CommandClose(lobby, threads);
+  commandsMap_["close"] = new CommandClose(lobby, pool);
   commandsMap_["start"] = new CommandStart(lobby);
 }
 
@@ -38,9 +38,9 @@ bool CommandsManager::isLegalCommand(string command, int client) {
 
 CommandsManager *CommandsManager::getInstance(Lobby *lobby,
                                               HandleGame *handleGame,
-                                              vector<pthread_t *> *threads) {
+                                              ThreadPool *pool) {
   if (!instance_) {
-    instance_ = new CommandsManager(lobby, handleGame, threads);
+    instance_ = new CommandsManager(lobby, handleGame, pool);
   }
   return instance_;
 }

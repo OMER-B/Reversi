@@ -6,9 +6,12 @@
 using namespace std;
 
 void notify(int clients[]) {
-  char NUM0[2] = "0";
-  char NUM1[2] = "1";
+  char NUM0[BUFFER];
+  char NUM1[BUFFER];
 
+  strcpy(NUM0, "0");
+  strcpy(NUM1, "1");
+  
   cout << "Notifying clients who is who. First is " << clients[0] << endl;
 
   ssize_t n = write(clients[0], &NUM0, sizeof(NUM0));
@@ -34,21 +37,26 @@ void *HandleGame::play(void *room) {
 
   int i = 0;
   char move[BUFFER];
-  char go[] = "go";
+  char go[BUFFER];
+  char error[BUFFER];
+  memset(go, 0, sizeof(move));
+  memset(error, 0, sizeof(move));
+  strcpy(go, "go");
+  strcpy(error, "close");
   ssize_t n;
-  char error[] = "close";
   while (true) {
     memset(move, 0, sizeof(move));
     // Read new point from client.
     n = write(clients[i], &go, sizeof(go));
+    cout << "Sent " << clients[i] << ": " << go << endl;
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
       n = write(clients[1 - i], &error, sizeof(error));
       cm->executeCommand("close", game->getName(), clients[i]);
       break;
     }
-    cout << "Sent feedback to: " << clients[i] << endl;
     n = read(clients[i], &move, sizeof(move));
+    cout << "recieved: " << move << " from: " << clients[i] << endl;
     if (n == -1) {
       cout << "Error reading from client " << clients[i % 2] << endl;
       n = write(clients[1 - i], &error, sizeof(error));
