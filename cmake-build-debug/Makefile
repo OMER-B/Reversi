@@ -111,30 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Server
+# Target rules for targets named server
 
 # Build rule for target.
-Server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Server
-.PHONY : Server
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-Server/fast:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
-.PHONY : Server/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 #=============================================================================
-# Target rules for targets named Reversi
+# Target rules for targets named client
 
 # Build rule for target.
-Reversi: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Reversi
-.PHONY : Reversi
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
 
 # fast build rule for target.
-Reversi/fast:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/build
-.PHONY : Reversi/fast
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
 
 src/client/board.o: src/client/board.cpp.o
 
@@ -142,7 +142,7 @@ src/client/board.o: src/client/board.cpp.o
 
 # target to build an object file
 src/client/board.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/board.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/board.cpp.o
 .PHONY : src/client/board.cpp.o
 
 src/client/board.i: src/client/board.cpp.i
@@ -151,7 +151,7 @@ src/client/board.i: src/client/board.cpp.i
 
 # target to preprocess a source file
 src/client/board.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/board.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/board.cpp.i
 .PHONY : src/client/board.cpp.i
 
 src/client/board.s: src/client/board.cpp.s
@@ -160,7 +160,7 @@ src/client/board.s: src/client/board.cpp.s
 
 # target to generate assembly for a file
 src/client/board.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/board.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/board.cpp.s
 .PHONY : src/client/board.cpp.s
 
 src/client/cell.o: src/client/cell.cpp.o
@@ -169,7 +169,7 @@ src/client/cell.o: src/client/cell.cpp.o
 
 # target to build an object file
 src/client/cell.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/cell.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/cell.cpp.o
 .PHONY : src/client/cell.cpp.o
 
 src/client/cell.i: src/client/cell.cpp.i
@@ -178,7 +178,7 @@ src/client/cell.i: src/client/cell.cpp.i
 
 # target to preprocess a source file
 src/client/cell.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/cell.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/cell.cpp.i
 .PHONY : src/client/cell.cpp.i
 
 src/client/cell.s: src/client/cell.cpp.s
@@ -187,7 +187,7 @@ src/client/cell.s: src/client/cell.cpp.s
 
 # target to generate assembly for a file
 src/client/cell.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/cell.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/cell.cpp.s
 .PHONY : src/client/cell.cpp.s
 
 src/client/client.o: src/client/client.cpp.o
@@ -196,7 +196,7 @@ src/client/client.o: src/client/client.cpp.o
 
 # target to build an object file
 src/client/client.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/client.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.o
 .PHONY : src/client/client.cpp.o
 
 src/client/client.i: src/client/client.cpp.i
@@ -205,7 +205,7 @@ src/client/client.i: src/client/client.cpp.i
 
 # target to preprocess a source file
 src/client/client.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/client.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.i
 .PHONY : src/client/client.cpp.i
 
 src/client/client.s: src/client/client.cpp.s
@@ -214,7 +214,7 @@ src/client/client.s: src/client/client.cpp.s
 
 # target to generate assembly for a file
 src/client/client.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/client.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/client.cpp.s
 .PHONY : src/client/client.cpp.s
 
 src/client/clientCommand.o: src/client/clientCommand.cpp.o
@@ -223,7 +223,7 @@ src/client/clientCommand.o: src/client/clientCommand.cpp.o
 
 # target to build an object file
 src/client/clientCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/clientCommand.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientCommand.cpp.o
 .PHONY : src/client/clientCommand.cpp.o
 
 src/client/clientCommand.i: src/client/clientCommand.cpp.i
@@ -232,7 +232,7 @@ src/client/clientCommand.i: src/client/clientCommand.cpp.i
 
 # target to preprocess a source file
 src/client/clientCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/clientCommand.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientCommand.cpp.i
 .PHONY : src/client/clientCommand.cpp.i
 
 src/client/clientCommand.s: src/client/clientCommand.cpp.s
@@ -241,7 +241,7 @@ src/client/clientCommand.s: src/client/clientCommand.cpp.s
 
 # target to generate assembly for a file
 src/client/clientCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/clientCommand.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientCommand.cpp.s
 .PHONY : src/client/clientCommand.cpp.s
 
 src/client/computer.o: src/client/computer.cpp.o
@@ -250,7 +250,7 @@ src/client/computer.o: src/client/computer.cpp.o
 
 # target to build an object file
 src/client/computer.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/computer.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/computer.cpp.o
 .PHONY : src/client/computer.cpp.o
 
 src/client/computer.i: src/client/computer.cpp.i
@@ -259,7 +259,7 @@ src/client/computer.i: src/client/computer.cpp.i
 
 # target to preprocess a source file
 src/client/computer.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/computer.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/computer.cpp.i
 .PHONY : src/client/computer.cpp.i
 
 src/client/computer.s: src/client/computer.cpp.s
@@ -268,7 +268,7 @@ src/client/computer.s: src/client/computer.cpp.s
 
 # target to generate assembly for a file
 src/client/computer.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/computer.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/computer.cpp.s
 .PHONY : src/client/computer.cpp.s
 
 src/client/consoleDisplay.o: src/client/consoleDisplay.cpp.o
@@ -277,7 +277,7 @@ src/client/consoleDisplay.o: src/client/consoleDisplay.cpp.o
 
 # target to build an object file
 src/client/consoleDisplay.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/consoleDisplay.cpp.o
 .PHONY : src/client/consoleDisplay.cpp.o
 
 src/client/consoleDisplay.i: src/client/consoleDisplay.cpp.i
@@ -286,7 +286,7 @@ src/client/consoleDisplay.i: src/client/consoleDisplay.cpp.i
 
 # target to preprocess a source file
 src/client/consoleDisplay.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/consoleDisplay.cpp.i
 .PHONY : src/client/consoleDisplay.cpp.i
 
 src/client/consoleDisplay.s: src/client/consoleDisplay.cpp.s
@@ -295,7 +295,7 @@ src/client/consoleDisplay.s: src/client/consoleDisplay.cpp.s
 
 # target to generate assembly for a file
 src/client/consoleDisplay.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/consoleDisplay.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/consoleDisplay.cpp.s
 .PHONY : src/client/consoleDisplay.cpp.s
 
 src/client/dummy.o: src/client/dummy.cpp.o
@@ -304,7 +304,7 @@ src/client/dummy.o: src/client/dummy.cpp.o
 
 # target to build an object file
 src/client/dummy.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/dummy.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/dummy.cpp.o
 .PHONY : src/client/dummy.cpp.o
 
 src/client/dummy.i: src/client/dummy.cpp.i
@@ -313,7 +313,7 @@ src/client/dummy.i: src/client/dummy.cpp.i
 
 # target to preprocess a source file
 src/client/dummy.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/dummy.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/dummy.cpp.i
 .PHONY : src/client/dummy.cpp.i
 
 src/client/dummy.s: src/client/dummy.cpp.s
@@ -322,7 +322,7 @@ src/client/dummy.s: src/client/dummy.cpp.s
 
 # target to generate assembly for a file
 src/client/dummy.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/dummy.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/dummy.cpp.s
 .PHONY : src/client/dummy.cpp.s
 
 src/client/gameFlow.o: src/client/gameFlow.cpp.o
@@ -331,7 +331,7 @@ src/client/gameFlow.o: src/client/gameFlow.cpp.o
 
 # target to build an object file
 src/client/gameFlow.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameFlow.cpp.o
 .PHONY : src/client/gameFlow.cpp.o
 
 src/client/gameFlow.i: src/client/gameFlow.cpp.i
@@ -340,7 +340,7 @@ src/client/gameFlow.i: src/client/gameFlow.cpp.i
 
 # target to preprocess a source file
 src/client/gameFlow.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameFlow.cpp.i
 .PHONY : src/client/gameFlow.cpp.i
 
 src/client/gameFlow.s: src/client/gameFlow.cpp.s
@@ -349,7 +349,7 @@ src/client/gameFlow.s: src/client/gameFlow.cpp.s
 
 # target to generate assembly for a file
 src/client/gameFlow.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/gameFlow.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameFlow.cpp.s
 .PHONY : src/client/gameFlow.cpp.s
 
 src/client/human.o: src/client/human.cpp.o
@@ -358,7 +358,7 @@ src/client/human.o: src/client/human.cpp.o
 
 # target to build an object file
 src/client/human.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/human.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/human.cpp.o
 .PHONY : src/client/human.cpp.o
 
 src/client/human.i: src/client/human.cpp.i
@@ -367,7 +367,7 @@ src/client/human.i: src/client/human.cpp.i
 
 # target to preprocess a source file
 src/client/human.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/human.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/human.cpp.i
 .PHONY : src/client/human.cpp.i
 
 src/client/human.s: src/client/human.cpp.s
@@ -376,7 +376,7 @@ src/client/human.s: src/client/human.cpp.s
 
 # target to generate assembly for a file
 src/client/human.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/human.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/human.cpp.s
 .PHONY : src/client/human.cpp.s
 
 src/client/logic.o: src/client/logic.cpp.o
@@ -385,7 +385,7 @@ src/client/logic.o: src/client/logic.cpp.o
 
 # target to build an object file
 src/client/logic.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/logic.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/logic.cpp.o
 .PHONY : src/client/logic.cpp.o
 
 src/client/logic.i: src/client/logic.cpp.i
@@ -394,7 +394,7 @@ src/client/logic.i: src/client/logic.cpp.i
 
 # target to preprocess a source file
 src/client/logic.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/logic.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/logic.cpp.i
 .PHONY : src/client/logic.cpp.i
 
 src/client/logic.s: src/client/logic.cpp.s
@@ -403,7 +403,7 @@ src/client/logic.s: src/client/logic.cpp.s
 
 # target to generate assembly for a file
 src/client/logic.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/logic.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/logic.cpp.s
 .PHONY : src/client/logic.cpp.s
 
 src/client/main.o: src/client/main.cpp.o
@@ -412,7 +412,7 @@ src/client/main.o: src/client/main.cpp.o
 
 # target to build an object file
 src/client/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/main.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/main.cpp.o
 .PHONY : src/client/main.cpp.o
 
 src/client/main.i: src/client/main.cpp.i
@@ -421,7 +421,7 @@ src/client/main.i: src/client/main.cpp.i
 
 # target to preprocess a source file
 src/client/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/main.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/main.cpp.i
 .PHONY : src/client/main.cpp.i
 
 src/client/main.s: src/client/main.cpp.s
@@ -430,7 +430,7 @@ src/client/main.s: src/client/main.cpp.s
 
 # target to generate assembly for a file
 src/client/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/main.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/main.cpp.s
 .PHONY : src/client/main.cpp.s
 
 src/client/player.o: src/client/player.cpp.o
@@ -439,7 +439,7 @@ src/client/player.o: src/client/player.cpp.o
 
 # target to build an object file
 src/client/player.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/player.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/player.cpp.o
 .PHONY : src/client/player.cpp.o
 
 src/client/player.i: src/client/player.cpp.i
@@ -448,7 +448,7 @@ src/client/player.i: src/client/player.cpp.i
 
 # target to preprocess a source file
 src/client/player.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/player.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/player.cpp.i
 .PHONY : src/client/player.cpp.i
 
 src/client/player.s: src/client/player.cpp.s
@@ -457,7 +457,7 @@ src/client/player.s: src/client/player.cpp.s
 
 # target to generate assembly for a file
 src/client/player.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/player.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/player.cpp.s
 .PHONY : src/client/player.cpp.s
 
 src/client/point.o: src/client/point.cpp.o
@@ -466,7 +466,7 @@ src/client/point.o: src/client/point.cpp.o
 
 # target to build an object file
 src/client/point.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/point.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/point.cpp.o
 .PHONY : src/client/point.cpp.o
 
 src/client/point.i: src/client/point.cpp.i
@@ -475,7 +475,7 @@ src/client/point.i: src/client/point.cpp.i
 
 # target to preprocess a source file
 src/client/point.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/point.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/point.cpp.i
 .PHONY : src/client/point.cpp.i
 
 src/client/point.s: src/client/point.cpp.s
@@ -484,7 +484,7 @@ src/client/point.s: src/client/point.cpp.s
 
 # target to generate assembly for a file
 src/client/point.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/point.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/point.cpp.s
 .PHONY : src/client/point.cpp.s
 
 src/client/regLogic.o: src/client/regLogic.cpp.o
@@ -493,7 +493,7 @@ src/client/regLogic.o: src/client/regLogic.cpp.o
 
 # target to build an object file
 src/client/regLogic.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/regLogic.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/regLogic.cpp.o
 .PHONY : src/client/regLogic.cpp.o
 
 src/client/regLogic.i: src/client/regLogic.cpp.i
@@ -502,7 +502,7 @@ src/client/regLogic.i: src/client/regLogic.cpp.i
 
 # target to preprocess a source file
 src/client/regLogic.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/regLogic.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/regLogic.cpp.i
 .PHONY : src/client/regLogic.cpp.i
 
 src/client/regLogic.s: src/client/regLogic.cpp.s
@@ -511,7 +511,7 @@ src/client/regLogic.s: src/client/regLogic.cpp.s
 
 # target to generate assembly for a file
 src/client/regLogic.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/client/regLogic.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/regLogic.cpp.s
 .PHONY : src/client/regLogic.cpp.s
 
 src/server/HandleGame.o: src/server/HandleGame.cpp.o
@@ -520,7 +520,7 @@ src/server/HandleGame.o: src/server/HandleGame.cpp.o
 
 # target to build an object file
 src/server/HandleGame.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/HandleGame.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/HandleGame.cpp.o
 .PHONY : src/server/HandleGame.cpp.o
 
 src/server/HandleGame.i: src/server/HandleGame.cpp.i
@@ -529,7 +529,7 @@ src/server/HandleGame.i: src/server/HandleGame.cpp.i
 
 # target to preprocess a source file
 src/server/HandleGame.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/HandleGame.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/HandleGame.cpp.i
 .PHONY : src/server/HandleGame.cpp.i
 
 src/server/HandleGame.s: src/server/HandleGame.cpp.s
@@ -538,7 +538,7 @@ src/server/HandleGame.s: src/server/HandleGame.cpp.s
 
 # target to generate assembly for a file
 src/server/HandleGame.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/HandleGame.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/HandleGame.cpp.s
 .PHONY : src/server/HandleGame.cpp.s
 
 src/server/Lobby.o: src/server/Lobby.cpp.o
@@ -547,7 +547,7 @@ src/server/Lobby.o: src/server/Lobby.cpp.o
 
 # target to build an object file
 src/server/Lobby.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Lobby.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Lobby.cpp.o
 .PHONY : src/server/Lobby.cpp.o
 
 src/server/Lobby.i: src/server/Lobby.cpp.i
@@ -556,7 +556,7 @@ src/server/Lobby.i: src/server/Lobby.cpp.i
 
 # target to preprocess a source file
 src/server/Lobby.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Lobby.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Lobby.cpp.i
 .PHONY : src/server/Lobby.cpp.i
 
 src/server/Lobby.s: src/server/Lobby.cpp.s
@@ -565,7 +565,7 @@ src/server/Lobby.s: src/server/Lobby.cpp.s
 
 # target to generate assembly for a file
 src/server/Lobby.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Lobby.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Lobby.cpp.s
 .PHONY : src/server/Lobby.cpp.s
 
 src/server/Room.o: src/server/Room.cpp.o
@@ -574,7 +574,7 @@ src/server/Room.o: src/server/Room.cpp.o
 
 # target to build an object file
 src/server/Room.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Room.cpp.o
 .PHONY : src/server/Room.cpp.o
 
 src/server/Room.i: src/server/Room.cpp.i
@@ -583,7 +583,7 @@ src/server/Room.i: src/server/Room.cpp.i
 
 # target to preprocess a source file
 src/server/Room.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Room.cpp.i
 .PHONY : src/server/Room.cpp.i
 
 src/server/Room.s: src/server/Room.cpp.s
@@ -592,8 +592,62 @@ src/server/Room.s: src/server/Room.cpp.s
 
 # target to generate assembly for a file
 src/server/Room.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/Room.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Room.cpp.s
 .PHONY : src/server/Room.cpp.s
+
+src/server/Task.o: src/server/Task.cpp.o
+
+.PHONY : src/server/Task.o
+
+# target to build an object file
+src/server/Task.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Task.cpp.o
+.PHONY : src/server/Task.cpp.o
+
+src/server/Task.i: src/server/Task.cpp.i
+
+.PHONY : src/server/Task.i
+
+# target to preprocess a source file
+src/server/Task.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Task.cpp.i
+.PHONY : src/server/Task.cpp.i
+
+src/server/Task.s: src/server/Task.cpp.s
+
+.PHONY : src/server/Task.s
+
+# target to generate assembly for a file
+src/server/Task.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/Task.cpp.s
+.PHONY : src/server/Task.cpp.s
+
+src/server/ThreadPool.o: src/server/ThreadPool.cpp.o
+
+.PHONY : src/server/ThreadPool.o
+
+# target to build an object file
+src/server/ThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ThreadPool.cpp.o
+.PHONY : src/server/ThreadPool.cpp.o
+
+src/server/ThreadPool.i: src/server/ThreadPool.cpp.i
+
+.PHONY : src/server/ThreadPool.i
+
+# target to preprocess a source file
+src/server/ThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ThreadPool.cpp.i
+.PHONY : src/server/ThreadPool.cpp.i
+
+src/server/ThreadPool.s: src/server/ThreadPool.cpp.s
+
+.PHONY : src/server/ThreadPool.s
+
+# target to generate assembly for a file
+src/server/ThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/ThreadPool.cpp.s
+.PHONY : src/server/ThreadPool.cpp.s
 
 src/server/commandClose.o: src/server/commandClose.cpp.o
 
@@ -601,7 +655,7 @@ src/server/commandClose.o: src/server/commandClose.cpp.o
 
 # target to build an object file
 src/server/commandClose.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandClose.cpp.o
 .PHONY : src/server/commandClose.cpp.o
 
 src/server/commandClose.i: src/server/commandClose.cpp.i
@@ -610,7 +664,7 @@ src/server/commandClose.i: src/server/commandClose.cpp.i
 
 # target to preprocess a source file
 src/server/commandClose.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandClose.cpp.i
 .PHONY : src/server/commandClose.cpp.i
 
 src/server/commandClose.s: src/server/commandClose.cpp.s
@@ -619,7 +673,7 @@ src/server/commandClose.s: src/server/commandClose.cpp.s
 
 # target to generate assembly for a file
 src/server/commandClose.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandClose.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandClose.cpp.s
 .PHONY : src/server/commandClose.cpp.s
 
 src/server/commandJoin.o: src/server/commandJoin.cpp.o
@@ -628,7 +682,7 @@ src/server/commandJoin.o: src/server/commandJoin.cpp.o
 
 # target to build an object file
 src/server/commandJoin.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandJoin.cpp.o
 .PHONY : src/server/commandJoin.cpp.o
 
 src/server/commandJoin.i: src/server/commandJoin.cpp.i
@@ -637,7 +691,7 @@ src/server/commandJoin.i: src/server/commandJoin.cpp.i
 
 # target to preprocess a source file
 src/server/commandJoin.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandJoin.cpp.i
 .PHONY : src/server/commandJoin.cpp.i
 
 src/server/commandJoin.s: src/server/commandJoin.cpp.s
@@ -646,7 +700,7 @@ src/server/commandJoin.s: src/server/commandJoin.cpp.s
 
 # target to generate assembly for a file
 src/server/commandJoin.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandJoin.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandJoin.cpp.s
 .PHONY : src/server/commandJoin.cpp.s
 
 src/server/commandPrint.o: src/server/commandPrint.cpp.o
@@ -655,7 +709,7 @@ src/server/commandPrint.o: src/server/commandPrint.cpp.o
 
 # target to build an object file
 src/server/commandPrint.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandPrint.cpp.o
 .PHONY : src/server/commandPrint.cpp.o
 
 src/server/commandPrint.i: src/server/commandPrint.cpp.i
@@ -664,7 +718,7 @@ src/server/commandPrint.i: src/server/commandPrint.cpp.i
 
 # target to preprocess a source file
 src/server/commandPrint.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandPrint.cpp.i
 .PHONY : src/server/commandPrint.cpp.i
 
 src/server/commandPrint.s: src/server/commandPrint.cpp.s
@@ -673,7 +727,7 @@ src/server/commandPrint.s: src/server/commandPrint.cpp.s
 
 # target to generate assembly for a file
 src/server/commandPrint.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandPrint.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandPrint.cpp.s
 .PHONY : src/server/commandPrint.cpp.s
 
 src/server/commandStart.o: src/server/commandStart.cpp.o
@@ -682,7 +736,7 @@ src/server/commandStart.o: src/server/commandStart.cpp.o
 
 # target to build an object file
 src/server/commandStart.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandStart.cpp.o
 .PHONY : src/server/commandStart.cpp.o
 
 src/server/commandStart.i: src/server/commandStart.cpp.i
@@ -691,7 +745,7 @@ src/server/commandStart.i: src/server/commandStart.cpp.i
 
 # target to preprocess a source file
 src/server/commandStart.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandStart.cpp.i
 .PHONY : src/server/commandStart.cpp.i
 
 src/server/commandStart.s: src/server/commandStart.cpp.s
@@ -700,7 +754,7 @@ src/server/commandStart.s: src/server/commandStart.cpp.s
 
 # target to generate assembly for a file
 src/server/commandStart.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandStart.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandStart.cpp.s
 .PHONY : src/server/commandStart.cpp.s
 
 src/server/commandsManager.o: src/server/commandsManager.cpp.o
@@ -709,7 +763,7 @@ src/server/commandsManager.o: src/server/commandsManager.cpp.o
 
 # target to build an object file
 src/server/commandsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandsManager.cpp.o
 .PHONY : src/server/commandsManager.cpp.o
 
 src/server/commandsManager.i: src/server/commandsManager.cpp.i
@@ -718,7 +772,7 @@ src/server/commandsManager.i: src/server/commandsManager.cpp.i
 
 # target to preprocess a source file
 src/server/commandsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandsManager.cpp.i
 .PHONY : src/server/commandsManager.cpp.i
 
 src/server/commandsManager.s: src/server/commandsManager.cpp.s
@@ -727,7 +781,7 @@ src/server/commandsManager.s: src/server/commandsManager.cpp.s
 
 # target to generate assembly for a file
 src/server/commandsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/commandsManager.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/commandsManager.cpp.s
 .PHONY : src/server/commandsManager.cpp.s
 
 src/server/main.o: src/server/main.cpp.o
@@ -736,7 +790,7 @@ src/server/main.o: src/server/main.cpp.o
 
 # target to build an object file
 src/server/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/main.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.o
 .PHONY : src/server/main.cpp.o
 
 src/server/main.i: src/server/main.cpp.i
@@ -745,7 +799,7 @@ src/server/main.i: src/server/main.cpp.i
 
 # target to preprocess a source file
 src/server/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/main.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.i
 .PHONY : src/server/main.cpp.i
 
 src/server/main.s: src/server/main.cpp.s
@@ -754,7 +808,7 @@ src/server/main.s: src/server/main.cpp.s
 
 # target to generate assembly for a file
 src/server/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/main.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/main.cpp.s
 .PHONY : src/server/main.cpp.s
 
 src/server/server.o: src/server/server.cpp.o
@@ -763,7 +817,7 @@ src/server/server.o: src/server/server.cpp.o
 
 # target to build an object file
 src/server/server.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/server.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.o
 .PHONY : src/server/server.cpp.o
 
 src/server/server.i: src/server/server.cpp.i
@@ -772,7 +826,7 @@ src/server/server.i: src/server/server.cpp.i
 
 # target to preprocess a source file
 src/server/server.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/server.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.i
 .PHONY : src/server/server.cpp.i
 
 src/server/server.s: src/server/server.cpp.s
@@ -781,7 +835,7 @@ src/server/server.s: src/server/server.cpp.s
 
 # target to generate assembly for a file
 src/server/server.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/server/server.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.s
 .PHONY : src/server/server.cpp.s
 
 # Help Target
@@ -792,8 +846,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Server"
-	@echo "... Reversi"
+	@echo "... server"
+	@echo "... client"
 	@echo "... src/client/board.o"
 	@echo "... src/client/board.i"
 	@echo "... src/client/board.s"
@@ -845,6 +899,12 @@ help:
 	@echo "... src/server/Room.o"
 	@echo "... src/server/Room.i"
 	@echo "... src/server/Room.s"
+	@echo "... src/server/Task.o"
+	@echo "... src/server/Task.i"
+	@echo "... src/server/Task.s"
+	@echo "... src/server/ThreadPool.o"
+	@echo "... src/server/ThreadPool.i"
+	@echo "... src/server/ThreadPool.s"
 	@echo "... src/server/commandClose.o"
 	@echo "... src/server/commandClose.i"
 	@echo "... src/server/commandClose.s"
