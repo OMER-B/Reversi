@@ -1,5 +1,6 @@
 #include "gameFlow.h"
 #include "client.h"
+#include "../tools.h"
 
 int main() {
 
@@ -49,7 +50,7 @@ int main() {
       return 0;
   }
   display = new ConsoleDisplay;
-  board = new Board(SIZE, SIZE, players);
+  board = new Board(BOARD_SIZE, BOARD_SIZE, players);
   logic = new RegLogic();
 
   Game game(board, logic, display, players[0], players[1]);

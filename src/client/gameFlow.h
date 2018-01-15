@@ -1,7 +1,6 @@
 #ifndef EX2NEW_GAME_H
 #define EX2NEW_GAME_H
 
-#define SIZE 8
 
 #define NUM_OF_PLAYERS 2
 

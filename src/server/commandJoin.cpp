@@ -1,9 +1,10 @@
 #include "commandJoin.h"
+#include "../tools.h"
 
 #include <thread_db.h>
 #include <unistd.h>
 #include <cstring>
-#define BUFFER 50
+
 
 bool CommandJoin::execute(string name, int clientSocket) {
   pthread_mutex_t joinLock;

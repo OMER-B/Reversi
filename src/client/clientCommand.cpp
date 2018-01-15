@@ -2,7 +2,8 @@
 #include <unistd.h>
 #include <iostream>
 #include "clientCommand.h"
-#define BUFFER 50
+#include "../tools.h"
+
 
 ClientCommand::ClientCommand(int clientSocket) : clientSocket_(clientSocket) {}
 

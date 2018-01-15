@@ -1,4 +1,5 @@
 #include "server.h"
+#include "../tools.h"
 #include <unistd.h>
 #include <string.h>
 #include <fstream>
@@ -50,11 +51,10 @@ void Server::start() {
   }
   cout << "Binding succeeded. Server is up." << endl;
 
-  //TODO add option to exit
-//  Task* exitTask = new Task(shouldStop, (void*)this);
-//  pool->addTask(exitTask);
+  Task* exitTask = new Task(shouldStop, (void*)this);
+  pool->addTask(exitTask);
 
-  listen(serverSocket_, MAX_CONNECTED_CLIENTS);
+  int listening = listen(serverSocket_, MAX_CONNECTED_CLIENTS);
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
 
@@ -63,11 +63,11 @@ void Server::start() {
     int clientSocket = accept(serverSocket_,
                               (struct sockaddr *) &clientAddress,
                               &clientAddressLen);
-    cout << clientSocket << endl;
     if (clientSocket == -1) {
-      continue;
+      throw "error accepting client";
     }
 
+    //handle each new client in a new TASK
     Task *handleClientTask = new Task(handleClient, &clientSocket);
     pool->addTask(handleClientTask);
   }
@@ -80,19 +80,19 @@ void *Server::handleClient(void *args) {
 
   bool shoulContinue = true;
 
+  // recieve command from the player and send to the matching function
   while (shoulContinue) {
     char input[BUFFER];
     memset(input, 0, sizeof(input));
 
     cout << "connected to client: " << clientSocket << endl;
     ssize_t n = read(clientSocket, &input, sizeof(input));
-    if (n == 0) {
-      break;
-    }
-    if (n == -1) {
+    if ((n == -1)||(n==0)) {
+      close(clientSocket);
       throw "Failed to receive read from client";
     }
 
+    // seperate the command to the function and its arguments
     string stringArgs;
 
     pair<string, string> result;
@@ -100,12 +100,15 @@ void *Server::handleClient(void *args) {
 
     string command = result.first;
     stringArgs = result.second;
+
+    //some commands return true -> the loop of getting new commands should continue
     if (manager->isLegalCommand(command, clientSocket)) {
       shoulContinue = manager->executeCommand(command,
                                               stringArgs,
                                               clientSocket);
     } else {
       cout << "Illegal command" << endl;
+      close(clientSocket);
       break;
     }
 
@@ -123,6 +126,8 @@ Server::~Server() {
 }
 
 void Server::stop() {
+  //stop the server and close all the room and sockets
+
   cout << "Closing the server..." << endl;
   stop_ = true;
   map<string, Room *> *mappa = lobby_->getMap();
@@ -131,6 +136,8 @@ void Server::stop() {
   for (map<string, Room *>::iterator it = mappa->begin(); it != mappa->end();
        ++it) {
     cout << "Closing room '" << (*it).second->getName() << "'" << endl;
+
+    // send a close message to the clients
     ssize_t n = write((*it).second->getFirstClient(), &close, sizeof(close));
     n = write((*it).second->getSecondClient(), &close, sizeof(close));
   }
@@ -139,6 +146,8 @@ void Server::stop() {
 }
 
 void *Server::shouldStop(void *serv) {
+  // get the exit command in the server command line, and close the game
+
   Server *server = (Server *) serv;
   string exit;
   cout << "Type 'exit' to close the server." << endl;

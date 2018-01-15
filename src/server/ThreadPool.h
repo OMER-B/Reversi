@@ -20,7 +20,7 @@ private:
   static void *execute(void *arg);
 
 public:
-  ThreadPool(int threadsNum);
+  explicit ThreadPool(int threadsNum);
   void addTask(Task *task);
   void terminate();
   virtual ~ThreadPool();

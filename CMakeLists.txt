@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ex5)
+project(Reversi)
 
 set(CMAKE_CXX_FLAGS -pthread)
 set(CMAKE_CXX_STANDARD 98)
@@ -33,7 +33,7 @@ set(CLIENT
         src/client/point.h
         src/client/regLogic.cpp
         src/client/regLogic.h
-        )
+        src/tools.h)
 set(SERVER
         src/server/command.h
         src/server/commandClose.cpp

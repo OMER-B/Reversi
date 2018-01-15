@@ -3,6 +3,8 @@
 #include "commandsManager.h"
 #include <cstring>
 #include "server.h"
+#include "../tools.h"
+
 using namespace std;
 
 void notify(int clients[]) {

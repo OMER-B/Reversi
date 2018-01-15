@@ -1,8 +1,9 @@
 #include <unistd.h>
 #include <cstring>
 #include "commandPrint.h"
+#include "../tools.h"
 
-#define BUFFER 50
+
 CommandPrint::CommandPrint(Lobby *lobby) {
   lobby_ = lobby;
 }
@@ -19,7 +20,6 @@ bool CommandPrint::execute(string arg, int clientSocket) {
     }
     listOfRooms += "\n";
     strcpy(list, listOfRooms.c_str());
-    //TODO turn this into one string and send
   }
   cout << "Sending to socket " << clientSocket << " list of rooms: "
        << listOfRooms << endl;

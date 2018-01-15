@@ -1,7 +1,8 @@
 #include <cstring>
 #include <unistd.h>
 #include "dummy.h"
-#define BUFFER 50
+#include "../tools.h"
+
 
 int Dummy::makeMove(Board &board, Logic &logic, Display &display) {
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "client.h"
 #include "clientCommand.h"
+#include "../tools.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -10,7 +11,6 @@
 #include <fstream>
 #include <cstdlib>
 
-#define BUFFER 50
 
 using namespace std;
 
@@ -103,6 +103,7 @@ string Client::getCommand() {
   return string(command);
 }
 
+
 int Client::makeMove(Board &board, Logic &logic, Display &display) {
   ssize_t n;
   char serverAnswer[BUFFER];
@@ -129,22 +130,22 @@ int Client::makeMove(Board &board, Logic &logic, Display &display) {
 
   if (strcmp(input, "nomoves") == 0) {
     n = write(clientSocket_, &input, sizeof(input));
-    if (n == -1) {
+    if ((n == -1)||(n==0)) {
       close(clientSocket_);
       return 2;
     }
     return 1;
   } else {
+    // Write the points to the socket
+    n = write(clientSocket_, &input, sizeof(input));
+    if ((n == -1)||(n==0)) {
+      close(clientSocket_);
+      return 2;
+    }
 
     Point newCell = Point(input).decrease();
     logic.putNewCell(board, *this, newCell);
     display.printBoard(&board);
-    // Write the points to the socket
-    n = write(clientSocket_, &input, sizeof(input));
-    if (n == -1) {
-      close(clientSocket_);
-      return 2;
-    }
   }
   return 0;
 }

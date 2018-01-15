@@ -1,6 +1,7 @@
 #include <map>
 #include <unistd.h>
 #include "commandStart.h"
+#include "../tools.h"
 
 bool CommandStart::execute(string arg, int clientSocket) {
 
@@ -21,7 +22,7 @@ bool CommandStart::execute(string arg, int clientSocket) {
   room->setFirstClient(clientSocket);
   room->setStatus(Waiting);
   pthread_mutex_unlock(&startLock);
-  char success[50] = "Successfully opened\n";
+  char success[BUFFER] = "Successfully opened\n";
   ssize_t n = write(clientSocket, &success, sizeof(success));
   cout << "Opened room: " << name << endl;
   return false;

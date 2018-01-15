@@ -16,8 +16,7 @@ bool CommandClose::execute(string arg, int clientSocket) {
     room->setStatus(Ended);
     close(room->getFirstClient());
     close(room->getSecondClient());
-    //Todo remove task from pool???
-    
+
     lobby_->removeRoom(name);
     pthread_mutex_unlock(&closeLock);
 

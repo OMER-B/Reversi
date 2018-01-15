@@ -12,10 +12,6 @@
 #include "HandleGame.h"
 #include "ThreadPool.h"
 
-#define THREADS_NUM 5
-#define BUFFER 50
-#define MAX_CONNECTED_CLIENTS 10
-
 
 using namespace std;
 
