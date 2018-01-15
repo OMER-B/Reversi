@@ -1,23 +1,20 @@
-commit 1f87fa5b1b0848998eec660dfa1c02c897c8a501
+commit 647906cc8270d3487a3a59a47f385ec91a058af0
 Author: H <h@ubuntu.ubuntu-domain>
-Date:   Mon Dec 25 21:01:07 2017 +0200
+Date:   Mon Jan 15 11:46:47 2018 +0200
 
-    ex4 working
+    ex7 with comments
 
-commit b2e679705783ff718b65e755bbbcf8d599667dd2
-Author: H <h@ubuntu.ubuntu-domain>
-Date:   Tue Dec 26 20:26:30 2017 +0200
 
-    added commands
-
-commit fe54dc550b9b37721c5119065fbdf37cf5ef857a
-Author: H <h@ubuntu.ubuntu-domain>
-Date:   Fri Dec 29 22:46:02 2017 +0200
-
-    added threads and tests
-
-commit e210b554e90295939e5534c5b481b818050ac277
+commit 47a829d9a10d2fcf5349f396a77e52475c6c6c55
 Author: OMER <omer5656@gmail.com>
-Date:   Mon Jan 1 20:36:44 2018 +0200
+Date:   Fri Jan 12 19:20:23 2018 +0200
 
-    finished ex5
+    7 is working
+
+
+commit 35284116bd7941a38e1867998b4635a399b61b68
+Author: OMER <omer5656@gmail.com>
+Date:   Wed Jan 10 15:39:15 2018 +0200
+
+    update
+
