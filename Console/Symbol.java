@@ -5,10 +5,15 @@ public enum Symbol {
     WHITE,
     EMPTY;
 
-    public static String toString(Symbol symbol) {
-        if (symbol == BLACK) {
+    /**
+     * Printable symbols.
+     *
+     * @return String of the player.
+     */
+    public String toString() {
+        if (this == BLACK) {
             return "X";
-        } else if (symbol == WHITE) {
+        } else if (this == WHITE) {
             return "O";
         } else {
             return " ";

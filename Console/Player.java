@@ -5,6 +5,7 @@ import java.util.Vector;
 
 public class Player {
     private Disk symbol;
+
     private Counter score;
 
     /**
@@ -17,6 +18,9 @@ public class Player {
         this.score = new Counter(2);
     }
 
+    /**
+     * @param symbol Constructor by given Disk.
+     */
     public Player(Disk symbol) {
         this.symbol = symbol;
         this.score = new Counter(2);
@@ -31,6 +35,9 @@ public class Player {
         return this.symbol.getSymbol();
     }
 
+    /**
+     * @return Returns disk of the player.
+     */
     public Disk getDisk() {
         return this.symbol;
     }
@@ -44,14 +51,36 @@ public class Player {
         return this.score.getValue();
     }
 
+    /**
+     * Sets the score of the player.
+     *
+     * @param score new Score to set.
+     */
+    public void setScore(int score) {
+        this.score.setValue(score);
+    }
+
+    /**
+     * Increases the score of the player.
+     */
     public void increaseScore() {
         this.score.increaseCounter();
     }
 
+    /**
+     * Decreases the score of the playre.
+     */
     public void decreaseScore() {
         this.score.decreaseCounter();
     }
 
+    /**
+     * Makes a move to the player.
+     *
+     * @param board board to make the move on.
+     * @param logic logic to use for the move.
+     * @return 0 if move is successful, 1 if no moves available and 2 if game ends.
+     */
     public int makeMove(Board board, Logic logic) {
         System.out.println(this.getSymbol() + ", it's your turn.");
         Vector<Point> possibleMoves = new Vector<>();
@@ -87,7 +116,12 @@ public class Player {
         return 0;
     }
 
+    /**
+     * Printable symbol of the player.
+     *
+     * @return Symbol of the player
+     */
     public String toString() {
-        return Symbol.toString(this.symbol.getSymbol());
+        return this.symbol.getSymbol().toString();
     }
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<GridPane fx:id="root" alignment="CENTER" maxHeight="420" maxWidth="420"
+          minHeight="420" minWidth="420" prefHeight="420.0" prefWidth="420.0"
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="GUI.Controllers.Settings">
+    <children>
+        <Group>
+            <children>
+                <Text layoutX="6.0" layoutY="44.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="SETTINGS"
+                      wrappingWidth="232.7294921875">
+                    <font>
+                        <Font name="KacstTitleL" size="41.0"/>
+                    </font>
+                </Text>
+                <Text layoutX="10.0" layoutY="176.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="FIRST PLAYER:"/>
+                <Text layoutX="10.0" layoutY="97.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="BOARD SIZE:"/>
+                <Slider id="slider" fx:id="sizeSlider" blockIncrement="2.0"
+                        layoutX="116.0" layoutY="85.0" majorTickUnit="4.0"
+                        max="20.0" min="4.0" minorTickCount="1"
+                        prefHeight="38.0" prefWidth="270.0"
+                        showTickLabels="true" showTickMarks="true"
+                        snapToTicks="true" value="8.0"/>
+                <Button fx:id="acceptButton" layoutX="317.0" layoutY="362.0"
+                        mnemonicParsing="false" onAction="#accept"
+                        text="ACCEPT"/>
+                <Button layoutX="237.0" layoutY="362.0" mnemonicParsing="false"
+                        onAction="#cancel" text="CANCEL"/>
+                <RadioButton fx:id="black" layoutX="116.0" layoutY="164.0"
+                             mnemonicParsing="false" selected="true"
+                             text="BLACK">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="firstPlayer"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="white" layoutX="116.0" layoutY="188.0"
+                             mnemonicParsing="false" text="WHITE"
+                             toggleGroup="$firstPlayer"/>
+                <Button layoutX="14.0" layoutY="363.0" mnemonicParsing="false"
+                        onAction="#reset" text="RESET"/>
+                <Text layoutX="10.0" layoutY="267.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="BLACK COLOR:"/>
+                <Text layoutX="220.0" layoutY="267.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="WHITE COLOR:"/>
+                <ColorPicker id="blackColor" fx:id="blackColor" layoutX="10.0"
+                             layoutY="277.0">
+                    <value>
+                        <Color blue="0.0" green="0.0" red="0.0"/>
+                    </value>
+                </ColorPicker>
+                <ColorPicker id="whiteColor" fx:id="whiteColor" layoutX="220.0"
+                             layoutY="277.0">
+                    <value>
+                        <Color blue="1.0" green="1.0" red="1.0"/>
+                    </value>
+                </ColorPicker>
+                <Text fill="RED" layoutX="156.0" layoutY="358.0"
+                      strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Changes will take effect in next launch.">
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Text>
+            </children>
+        </Group>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>

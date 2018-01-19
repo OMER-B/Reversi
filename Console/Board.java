@@ -15,7 +15,6 @@ public class Board {
     public Board(int size, Player players[]) {
         this.counter = new Counter(4);
         this.size = size;
-        this.cells = new Cell[this.size][this.size];
         this.players = players;
         this.initalize();
     }
@@ -24,6 +23,7 @@ public class Board {
      * Initializes the board with the players in the middle.
      */
     public void initalize() {
+        this.cells = new Cell[this.size][this.size];
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
                 this.cells[i][j] = new Cell(i, j);

@@ -15,15 +15,6 @@ public class Cell {
     }
 
     /**
-     * Constructor for a cell by point.
-     *
-     * @param point coordinates by point.
-     */
-    public Cell(Point point) {
-        this.point = point;
-    }
-
-    /**
      * Returns the occupying player's symbol.
      *
      * @return occupying player's symbol.
@@ -32,7 +23,7 @@ public class Cell {
         return this.player == null ? Symbol.EMPTY : this.player.getSymbol();
     }
 
-    public Point getPoint(){
+    public Point getPoint() {
         return this.point;
     }
 

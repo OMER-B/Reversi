@@ -1,0 +1,77 @@
+.root {
+     -fx-background-color: #444444;
+}
+
+ .slider {
+     -fx-text-fill: white;
+}
+ .menu-bar, .context-menu{
+     -fx-font-size: 11;
+     -fx-background-color: #444444;
+     -fx-border-width: 0;
+}
+ .context-menu .separator {
+     -fx-border-style: solid;
+     -fx-border-width: 1px;
+}
+ .menu .label{
+     -fx-text-fill: white;
+}
+ .menu:hover {
+     -fx-text-fill: white;
+}
+ .slider .track {
+     -fx-background-color: #3a3a3a;
+     -fx-background-radius: 5;
+     -fx-background-insets: 0;
+     -fx-pref-width: 12px;
+     -fx-pref-height: 5px;
+}
+ .slider .axis {
+     -fx-tick-label-fill: black;
+}
+ .slider .thumb {
+     -fx-background-color: #1c293d;
+     -fx-background-radius: 15;
+     -fx-background-insets: 0;
+     -fx-border-radius: 15;
+}
+ .slider .thumb:hover {
+     -fx-background-color: #32415b;
+}
+ .slider .thumb:pressed {
+     -fx-text-fill: black;
+     -fx-background-color: #dce1e5;
+}
+ .radio-button .dot {
+     -fx-background-color: TRANSPARENT;
+}
+ .radio-button:selected .radio {
+     -fx-background-color: #1c293d;
+}
+ .radio-button {
+     -fx-text-fill: black;
+}
+ .radio-button .radio {
+     -fx-text-fill: white;
+     -fx-background-color: white;
+     -fx-background-radius: 3;
+}
+ .radio-button:selected:hover .radio {
+     -fx-background-color: #1c293d;
+}
+ .radio-button:hover .radio {
+     -fx-background-color: #ededed;
+}
+ .button {
+     -fx-text-fill: white;
+     -fx-background-color: #1c293d;
+     -fx-background-radius: 3;
+}
+ .button:hover {
+     -fx-background-color: #32415b;
+}
+ .button:pressed {
+     -fx-text-fill: black;
+     -fx-background-color: #dce1e5;
+}

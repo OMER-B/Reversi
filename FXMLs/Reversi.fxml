@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="root" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="GUI.Controllers.ReversiController">
+    <children>
+        <HBox maxHeight="20" minHeight="20" spacing="40"
+              alignment="center_left">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Menu">
+                            <items>
+                                <MenuItem mnemonicParsing="false"
+                                          onAction="#settings" text="Settings"/>
+                                <MenuItem mnemonicParsing="false"
+                                          onAction="#close" text="Close"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Label fx:id="blackScore">
+                    <font>
+                        <Font name="System Bold" size="11.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="whiteScore">
+                    <font>
+                        <Font name="System Bold" size="11.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="currentPlayer">
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</VBox>

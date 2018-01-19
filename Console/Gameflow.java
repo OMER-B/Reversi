@@ -1,13 +1,13 @@
 package Console;
 
 public class Gameflow {
+    private static final int NUM_PLAYERS = 2;
+    private static final int SIZE = 8;
     private Board board;
     private Player[] players;
     private Logic logic;
     private ConsoleUI display;
     private int validTurns = 0, currentPlayer = 0;
-    private static final int NUM_PLAYERS = 2;
-    private static final int SIZE = 8;
 
     /**
      * Constructor for Gameflow.
@@ -32,12 +32,14 @@ public class Gameflow {
         //ANNOUNCE WINNER
         System.out.println("No more moves to play");
         this.display.printBoard(this.board);
-        Player winner = this.logic.getWinner(this.players);
+        int winner = this.logic.getWinner(this.players);
         System.out.println("Scoreboard:");
         System.out.println(this.players[0] + "\t\t\t" + this.players[0].getScore());
         System.out.println(this.players[1] + "\t\t\t" + this.players[1].getScore());
-        if (this.players[0].getScore() == this.players[1].getScore()) System.out.println("It's a tie!");
-        else System.out.println("Winner is '" + winner + "' with score of: " + winner.getScore());
+        if (this.players[0].getScore() == this.players[1].getScore())
+            System.out.println("It's a tie!");
+        else System.out.println("Winner is '" + this.players[winner]
+                + "' with score of: " + this.players[winner].getScore());
     }
 
     /**
@@ -45,6 +47,7 @@ public class Gameflow {
      */
     public void playOneTurn() {
         System.out.println("Current board:");
+        System.out.println("X: " + this.players[0].getScore() + "\t" + "O" + this.players[1].getScore());
         this.display.printBoard(this.board);
         int temp = this.validTurns;
         this.validTurns += this.players[this.currentPlayer].makeMove(this.board, this.logic);
